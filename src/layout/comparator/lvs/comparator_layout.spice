@@ -1,0 +1,19 @@
+* NGSPICE file created from comparator.ext - technology: gf180mcuD
+
+.subckt comparator VSS VDD VIN_C CLK VREF_C VOUT
+X0 VDD VSS a_1492_5905# VDD pfet_03v3 ad=4.4p pd=20.88u as=4.4p ps=20.88u w=10u l=0.3u
+X1 VOUT CLK a_1492_1971# VSS nfet_03v3 ad=1.1p pd=5.88u as=1.1p ps=5.88u w=2.5u l=0.3u
+X2 a_1640_3069# VOUT VDD VDD pfet_03v3 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.3u
+X3 a_1492_5905# VREF_C a_3393_5905# VDD pfet_03v3 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.3u
+X4 a_1492_1971# a_2014_5776# a_1640_5905# VDD pfet_03v3 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.3u
+X5 a_1640_5905# VIN_C a_1492_5905# VDD pfet_03v3 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.3u
+X6 a_3393_5905# a_2014_5776# VOUT VDD pfet_03v3 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.3u
+X7 VOUT CLK a_3685_3069# VDD pfet_03v3 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.3u
+X8 a_1640_3069# CLK a_1492_1971# VDD pfet_03v3 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.3u
+X9 a_2014_5776# CLK VDD VDD pfet_03v3 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.3u
+X10 a_2014_5776# CLK VSS VSS nfet_03v3 ad=1.1p pd=5.88u as=1.1p ps=5.88u w=2.5u l=0.3u
+X11 VOUT a_1492_1971# VSS VSS nfet_03v3 ad=1.1p pd=5.88u as=1.1p ps=5.88u w=2.5u l=0.3u
+X12 VSS VOUT a_1492_1971# VSS nfet_03v3 ad=1.1p pd=5.88u as=1.1p ps=5.88u w=2.5u l=0.3u
+X13 VDD a_1492_1971# a_3685_3069# VDD pfet_03v3 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.3u
+.ends
+
