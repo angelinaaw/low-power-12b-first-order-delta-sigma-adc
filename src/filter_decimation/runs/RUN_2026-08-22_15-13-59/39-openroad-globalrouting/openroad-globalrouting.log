@@ -1,0 +1,74 @@
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading OpenROAD database at '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/37-openroad-resizertimingpostcts/cic_filter.odb'…
+Reading design constraints file at 'constraint.sdc'…
+[WARNING STA-0345] resistance scale 1e+03 does not match library scale 1e+00.
+[WARNING STA-0351] clock 'clk' not found.
+[WARNING STA-0138] clock arg 'clk' clock not found.
+[WARNING STA-0138] clock arg 'clk' clock not found.
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+[INFO] Setting signal min routing layer to: Metal2 and clock min routing layer to Metal2. 
+[INFO] Setting signal max routing layer to: Metal5 and clock max routing layer to Metal5. 
++ global_route -congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: Metal5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.5600  line-2-Via Pitch: 0.4750
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 0.9000  line-2-Via Pitch: 0.8200
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 10 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 51
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical        10372          6932          33.17%
+Metal3     Horizontal      10552          7028          33.40%
+Metal4     Vertical        10366          6928          33.17%
+Metal5     Horizontal       6396          4290          32.93%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 7967
+[INFO GRT-0198] Via related Steiner nodes: 116
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 9698
+[INFO GRT-0112] Final usage 3D: 34071
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2            6932          2502           36.09%             0 /  0 /  0
+Metal3            7028          2270           32.30%             0 /  0 /  0
+Metal4            6928           129            1.86%             0 /  0 /  0
+Metal5            4290            76            1.77%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total            25178          4977           19.77%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 70282 um
+[INFO GRT-0014] Routed nets: 1288
+[INFO GRT-0303] Global routing runtime = 00:00:00
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                             100     439.04
+  Tap cell                                262    1150.28
+  Clock buffer                              9     987.84
+  Timing Repair Buffer                     21    1097.60
+  Inverter                                126    1106.38
+  Clock inverter                            7     153.66
+  Sequential cell                         220   16424.49
+  Multi-Input combinational cell          909   17315.74
+  Total                                  1654   38675.03
+Writing OpenROAD database to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/39-openroad-globalrouting/cic_filter.odb'…
+Writing layout to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/39-openroad-globalrouting/cic_filter.def'…

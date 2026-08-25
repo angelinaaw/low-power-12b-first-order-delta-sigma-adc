@@ -1,0 +1,929 @@
+{
+  "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+  "modules": {
+    "andig_clock": {
+      "attributes": {
+        "hdlname": "andig_clock",
+        "top": "00000000000000000000000000000001",
+        "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:1.1-43.10"
+      },
+      "ports": {
+        "in_clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "out_clk1": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "out_clk2": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "out_clk2B": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "out_clk_cic": {
+          "direction": "output",
+          "bits": [ 7 ]
+        }
+      },
+      "cells": {
+        "$add$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:22$5": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:22.20-22.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 11, 12, 13 ]
+          }
+        },
+        "$add$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:27$7": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:27.20-27.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 14, 15, 16 ]
+          }
+        },
+        "$add$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:32$11": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:32.20-32.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 17, 18, 19 ]
+          }
+        },
+        "$eq$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23$6": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.20-23.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10 ],
+            "B": [ "0", "1", "0" ],
+            "Y": [ 20 ]
+          }
+        },
+        "$eq$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28$8": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.20-28.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10 ],
+            "B": [ "1", "1", "0" ],
+            "Y": [ 21 ]
+          }
+        },
+        "$eq$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28$9": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.41-28.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 22 ]
+          }
+        },
+        "$eq$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33$12": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33.20-33.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10 ],
+            "B": [ "1", "0", "1" ],
+            "Y": [ 23 ]
+          }
+        },
+        "$le$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18$4": {
+          "hide_name": 1,
+          "type": "$le",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.11-18.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8, 9, 10 ],
+            "B": [ "1", "0", "0" ],
+            "Y": [ 24 ]
+          }
+        },
+        "$logic_or$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28$10": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.20-28.58"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 21 ],
+            "B": [ 22 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$not$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:10$1": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:10.22-10.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$procdff$64": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:11.3-42.6"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 26 ],
+            "Q": [ 4 ]
+          }
+        },
+        "$procdff$69": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:11.3-42.6"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 27 ],
+            "Q": [ 5 ]
+          }
+        },
+        "$procdff$74": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:11.3-42.6"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 28 ],
+            "Q": [ 7 ]
+          }
+        },
+        "$procdff$79": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:11.3-42.6"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 29, 30, 31 ],
+            "Q": [ 8, 9, 10 ]
+          }
+        },
+        "$procmux$16": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.20-28.58|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0" ],
+            "B": [ 17, 18, 19 ],
+            "S": [ 25 ],
+            "Y": [ 32, 33, 34 ]
+          }
+        },
+        "$procmux$19": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.20-23.37|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 32, 33, 34 ],
+            "B": [ 14, 15, 16 ],
+            "S": [ 20 ],
+            "Y": [ 35, 36, 37 ]
+          }
+        },
+        "$procmux$22": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.11-18.28|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.7-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 35, 36, 37 ],
+            "B": [ 11, 12, 13 ],
+            "S": [ 24 ],
+            "Y": [ 29, 30, 31 ]
+          }
+        },
+        "$procmux$25": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33.20-33.37|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ "1" ],
+            "S": [ 23 ],
+            "Y": [ 38 ]
+          }
+        },
+        "$procmux$28": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.20-28.58|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 38 ],
+            "B": [ "1" ],
+            "S": [ 25 ],
+            "Y": [ 39 ]
+          }
+        },
+        "$procmux$31": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.20-23.37|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 39 ],
+            "B": [ "0" ],
+            "S": [ 20 ],
+            "Y": [ 40 ]
+          }
+        },
+        "$procmux$34": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.11-18.28|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.7-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 40 ],
+            "B": [ "0" ],
+            "S": [ 24 ],
+            "Y": [ 28 ]
+          }
+        },
+        "$procmux$37": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33.20-33.37|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ "0" ],
+            "S": [ 23 ],
+            "Y": [ 41 ]
+          }
+        },
+        "$procmux$40": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.20-28.58|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 41 ],
+            "B": [ "1" ],
+            "S": [ 25 ],
+            "Y": [ 42 ]
+          }
+        },
+        "$procmux$43": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.20-23.37|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 42 ],
+            "B": [ "0" ],
+            "S": [ 20 ],
+            "Y": [ 43 ]
+          }
+        },
+        "$procmux$46": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.11-18.28|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.7-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 43 ],
+            "B": [ "0" ],
+            "S": [ 24 ],
+            "Y": [ 27 ]
+          }
+        },
+        "$procmux$49": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33.20-33.37|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ "0" ],
+            "S": [ 23 ],
+            "Y": [ 44 ]
+          }
+        },
+        "$procmux$52": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.20-28.58|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 44 ],
+            "B": [ "0" ],
+            "S": [ 25 ],
+            "Y": [ 45 ]
+          }
+        },
+        "$procmux$55": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.20-23.37|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.16-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 45 ],
+            "B": [ "0" ],
+            "S": [ 20 ],
+            "Y": [ 46 ]
+          }
+        },
+        "$procmux$58": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.11-18.28|/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.7-40.10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 46 ],
+            "B": [ "1" ],
+            "S": [ 24 ],
+            "Y": [ 26 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\counter[2:0]": {
+          "hide_name": 1,
+          "bits": [ 29, 30, 31 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:11.3-42.6"
+          }
+        },
+        "$0\\out_clk1[0:0]": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:11.3-42.6"
+          }
+        },
+        "$0\\out_clk2[0:0]": {
+          "hide_name": 1,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:11.3-42.6"
+          }
+        },
+        "$0\\out_clk_cic[0:0]": {
+          "hide_name": 1,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:11.3-42.6"
+          }
+        },
+        "$add$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:22$5_Y": {
+          "hide_name": 1,
+          "bits": [ 11, 12, 13 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:22.20-22.34"
+          }
+        },
+        "$add$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:27$7_Y": {
+          "hide_name": 1,
+          "bits": [ 14, 15, 16 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:27.20-27.34"
+          }
+        },
+        "$add$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:32$11_Y": {
+          "hide_name": 1,
+          "bits": [ 17, 18, 19 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:32.20-32.34"
+          }
+        },
+        "$eq$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23$6_Y": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:23.20-23.37"
+          }
+        },
+        "$eq$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28$8_Y": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.20-28.37"
+          }
+        },
+        "$eq$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28$9_Y": {
+          "hide_name": 1,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.41-28.58"
+          }
+        },
+        "$eq$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33$12_Y": {
+          "hide_name": 1,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:33.20-33.37"
+          }
+        },
+        "$le$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18$4_Y": {
+          "hide_name": 1,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:18.11-18.28"
+          }
+        },
+        "$logic_or$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28$10_Y": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:28.20-28.58"
+          }
+        },
+        "$procmux$16_Y": {
+          "hide_name": 1,
+          "bits": [ 32, 33, 34 ],
+          "attributes": {
+          }
+        },
+        "$procmux$19_Y": {
+          "hide_name": 1,
+          "bits": [ 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "$procmux$25_Y": {
+          "hide_name": 1,
+          "bits": [ 38 ],
+          "attributes": {
+          }
+        },
+        "$procmux$28_Y": {
+          "hide_name": 1,
+          "bits": [ 39 ],
+          "attributes": {
+          }
+        },
+        "$procmux$31_Y": {
+          "hide_name": 1,
+          "bits": [ 40 ],
+          "attributes": {
+          }
+        },
+        "$procmux$37_Y": {
+          "hide_name": 1,
+          "bits": [ 41 ],
+          "attributes": {
+          }
+        },
+        "$procmux$40_Y": {
+          "hide_name": 1,
+          "bits": [ 42 ],
+          "attributes": {
+          }
+        },
+        "$procmux$43_Y": {
+          "hide_name": 1,
+          "bits": [ 43 ],
+          "attributes": {
+          }
+        },
+        "$procmux$49_Y": {
+          "hide_name": 1,
+          "bits": [ 44 ],
+          "attributes": {
+          }
+        },
+        "$procmux$52_Y": {
+          "hide_name": 1,
+          "bits": [ 45 ],
+          "attributes": {
+          }
+        },
+        "$procmux$55_Y": {
+          "hide_name": 1,
+          "bits": [ 46 ],
+          "attributes": {
+          }
+        },
+        "counter": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:9.13-9.20"
+          }
+        },
+        "in_clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:2.14-2.20"
+          }
+        },
+        "out_clk1": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:4.14-4.22"
+          }
+        },
+        "out_clk2": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:5.14-5.22"
+          }
+        },
+        "out_clk2B": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:6.15-6.24"
+          }
+        },
+        "out_clk_cic": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:7.14-7.25"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/andig_clock.v:3.14-3.17"
+          }
+        }
+      }
+    }
+  }
+}

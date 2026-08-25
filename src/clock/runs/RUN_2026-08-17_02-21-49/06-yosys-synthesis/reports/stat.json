@@ -1,0 +1,65 @@
+{
+   "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/runs/RUN_2026-08-17_02-21-49/tmp/b9b7f25be40146a68079c1ca1891e251.lib ",
+   "modules": {
+      "\\andig_clock": {
+         "num_wires":         24,
+         "num_wire_bits":     24,
+         "num_pub_wires":     9,
+         "num_pub_wire_bits": 9,
+         "num_ports":         6,
+         "num_port_bits":     6,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22,
+         "num_submodules":       0,
+         "area":              704.659200,
+         "sequential_area":    452.211200,
+         "num_cells_by_type": {
+            "gf180mcu_fd_sc_mcu7t5v0__and2_1": 2,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi21_1": 3,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi22_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__clkinv_1": 3,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 5,
+            "gf180mcu_fd_sc_mcu7t5v0__dffsnq_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__mux2_2": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__nand2_1": 2,
+            "gf180mcu_fd_sc_mcu7t5v0__nand3_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__nor2_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__nor3_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__oai21_1": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         24,
+         "num_wire_bits":     24,
+         "num_pub_wires":     9,
+         "num_pub_wire_bits": 9,
+         "num_ports":         6,
+         "num_port_bits":     6,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22,
+         "num_submodules":       0,
+         "area":              704.659200,
+         "sequential_area":    452.211200,
+         "num_cells_by_type": {
+            "gf180mcu_fd_sc_mcu7t5v0__and2_1": 2,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi21_1": 3,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi22_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__clkinv_1": 3,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 5,
+            "gf180mcu_fd_sc_mcu7t5v0__dffsnq_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__mux2_2": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__nand2_1": 2,
+            "gf180mcu_fd_sc_mcu7t5v0__nand3_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__nor2_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__nor3_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__oai21_1": 1
+         }
+      }
+}
+

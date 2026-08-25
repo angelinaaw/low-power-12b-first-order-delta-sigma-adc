@@ -1,0 +1,45 @@
+100. Printing statistics.
+
+=== cic_filter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     1247        - wires
+     1258        - wire bits
+      212        - public wires
+      223        - public wire bits
+        4        - ports
+       15        - port bits
+     1255 3.48E+04 cells
+       38  667.341   gf180mcu_fd_sc_mcu7t5v0__and2_1
+        9  197.568   gf180mcu_fd_sc_mcu7t5v0__and3_1
+       27  651.974   gf180mcu_fd_sc_mcu7t5v0__and4_1
+       13  285.376   gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+       99 1.74E+03   gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+        4   96.589   gf180mcu_fd_sc_mcu7t5v0__aoi221_1
+       20  395.136   gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+      126 1.11E+03   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+      137 1.02E+04   gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1
+       83 6.19E+03   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+      225   2469.6   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+       29  445.626   gf180mcu_fd_sc_mcu7t5v0__nand3_1
+       31  612.461   gf180mcu_fd_sc_mcu7t5v0__nand4_1
+       87 1.15E+03   gf180mcu_fd_sc_mcu7t5v0__nor2_1
+       10  175.616   gf180mcu_fd_sc_mcu7t5v0__nor3_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__nor4_1
+       26  570.752   gf180mcu_fd_sc_mcu7t5v0__oai211_1
+       63 1.11E+03   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+        3   79.027   gf180mcu_fd_sc_mcu7t5v0__oai221_1
+       17  373.184   gf180mcu_fd_sc_mcu7t5v0__oai22_1
+        5  120.736   gf180mcu_fd_sc_mcu7t5v0__oai31_1
+       39  684.902   gf180mcu_fd_sc_mcu7t5v0__or2_1
+        4   87.808   gf180mcu_fd_sc_mcu7t5v0__or3_1
+       26  741.978   gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+        4  210.739   gf180mcu_fd_sc_mcu7t5v0__xnor3_1
+       86 2.27E+03   gf180mcu_fd_sc_mcu7t5v0__xor2_1
+       43 2.17E+03   gf180mcu_fd_sc_mcu7t5v0__xor3_1
+
+   Chip area for module '\cic_filter': 34842.214400
+     of which used for sequential elements: 16420.096000 (47.13%)
+
