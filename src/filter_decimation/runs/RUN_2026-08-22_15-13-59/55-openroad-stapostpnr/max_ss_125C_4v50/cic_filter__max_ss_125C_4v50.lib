@@ -1,0 +1,127 @@
+library (cic_filter) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1mA";
+  pulling_resistance_unit        : "1ohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 30;
+  slew_lower_threshold_pct_fall : 30;
+  slew_upper_threshold_pct_rise : 70;
+  slew_upper_threshold_pct_fall : 70;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 125.0;
+  nom_voltage                    : 4.50;
+
+  type ("out_cic") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 12;
+    bit_from : 11;
+    bit_to : 0;
+  }
+
+  cell ("cic_filter") {
+    area : 42367.523 
+    is_macro_cell : true;
+    pin("clk") {
+      direction : input;
+      clock : true;
+      capacitance : 0.0430;
+      timing() {
+        timing_sense : positive_unate;
+        timing_type : min_clock_tree_path;
+	cell_rise(scalar) {
+          values("1.09135");
+	}
+	cell_fall(scalar) {
+          values("1.10142");
+	}
+      }
+      timing() {
+        timing_sense : positive_unate;
+        timing_type : max_clock_tree_path;
+	cell_rise(scalar) {
+          values("1.11453");
+	}
+	cell_fall(scalar) {
+          values("1.12617");
+	}
+      }
+    }
+    pin("in_cic") {
+      direction : input;
+      capacitance : 0.0048;
+    }
+    pin("rst") {
+      direction : input;
+      capacitance : 0.0109;
+    }
+    bus("out_cic") {
+      bus_type : out_cic;
+      direction : output;
+      capacitance : 0.0000;
+    pin("out_cic[11]") {
+      direction : output;
+      capacitance : 0.0056;
+    }
+    pin("out_cic[10]") {
+      direction : output;
+      capacitance : 0.0034;
+    }
+    pin("out_cic[9]") {
+      direction : output;
+      capacitance : 0.0017;
+    }
+    pin("out_cic[8]") {
+      direction : output;
+      capacitance : 0.0009;
+    }
+    pin("out_cic[7]") {
+      direction : output;
+      capacitance : 0.0011;
+    }
+    pin("out_cic[6]") {
+      direction : output;
+      capacitance : 0.0047;
+    }
+    pin("out_cic[5]") {
+      direction : output;
+      capacitance : 0.0010;
+    }
+    pin("out_cic[4]") {
+      direction : output;
+      capacitance : 0.0014;
+    }
+    pin("out_cic[3]") {
+      direction : output;
+      capacitance : 0.0015;
+    }
+    pin("out_cic[2]") {
+      direction : output;
+      capacitance : 0.0010;
+    }
+    pin("out_cic[1]") {
+      direction : output;
+      capacitance : 0.0013;
+    }
+    pin("out_cic[0]") {
+      direction : output;
+      capacitance : 0.0010;
+    }
+    }
+  }
+
+}

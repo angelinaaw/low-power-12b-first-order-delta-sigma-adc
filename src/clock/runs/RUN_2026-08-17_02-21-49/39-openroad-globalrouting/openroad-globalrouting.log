@@ -1,0 +1,70 @@
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading OpenROAD database at '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/runs/RUN_2026-08-17_02-21-49/37-openroad-resizertimingpostcts/andig_clock.odb'…
+Reading design constraints file at '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/constraint.sdc'…
+[WARNING STA-0345] resistance scale 1e+03 does not match library scale 1e+00.
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+[INFO] Setting signal min routing layer to: Metal2 and clock min routing layer to Metal2. 
+[INFO] Setting signal max routing layer to: Metal5 and clock max routing layer to Metal5. 
++ global_route -congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: Metal5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.5600  line-2-Via Pitch: 0.4750
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 0.9000  line-2-Via Pitch: 0.8200
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 4 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 9
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical         1729          1156          33.14%
+Metal3     Horizontal       1761          1173          33.39%
+Metal4     Vertical         1726          1154          33.14%
+Metal5     Horizontal       1070           710          33.64%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 163
+[INFO GRT-0198] Via related Steiner nodes: 2
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 193
+[INFO GRT-0112] Final usage 3D: 679
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2            1156            53            4.58%             0 /  0 /  0
+Metal3            1173            47            4.01%             0 /  0 /  0
+Metal4            1154             0            0.00%             0 /  0 /  0
+Metal5             710             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             4193           100            2.38%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 1335 um
+[INFO GRT-0014] Routed nets: 32
+[INFO GRT-0303] Global routing runtime = 00:00:00
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                              34     149.27
+  Tap cell                                 38     166.84
+  Clock buffer                              4     346.84
+  Timing Repair Buffer                      5     175.62
+  Inverter                                  3      26.34
+  Sequential cell                           6     452.21
+  Multi-Input combinational cell           13     226.11
+  Total                                   103    1543.23
+Writing OpenROAD database to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/runs/RUN_2026-08-17_02-21-49/39-openroad-globalrouting/andig_clock.odb'…
+Writing layout to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/clock/runs/RUN_2026-08-17_02-21-49/39-openroad-globalrouting/andig_clock.def'…

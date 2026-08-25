@@ -1,0 +1,873 @@
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading OpenROAD database at '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/28-openroad-globalplacement/cic_filter.odb'…
+Reading design constraints file at 'constraint.sdc'…
+[WARNING STA-0345] resistance scale 1e+03 does not match library scale 1e+00.
+[WARNING STA-0351] clock 'clk' not found.
+[WARNING STA-0138] clock arg 'clk' clock not found.
+[WARNING STA-0138] clock arg 'clk' clock not found.
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+%OL_CREATE_REPORT min.rpt
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+======================= nom_tt_025C_5v00 Corner ===================================
+
+[WARNING STA-1060] no master clock found for generated clock clk_div.
+No paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT max.rpt
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+======================= nom_tt_025C_5v00 Corner ===================================
+
+No paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT checks.rpt
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_5v00 Corner ===================================
+
+Startpoint: in_cic (input port)
+Endpoint: _2144_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                 10.000000   10.000000 ^ input external delay
+     4    0.021261    0.000000    0.000000   10.000000 ^ in_cic (in)
+                                                         in_cic (net)
+                      0.000233    0.000095   10.000095 ^ _1519_/A4 (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+     5    0.029490    0.567067    0.747517   10.747612 ^ _1519_/Z (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+                                                         _0908_ (net)
+                      0.567067    0.000470   10.748082 ^ _1526_/A4 (gf180mcu_fd_sc_mcu7t5v0__nand4_1)
+     2    0.014480    0.609789    0.347455   11.095536 v _1526_/ZN (gf180mcu_fd_sc_mcu7t5v0__nand4_1)
+                                                         _0912_ (net)
+                      0.609789    0.000110   11.095647 v _1530_/A3 (gf180mcu_fd_sc_mcu7t5v0__nor3_1)
+     8    0.042779    2.018167    1.276336   12.371983 ^ _1530_/ZN (gf180mcu_fd_sc_mcu7t5v0__nor3_1)
+                                                         _0914_ (net)
+                      2.018167    0.000765   12.372747 ^ _1551_/A2 (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+     6    0.040179    0.744032    1.015203   13.387951 ^ _1551_/Z (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+                                                         _0927_ (net)
+                      0.744033    0.001394   13.389344 ^ _1561_/A3 (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+     5    0.028911    0.558676    0.766325   14.155669 ^ _1561_/Z (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+                                                         _0933_ (net)
+                      0.558676    0.000404   14.156074 ^ _1566_/A3 (gf180mcu_fd_sc_mcu7t5v0__nand3_1)
+     3    0.017667    0.503503    0.319824   14.475898 v _1566_/ZN (gf180mcu_fd_sc_mcu7t5v0__nand3_1)
+                                                         _0936_ (net)
+                      0.503503    0.000282   14.476179 v _1574_/A1 (gf180mcu_fd_sc_mcu7t5v0__or3_1)
+     1    0.004728    0.226921    0.666796   15.142975 v _1574_/Z (gf180mcu_fd_sc_mcu7t5v0__or3_1)
+                                                         _0941_ (net)
+                      0.226921    0.000004   15.142979 v _1575_/A2 (gf180mcu_fd_sc_mcu7t5v0__nand2_1)
+     1    0.003391    0.174784    0.162769   15.305748 ^ _1575_/ZN (gf180mcu_fd_sc_mcu7t5v0__nand2_1)
+                                                         _0078_ (net)
+                      0.174784    0.000005   15.305754 ^ _2144_/D (gf180mcu_fd_sc_mcu7t5v0__dffrnq_1)
+                                             15.305754   data arrival time
+---------------------------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_5v00 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_5v00 Corner ===================================
+
+max slew
+
+Pin                                        Limit        Slew       Slack
+------------------------------------------------------------------------
+_2156_/CLKN                             4.000000   10.852173   -6.852173 (VIOLATED)
+_2158_/CLKN                             4.000000   10.852169   -6.852169 (VIOLATED)
+_2215_/CLKN                             4.000000   10.852176   -6.852175 (VIOLATED)
+_2216_/CLKN                             4.000000   10.852176   -6.852175 (VIOLATED)
+_2217_/CLKN                             4.000000   10.852175   -6.852175 (VIOLATED)
+_2218_/CLKN                             4.000000   10.852170   -6.852170 (VIOLATED)
+_2219_/CLKN                             4.000000   10.852170   -6.852170 (VIOLATED)
+_2220_/CLKN                             4.000000   10.852168   -6.852169 (VIOLATED)
+_2159_/CLKN                             4.000000   10.852158   -6.852158 (VIOLATED)
+_2162_/CLKN                             4.000000   10.852157   -6.852157 (VIOLATED)
+_2221_/CLKN                             4.000000   10.852163   -6.852163 (VIOLATED)
+_2222_/CLKN                             4.000000   10.852160   -6.852160 (VIOLATED)
+_2161_/CLKN                             4.000000   10.852150   -6.852149 (VIOLATED)
+_2223_/CLKN                             4.000000   10.852150   -6.852149 (VIOLATED)
+_2224_/CLKN                             4.000000   10.852150   -6.852149 (VIOLATED)
+_2225_/CLKN                             4.000000   10.852138   -6.852137 (VIOLATED)
+_2226_/CLKN                             4.000000   10.852139   -6.852140 (VIOLATED)
+_2165_/CLKN                             4.000000   10.852127   -6.852127 (VIOLATED)
+_2190_/CLKN                             4.000000   10.852119   -6.852119 (VIOLATED)
+_2191_/CLKN                             4.000000   10.852118   -6.852118 (VIOLATED)
+_2166_/CLKN                             4.000000   10.852110   -6.852110 (VIOLATED)
+_2192_/CLKN                             4.000000   10.852116   -6.852116 (VIOLATED)
+_2227_/CLKN                             4.000000   10.852122   -6.852122 (VIOLATED)
+_2193_/CLKN                             4.000000   10.852114   -6.852113 (VIOLATED)
+_2265_/CLKN                             4.000000   10.852118   -6.852118 (VIOLATED)
+_2266_/CLKN                             4.000000   10.852118   -6.852118 (VIOLATED)
+_2194_/CLKN                             4.000000   10.852110   -6.852110 (VIOLATED)
+_2195_/CLKN                             4.000000   10.852108   -6.852108 (VIOLATED)
+_2228_/CLKN                             4.000000   10.852109   -6.852109 (VIOLATED)
+_2240_/CLKN                             4.000000   10.852112   -6.852111 (VIOLATED)
+_2267_/CLKN                             4.000000   10.852112   -6.852111 (VIOLATED)
+_2268_/CLKN                             4.000000   10.852111   -6.852111 (VIOLATED)
+_2269_/CLKN                             4.000000   10.852109   -6.852109 (VIOLATED)
+_2270_/CLKN                             4.000000   10.852107   -6.852107 (VIOLATED)
+_2167_/CLKN                             4.000000   10.852095   -6.852095 (VIOLATED)
+_2196_/CLKN                             4.000000   10.852099   -6.852099 (VIOLATED)
+_2229_/CLKN                             4.000000   10.852093   -6.852093 (VIOLATED)
+_2271_/CLKN                             4.000000   10.852099   -6.852099 (VIOLATED)
+_2197_/CLKN                             4.000000   10.852090   -6.852090 (VIOLATED)
+_2272_/CLKN                             4.000000   10.852090   -6.852090 (VIOLATED)
+_2168_/CLKN                             4.000000   10.852076   -6.852075 (VIOLATED)
+_2198_/CLKN                             4.000000   10.852080   -6.852080 (VIOLATED)
+_2199_/CLKN                             4.000000   10.852077   -6.852077 (VIOLATED)
+_2230_/CLKN                             4.000000   10.852078   -6.852078 (VIOLATED)
+_2170_/CLKN                             4.000000   10.852062   -6.852063 (VIOLATED)
+_2201_/CLKN                             4.000000   10.852068   -6.852068 (VIOLATED)
+_2153_/CLKN                             4.000000   10.852050   -6.852050 (VIOLATED)
+_2154_/CLKN                             4.000000   10.852050   -6.852050 (VIOLATED)
+_2200_/CLKN                             4.000000   10.852057   -6.852057 (VIOLATED)
+_2273_/CLKN                             4.000000   10.852060   -6.852060 (VIOLATED)
+_2274_/CLKN                             4.000000   10.852060   -6.852060 (VIOLATED)
+_2275_/CLKN                             4.000000   10.852058   -6.852058 (VIOLATED)
+_2276_/CLKN                             4.000000   10.852059   -6.852059 (VIOLATED)
+_2155_/CLKN                             4.000000   10.852049   -6.852049 (VIOLATED)
+_2157_/CLKN                             4.000000   10.852048   -6.852047 (VIOLATED)
+_2169_/CLKN                             4.000000   10.852050   -6.852050 (VIOLATED)
+_2160_/CLKN                             4.000000   10.852041   -6.852041 (VIOLATED)
+_2163_/CLKN                             4.000000   10.852038   -6.852039 (VIOLATED)
+_2164_/CLKN                             4.000000   10.852036   -6.852036 (VIOLATED)
+_2202_/CLKN                             4.000000   10.852042   -6.852042 (VIOLATED)
+_2231_/CLKN                             4.000000   10.852039   -6.852039 (VIOLATED)
+_2232_/CLKN                             4.000000   10.852042   -6.852042 (VIOLATED)
+_2277_/CLKN                             4.000000   10.852042   -6.852042 (VIOLATED)
+_2171_/CLKN                             4.000000   10.852025   -6.852026 (VIOLATED)
+_2178_/CLKN                             4.000000   10.852027   -6.852027 (VIOLATED)
+_2179_/CLKN                             4.000000   10.852022   -6.852022 (VIOLATED)
+_2203_/CLKN                             4.000000   10.852025   -6.852026 (VIOLATED)
+_2233_/CLKN                             4.000000   10.852023   -6.852024 (VIOLATED)
+_2278_/CLKN                             4.000000   10.852024   -6.852025 (VIOLATED)
+_2180_/CLKN                             4.000000   10.852014   -6.852014 (VIOLATED)
+_2181_/CLKN                             4.000000   10.852007   -6.852007 (VIOLATED)
+_2205_/CLKN                             4.000000   10.852011   -6.852011 (VIOLATED)
+_2234_/CLKN                             4.000000   10.852009   -6.852008 (VIOLATED)
+_2280_/CLKN                             4.000000   10.852010   -6.852009 (VIOLATED)
+_2182_/CLKN                             4.000000   10.851999   -6.852000 (VIOLATED)
+_2172_/CLKN                             4.000000   10.851992   -6.851992 (VIOLATED)
+_2173_/CLKN                             4.000000   10.851992   -6.851992 (VIOLATED)
+_2183_/CLKN                             4.000000   10.851991   -6.851991 (VIOLATED)
+_2204_/CLKN                             4.000000   10.851995   -6.851995 (VIOLATED)
+_2235_/CLKN                             4.000000   10.851994   -6.851994 (VIOLATED)
+_2279_/CLKN                             4.000000   10.851997   -6.851998 (VIOLATED)
+_2184_/CLKN                             4.000000   10.851983   -6.851983 (VIOLATED)
+_2207_/CLKN                             4.000000   10.851983   -6.851983 (VIOLATED)
+_2185_/CLKN                             4.000000   10.851974   -6.851975 (VIOLATED)
+_2236_/CLKN                             4.000000   10.851977   -6.851977 (VIOLATED)
+_2186_/CLKN                             4.000000   10.851968   -6.851968 (VIOLATED)
+_2206_/CLKN                             4.000000   10.851971   -6.851970 (VIOLATED)
+_2174_/CLKN                             4.000000   10.851960   -6.851961 (VIOLATED)
+_2175_/CLKN                             4.000000   10.851959   -6.851960 (VIOLATED)
+_2187_/CLKN                             4.000000   10.851960   -6.851961 (VIOLATED)
+_2237_/CLKN                             4.000000   10.851959   -6.851960 (VIOLATED)
+_2281_/CLKN                             4.000000   10.851962   -6.851962 (VIOLATED)
+_2282_/CLKN                             4.000000   10.851962   -6.851962 (VIOLATED)
+_2188_/CLKN                             4.000000   10.851951   -6.851951 (VIOLATED)
+_2176_/CLKN                             4.000000   10.851943   -6.851943 (VIOLATED)
+_2189_/CLKN                             4.000000   10.851946   -6.851945 (VIOLATED)
+_2208_/CLKN                             4.000000   10.851947   -6.851947 (VIOLATED)
+_2238_/CLKN                             4.000000   10.851940   -6.851940 (VIOLATED)
+_2283_/CLKN                             4.000000   10.851946   -6.851946 (VIOLATED)
+_2177_/CLKN                             4.000000   10.851927   -6.851927 (VIOLATED)
+_2209_/CLKN                             4.000000   10.851932   -6.851931 (VIOLATED)
+_2284_/CLKN                             4.000000   10.851928   -6.851928 (VIOLATED)
+_2210_/CLKN                             4.000000   10.851911   -6.851911 (VIOLATED)
+_2239_/CLKN                             4.000000   10.851917   -6.851917 (VIOLATED)
+_2285_/CLKN                             4.000000   10.851912   -6.851912 (VIOLATED)
+_2286_/CLKN                             4.000000   10.851899   -6.851899 (VIOLATED)
+_2211_/CLKN                             4.000000   10.851886   -6.851886 (VIOLATED)
+_2212_/CLKN                             4.000000   10.851886   -6.851886 (VIOLATED)
+_2287_/CLKN                             4.000000   10.851885   -6.851885 (VIOLATED)
+_2213_/CLKN                             4.000000   10.851869   -6.851868 (VIOLATED)
+_2214_/CLKN                             4.000000   10.851871   -6.851871 (VIOLATED)
+_2288_/CLKN                             4.000000   10.851869   -6.851868 (VIOLATED)
+_2241_/CLKN                             4.000000   10.851855   -6.851856 (VIOLATED)
+_2242_/CLKN                             4.000000   10.851855   -6.851855 (VIOLATED)
+_2243_/CLKN                             4.000000   10.851854   -6.851854 (VIOLATED)
+_2244_/CLKN                             4.000000   10.851853   -6.851853 (VIOLATED)
+_2245_/CLKN                             4.000000   10.851852   -6.851852 (VIOLATED)
+_2246_/CLKN                             4.000000   10.851851   -6.851851 (VIOLATED)
+_2289_/CLKN                             4.000000   10.851856   -6.851857 (VIOLATED)
+_2247_/CLKN                             4.000000   10.851850   -6.851850 (VIOLATED)
+_2248_/CLKN                             4.000000   10.851848   -6.851848 (VIOLATED)
+_2249_/CLKN                             4.000000   10.851847   -6.851847 (VIOLATED)
+_2250_/CLKN                             4.000000   10.851844   -6.851844 (VIOLATED)
+_2251_/CLKN                             4.000000   10.851841   -6.851840 (VIOLATED)
+_2252_/CLKN                             4.000000   10.851838   -6.851838 (VIOLATED)
+_2253_/CLKN                             4.000000   10.851833   -6.851833 (VIOLATED)
+_2254_/CLKN                             4.000000   10.851830   -6.851830 (VIOLATED)
+_2255_/CLKN                             4.000000   10.851828   -6.851827 (VIOLATED)
+_2256_/CLKN                             4.000000   10.851823   -6.851823 (VIOLATED)
+_2257_/CLKN                             4.000000   10.851825   -6.851825 (VIOLATED)
+_1153_/A1                               4.000000   10.851786   -6.851786 (VIOLATED)
+_2152_/Q                                4.000000   10.851786   -6.851786 (VIOLATED)
+_2258_/CLKN                             4.000000   10.851786   -6.851786 (VIOLATED)
+_2259_/CLKN                             4.000000   10.851786   -6.851786 (VIOLATED)
+_2260_/CLKN                             4.000000   10.851786   -6.851786 (VIOLATED)
+_2261_/CLKN                             4.000000   10.851786   -6.851786 (VIOLATED)
+_2262_/CLKN                             4.000000   10.851786   -6.851786 (VIOLATED)
+_2263_/CLKN                             4.000000   10.851786   -6.851786 (VIOLATED)
+_2264_/CLKN                             4.000000   10.851786   -6.851786 (VIOLATED)
+
+max capacitance
+
+Pin                                        Limit         Cap       Slack
+------------------------------------------------------------------------
+_2152_/Q                                0.238200    0.675153   -0.436953 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 0 unannotated drivers.
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 139
+Writing metric design__max_slew_violation__count__corner:nom_tt_025C_5v00: 139
+max fanout violation count 0
+Writing metric design__max_fanout_violation__count__corner:nom_tt_025C_5v00: 0
+max cap violation count 1
+Writing metric design__max_cap_violation__count__corner:nom_tt_025C_5v00: 1
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+[WARNING STA-1060] no master clock found for generated clock clk_div.
+Warning: There are 220 unclocked register/latch pins.
+  _2070_/CLK
+  _2071_/CLK
+  _2072_/CLK
+  _2073_/CLK
+  _2074_/CLK
+  _2075_/CLK
+  _2076_/CLK
+  _2077_/CLK
+  _2078_/CLK
+  _2079_/CLK
+  _2080_/CLK
+  _2081_/CLK
+  _2082_/CLK
+  _2083_/CLK
+  _2084_/CLK
+  _2085_/CLK
+  _2086_/CLK
+  _2087_/CLK
+  _2088_/CLK
+  _2089_/CLK
+  _2090_/CLK
+  _2091_/CLK
+  _2092_/CLK
+  _2093_/CLK
+  _2094_/CLK
+  _2095_/CLK
+  _2096_/CLK
+  _2097_/CLK
+  _2098_/CLK
+  _2099_/CLK
+  _2100_/CLK
+  _2101_/CLK
+  _2102_/CLK
+  _2103_/CLK
+  _2104_/CLK
+  _2105_/CLK
+  _2106_/CLK
+  _2107_/CLK
+  _2108_/CLK
+  _2109_/CLK
+  _2110_/CLK
+  _2111_/CLK
+  _2112_/CLK
+  _2113_/CLK
+  _2114_/CLK
+  _2115_/CLK
+  _2116_/CLK
+  _2117_/CLK
+  _2118_/CLK
+  _2119_/CLK
+  _2120_/CLK
+  _2121_/CLK
+  _2122_/CLK
+  _2123_/CLK
+  _2124_/CLK
+  _2125_/CLK
+  _2126_/CLK
+  _2127_/CLK
+  _2128_/CLK
+  _2129_/CLK
+  _2130_/CLK
+  _2131_/CLK
+  _2132_/CLK
+  _2133_/CLK
+  _2134_/CLK
+  _2135_/CLK
+  _2136_/CLK
+  _2137_/CLK
+  _2138_/CLK
+  _2139_/CLK
+  _2140_/CLK
+  _2141_/CLK
+  _2142_/CLK
+  _2143_/CLK
+  _2144_/CLK
+  _2145_/CLK
+  _2146_/CLK
+  _2147_/CLK
+  _2148_/CLK
+  _2149_/CLK
+  _2150_/CLK
+  _2151_/CLK
+  _2152_/CLK
+  _2153_/CLKN
+  _2154_/CLKN
+  _2155_/CLKN
+  _2156_/CLKN
+  _2157_/CLKN
+  _2158_/CLKN
+  _2159_/CLKN
+  _2160_/CLKN
+  _2161_/CLKN
+  _2162_/CLKN
+  _2163_/CLKN
+  _2164_/CLKN
+  _2165_/CLKN
+  _2166_/CLKN
+  _2167_/CLKN
+  _2168_/CLKN
+  _2169_/CLKN
+  _2170_/CLKN
+  _2171_/CLKN
+  _2172_/CLKN
+  _2173_/CLKN
+  _2174_/CLKN
+  _2175_/CLKN
+  _2176_/CLKN
+  _2177_/CLKN
+  _2178_/CLKN
+  _2179_/CLKN
+  _2180_/CLKN
+  _2181_/CLKN
+  _2182_/CLKN
+  _2183_/CLKN
+  _2184_/CLKN
+  _2185_/CLKN
+  _2186_/CLKN
+  _2187_/CLKN
+  _2188_/CLKN
+  _2189_/CLKN
+  _2190_/CLKN
+  _2191_/CLKN
+  _2192_/CLKN
+  _2193_/CLKN
+  _2194_/CLKN
+  _2195_/CLKN
+  _2196_/CLKN
+  _2197_/CLKN
+  _2198_/CLKN
+  _2199_/CLKN
+  _2200_/CLKN
+  _2201_/CLKN
+  _2202_/CLKN
+  _2203_/CLKN
+  _2204_/CLKN
+  _2205_/CLKN
+  _2206_/CLKN
+  _2207_/CLKN
+  _2208_/CLKN
+  _2209_/CLKN
+  _2210_/CLKN
+  _2211_/CLKN
+  _2212_/CLKN
+  _2213_/CLKN
+  _2214_/CLKN
+  _2215_/CLKN
+  _2216_/CLKN
+  _2217_/CLKN
+  _2218_/CLKN
+  _2219_/CLKN
+  _2220_/CLKN
+  _2221_/CLKN
+  _2222_/CLKN
+  _2223_/CLKN
+  _2224_/CLKN
+  _2225_/CLKN
+  _2226_/CLKN
+  _2227_/CLKN
+  _2228_/CLKN
+  _2229_/CLKN
+  _2230_/CLKN
+  _2231_/CLKN
+  _2232_/CLKN
+  _2233_/CLKN
+  _2234_/CLKN
+  _2235_/CLKN
+  _2236_/CLKN
+  _2237_/CLKN
+  _2238_/CLKN
+  _2239_/CLKN
+  _2240_/CLKN
+  _2241_/CLKN
+  _2242_/CLKN
+  _2243_/CLKN
+  _2244_/CLKN
+  _2245_/CLKN
+  _2246_/CLKN
+  _2247_/CLKN
+  _2248_/CLKN
+  _2249_/CLKN
+  _2250_/CLKN
+  _2251_/CLKN
+  _2252_/CLKN
+  _2253_/CLKN
+  _2254_/CLKN
+  _2255_/CLKN
+  _2256_/CLKN
+  _2257_/CLKN
+  _2258_/CLKN
+  _2259_/CLKN
+  _2260_/CLKN
+  _2261_/CLKN
+  _2262_/CLKN
+  _2263_/CLKN
+  _2264_/CLKN
+  _2265_/CLKN
+  _2266_/CLKN
+  _2267_/CLKN
+  _2268_/CLKN
+  _2269_/CLKN
+  _2270_/CLKN
+  _2271_/CLKN
+  _2272_/CLKN
+  _2273_/CLKN
+  _2274_/CLKN
+  _2275_/CLKN
+  _2276_/CLKN
+  _2277_/CLKN
+  _2278_/CLKN
+  _2279_/CLKN
+  _2280_/CLKN
+  _2281_/CLKN
+  _2282_/CLKN
+  _2283_/CLKN
+  _2284_/CLKN
+  _2285_/CLKN
+  _2286_/CLKN
+  _2287_/CLKN
+  _2288_/CLKN
+  _2289_/CLKN
+Warning: There are 232 unconstrained endpoints.
+  out_cic[0]
+  out_cic[10]
+  out_cic[11]
+  out_cic[1]
+  out_cic[2]
+  out_cic[3]
+  out_cic[4]
+  out_cic[5]
+  out_cic[6]
+  out_cic[7]
+  out_cic[8]
+  out_cic[9]
+  _2070_/D
+  _2071_/D
+  _2072_/D
+  _2073_/D
+  _2074_/D
+  _2075_/D
+  _2076_/D
+  _2077_/D
+  _2078_/D
+  _2079_/D
+  _2080_/D
+  _2081_/D
+  _2082_/D
+  _2083_/D
+  _2084_/D
+  _2085_/D
+  _2086_/D
+  _2087_/D
+  _2088_/D
+  _2089_/D
+  _2090_/D
+  _2091_/D
+  _2092_/D
+  _2093_/D
+  _2094_/D
+  _2095_/D
+  _2096_/D
+  _2097_/D
+  _2098_/D
+  _2099_/D
+  _2100_/D
+  _2101_/D
+  _2102_/D
+  _2103_/D
+  _2104_/D
+  _2105_/D
+  _2106_/D
+  _2107_/D
+  _2108_/D
+  _2109_/D
+  _2110_/D
+  _2111_/D
+  _2112_/D
+  _2113_/D
+  _2114_/D
+  _2115_/D
+  _2116_/D
+  _2117_/D
+  _2118_/D
+  _2119_/D
+  _2120_/D
+  _2121_/D
+  _2122_/D
+  _2123_/D
+  _2124_/D
+  _2125_/D
+  _2126_/D
+  _2127_/D
+  _2128_/D
+  _2129_/D
+  _2130_/D
+  _2131_/D
+  _2132_/D
+  _2133_/D
+  _2134_/D
+  _2135_/D
+  _2136_/D
+  _2137_/D
+  _2138_/D
+  _2139_/D
+  _2140_/D
+  _2141_/D
+  _2142_/D
+  _2143_/D
+  _2144_/D
+  _2145_/D
+  _2146_/D
+  _2147_/D
+  _2148_/D
+  _2149_/D
+  _2150_/D
+  _2151_/D
+  _2152_/D
+  _2153_/D
+  _2154_/D
+  _2155_/D
+  _2156_/D
+  _2157_/D
+  _2158_/D
+  _2159_/D
+  _2160_/D
+  _2161_/D
+  _2162_/D
+  _2163_/D
+  _2164_/D
+  _2165_/D
+  _2166_/D
+  _2167_/D
+  _2168_/D
+  _2169_/D
+  _2170_/D
+  _2171_/D
+  _2172_/D
+  _2173_/D
+  _2174_/D
+  _2175_/D
+  _2176_/D
+  _2177_/D
+  _2178_/D
+  _2179_/D
+  _2180_/D
+  _2181_/D
+  _2182_/D
+  _2183_/D
+  _2184_/D
+  _2185_/D
+  _2186_/D
+  _2187_/D
+  _2188_/D
+  _2189_/D
+  _2190_/D
+  _2191_/D
+  _2192_/D
+  _2193_/D
+  _2194_/D
+  _2195_/D
+  _2196_/D
+  _2197_/D
+  _2198_/D
+  _2199_/D
+  _2200_/D
+  _2201_/D
+  _2202_/D
+  _2203_/D
+  _2204_/D
+  _2205_/D
+  _2206_/D
+  _2207_/D
+  _2208_/D
+  _2209_/D
+  _2210_/D
+  _2211_/D
+  _2212_/D
+  _2213_/D
+  _2214_/D
+  _2215_/D
+  _2216_/D
+  _2217_/D
+  _2218_/D
+  _2219_/D
+  _2220_/D
+  _2221_/D
+  _2222_/D
+  _2223_/D
+  _2224_/D
+  _2225_/D
+  _2226_/D
+  _2227_/D
+  _2228_/D
+  _2229_/D
+  _2230_/D
+  _2231_/D
+  _2232_/D
+  _2233_/D
+  _2234_/D
+  _2235_/D
+  _2236_/D
+  _2237_/D
+  _2238_/D
+  _2239_/D
+  _2240_/D
+  _2241_/D
+  _2242_/D
+  _2243_/D
+  _2244_/D
+  _2245_/D
+  _2246_/D
+  _2247_/D
+  _2248_/D
+  _2249_/D
+  _2250_/D
+  _2251_/D
+  _2252_/D
+  _2253_/D
+  _2254_/D
+  _2255_/D
+  _2256_/D
+  _2257_/D
+  _2258_/D
+  _2259_/D
+  _2260_/D
+  _2261_/D
+  _2262_/D
+  _2263_/D
+  _2264_/D
+  _2265_/D
+  _2266_/D
+  _2267_/D
+  _2268_/D
+  _2269_/D
+  _2270_/D
+  _2271_/D
+  _2272_/D
+  _2273_/D
+  _2274_/D
+  _2275_/D
+  _2276_/D
+  _2277_/D
+  _2278_/D
+  _2279_/D
+  _2280_/D
+  _2281_/D
+  _2282_/D
+  _2283_/D
+  _2284_/D
+  _2285_/D
+  _2286_/D
+  _2287_/D
+  _2288_/D
+  _2289_/D
+Warning: There is 1 generated clock that is not connected to a clock source.
+  clk_div
+%OL_END_REPORT
+%OL_CREATE_REPORT power.rpt
+
+===========================================================================
+ report_power
+============================================================================
+======================= nom_tt_025C_5v00 Corner ===================================
+
+Group                    Internal    Switching      Leakage        Total
+                            Power        Power        Power        Power (Watts)
+------------------------------------------------------------------------
+Sequential           5.361758e-05 0.000000e+00 1.040189e-07 5.372160e-05  45.1%
+Combinational        4.334840e-05 2.177814e-05 1.255926e-07 6.525213e-05  54.8%
+Clock                0.000000e+00 0.000000e+00 7.520055e-08 7.520055e-08   0.1%
+Macro                0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+Pad                  0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+------------------------------------------------------------------------
+Total                9.696603e-05 2.177814e-05 3.048024e-07 1.190490e-04 100.0%
+                            81.5%        18.3%         0.3%
+Writing metric power__internal__total: 9.696603228803724e-5
+Writing metric power__switching__total: 2.1778141672257334e-5
+Writing metric power__leakage__total: 3.0480242685371195e-7
+Writing metric power__total: 0.00011904897837666795
+
+%OL_END_REPORT
+%OL_CREATE_REPORT skew.min.rpt
+
+===========================================================================
+Clock Skew (Hold)
+============================================================================
+Writing metric clock__skew__worst_hold__corner:nom_tt_025C_5v00: 0.0
+======================= nom_tt_025C_5v00 Corner ===================================
+
+Clock clk_div
+No launch/capture paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT skew.max.rpt
+
+===========================================================================
+Clock Skew (Setup)
+============================================================================
+Writing metric clock__skew__worst_setup__corner:nom_tt_025C_5v00: 0.0
+======================= nom_tt_025C_5v00 Corner ===================================
+
+Clock clk_div
+No launch/capture paths found.
+
+%OL_END_REPORT
+%OL_CREATE_REPORT ws.min.rpt
+
+===========================================================================
+Worst Slack (Hold)
+============================================================================
+Writing metric timing__hold__ws__corner:nom_tt_025C_5v00: 1.0000000433293989e+39
+nom_tt_025C_5v00: 1.0000000433293989e+39
+%OL_END_REPORT
+%OL_CREATE_REPORT ws.max.rpt
+
+===========================================================================
+Worst Slack (Setup)
+============================================================================
+Writing metric timing__setup__ws__corner:nom_tt_025C_5v00: 1.0000000433293989e+39
+nom_tt_025C_5v00: 1.0000000433293989e+39
+%OL_END_REPORT
+%OL_CREATE_REPORT tns.min.rpt
+
+===========================================================================
+Total Negative Slack (Hold)
+============================================================================
+Writing metric timing__hold__tns__corner:nom_tt_025C_5v00: 0.0
+nom_tt_025C_5v00: 0.0
+%OL_END_REPORT
+%OL_CREATE_REPORT tns.max.rpt
+
+===========================================================================
+Total Negative Slack (Setup)
+============================================================================
+Writing metric timing__setup__tns__corner:nom_tt_025C_5v00: 0.0
+nom_tt_025C_5v00: 0.0
+%OL_END_REPORT
+%OL_CREATE_REPORT wns.min.rpt
+
+===========================================================================
+Worst Negative Slack (Hold)
+============================================================================
+Writing metric timing__hold__wns__corner:nom_tt_025C_5v00: 0
+nom_tt_025C_5v00: 0
+%OL_END_REPORT
+%OL_CREATE_REPORT wns.max.rpt
+
+===========================================================================
+Worst Negative Slack (Setup)
+============================================================================
+Writing metric timing__setup__wns__corner:nom_tt_025C_5v00: 0.0
+nom_tt_025C_5v00: 0.0
+%OL_END_REPORT
+%OL_CREATE_REPORT violator_list.rpt
+
+===========================================================================
+Violator List
+============================================================================
+Writing metric timing__hold_vio__count__corner:nom_tt_025C_5v00: 0
+Writing metric timing__hold_r2r__ws__corner:nom_tt_025C_5v00: 1e30
+Writing metric timing__hold_r2r_vio__count__corner:nom_tt_025C_5v00: 0
+Writing metric timing__setup_vio__count__corner:nom_tt_025C_5v00: 0
+Writing metric timing__setup_r2r__ws__corner:nom_tt_025C_5v00: 1e30
+Writing metric timing__setup_r2r_vio__count__corner:nom_tt_025C_5v00: 0
+%OL_END_REPORT
+%OL_CREATE_REPORT unpropagated.rpt
+%OL_END_REPORT
+%OL_CREATE_REPORT clock.rpt
+Clock: clk_div
+Sources: clk 
+Generated: yes
+Virtual: yes
+Propagated: no
+Period: 0.000000
+
+===========================================================================
+report_clock_properties
+============================================================================
+Clock                   Period          Waveform
+----------------------------------------------------
+
+===========================================================================
+report_clock_latency
+============================================================================
+Clock clk_div
+rise -> rise
+    min     max
+0.000000 0.000000 source latency
+0.001173         network latency _2150_/CLK
+        0.013727 network latency _2071_/CLK
+---------------
+0.001173 0.013727 latency
+        0.012554 skew
+
+fall -> fall
+    min     max
+0.000000 0.000000 source latency
+0.001173         network latency _2150_/CLK
+        0.013727 network latency _2071_/CLK
+---------------
+0.001173 0.013727 latency
+        0.012554 skew
+
+
+
+===========================================================================
+report_clock_min_period
+============================================================================
+clk_div period_min = 0.00 fmax = inf
+%OL_END_REPORT

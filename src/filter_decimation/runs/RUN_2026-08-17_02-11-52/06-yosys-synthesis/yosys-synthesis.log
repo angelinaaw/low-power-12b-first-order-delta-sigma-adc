@@ -1,0 +1,1199 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)
+
+1. Executing Liberty frontend: /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib
+Imported 229 cell types from liberty file.
+[INFO] Using SDC file '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/06-yosys-synthesis/synthesis.abc.sdc' for ABC…wtaf
+
+2. Executing Verilog-2005 frontend: cic_filter/cic_filter.v
+Parsing SystemVerilog input from `cic_filter/cic_filter.v' to AST representation.
+Storing AST representation for module `$abstract\cic_filter'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: cascade_int/cascade_int.v
+Parsing SystemVerilog input from `cascade_int/cascade_int.v' to AST representation.
+Storing AST representation for module `$abstract\cascade_int'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: integrator/integrator.v
+Parsing SystemVerilog input from `integrator/integrator.v' to AST representation.
+Storing AST representation for module `$abstract\integrator'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: clock_div/clock_div.v
+Parsing SystemVerilog input from `clock_div/clock_div.v' to AST representation.
+Storing AST representation for module `$abstract\clock_div'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: cascade_diff/cascade_diff.v
+Parsing SystemVerilog input from `cascade_diff/cascade_diff.v' to AST representation.
+Storing AST representation for module `$abstract\cascade_diff'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: differentiator/differentiator.v
+Parsing SystemVerilog input from `differentiator/differentiator.v' to AST representation.
+Storing AST representation for module `$abstract\differentiator'.
+Successfully finished Verilog frontend.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+9. Executing AST frontend in derive mode using pre-parsed AST for module `\cic_filter'.
+Generating RTLIL representation for module `\cic_filter'.
+
+9.1. Analyzing design hierarchy..
+Top module:  \cic_filter
+
+9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\cascade_diff'.
+Generating RTLIL representation for module `\cascade_diff'.
+
+9.3. Executing AST frontend in derive mode using pre-parsed AST for module `\clock_div'.
+Generating RTLIL representation for module `\clock_div'.
+
+9.4. Executing AST frontend in derive mode using pre-parsed AST for module `\cascade_int'.
+Generating RTLIL representation for module `\cascade_int'.
+
+9.5. Analyzing design hierarchy..
+Top module:  \cic_filter
+Used module:     \cascade_diff
+Used module:     \clock_div
+Used module:     \cascade_int
+
+9.6. Executing AST frontend in derive mode using pre-parsed AST for module `\integrator'.
+Generating RTLIL representation for module `\integrator'.
+
+9.7. Executing AST frontend in derive mode using pre-parsed AST for module `\differentiator'.
+Generating RTLIL representation for module `\differentiator'.
+
+9.8. Analyzing design hierarchy..
+Top module:  \cic_filter
+Used module:     \cascade_diff
+Used module:         \differentiator
+Used module:     \clock_div
+Used module:     \cascade_int
+Used module:         \integrator
+
+9.9. Analyzing design hierarchy..
+Top module:  \cic_filter
+Used module:     \cascade_diff
+Used module:         \differentiator
+Used module:     \clock_div
+Used module:     \cascade_int
+Used module:         \integrator
+Removing unused module `$abstract\differentiator'.
+Removing unused module `$abstract\cascade_diff'.
+Removing unused module `$abstract\clock_div'.
+Removing unused module `$abstract\integrator'.
+Removing unused module `$abstract\cascade_int'.
+Removing unused module `$abstract\cic_filter'.
+Removed 6 unused modules.
+Renaming module cic_filter to cic_filter.
+
+10. Executing ATTRMAP pass (move or copy attributes).
+
+11. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1. Analyzing design hierarchy..
+Top module:  \cic_filter
+Used module:     \cascade_diff
+Used module:         \differentiator
+Used module:     \clock_div
+Used module:     \cascade_int
+Used module:         \integrator
+
+11.2. Analyzing design hierarchy..
+Top module:  \cic_filter
+Used module:     \cascade_diff
+Used module:         \differentiator
+Used module:     \clock_div
+Used module:     \cascade_int
+Used module:         \integrator
+Removed 0 unused modules.
+
+12. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+13. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$integrator/integrator.v:7$5 in module integrator.
+Marked 1 switch rules as full_case in process $proc$clock_div/clock_div.v:8$2 in module clock_div.
+Marked 1 switch rules as full_case in process $proc$differentiator/differentiator.v:8$8 in module differentiator.
+Removed a total of 0 dead cases.
+
+14. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 4 redundant assignments.
+Promoted 0 assignments to connections.
+
+15. Executing PROC_INIT pass (extract init attributes).
+
+16. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\integrator.$proc$integrator/integrator.v:7$5'.
+Found async reset \rst in `\clock_div.$proc$clock_div/clock_div.v:8$2'.
+Found async reset \rst in `\differentiator.$proc$differentiator/differentiator.v:8$8'.
+
+17. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+18. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\integrator.$proc$integrator/integrator.v:7$5'.
+     1/1: $0\out_int[24:0]
+Creating decoders for process `\clock_div.$proc$clock_div/clock_div.v:8$2'.
+     1/1: $0\counter[7:0]
+Creating decoders for process `\differentiator.$proc$differentiator/differentiator.v:8$8'.
+     1/2: $0\out_diff[24:0]
+     2/2: $0\in_min1[24:0]
+
+19. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+20. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\integrator.\out_int' using process `\integrator.$proc$integrator/integrator.v:7$5'.
+  created $adff cell `$procdff$15' with positive edge clock and positive level reset.
+Creating register for signal `\clock_div.\counter' using process `\clock_div.$proc$clock_div/clock_div.v:8$2'.
+  created $adff cell `$procdff$20' with positive edge clock and positive level reset.
+Creating register for signal `\differentiator.\out_diff' using process `\differentiator.$proc$differentiator/differentiator.v:8$8'.
+  created $adff cell `$procdff$25' with positive edge clock and positive level reset.
+Creating register for signal `\differentiator.\in_min1' using process `\differentiator.$proc$differentiator/differentiator.v:8$8'.
+  created $adff cell `$procdff$30' with positive edge clock and positive level reset.
+
+21. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+22. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `integrator.$proc$integrator/integrator.v:7$5'.
+Removing empty process `clock_div.$proc$clock_div/clock_div.v:8$2'.
+Removing empty process `differentiator.$proc$differentiator/differentiator.v:8$8'.
+Cleaned up 0 empty switches.
+
+23. Executing CHECK pass (checking for obvious problems).
+Checking module cic_filter...
+Checking module integrator...
+Checking module cascade_int...
+Checking module clock_div...
+Checking module cascade_diff...
+Checking module differentiator...
+Found and reported 0 problems.
+
+24. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+Optimizing module integrator.
+<suppressed ~2 debug messages>
+Optimizing module cascade_int.
+Optimizing module clock_div.
+<suppressed ~2 debug messages>
+Optimizing module cascade_diff.
+Optimizing module differentiator.
+<suppressed ~4 debug messages>
+
+25. Executing FLATTEN pass (flatten design).
+Deleting now unused module integrator.
+Deleting now unused module cascade_int.
+Deleting now unused module clock_div.
+Deleting now unused module cascade_diff.
+Deleting now unused module differentiator.
+<suppressed ~9 debug messages>
+
+26. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+<suppressed ~6 debug messages>
+
+27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+Removed 18 unused cells and 44 unused wires.
+<suppressed ~25 debug messages>
+
+28. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 26 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+30. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cic_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+31. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cic_filter.
+Performed a total of 0 changes.
+
+32. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 26 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+33. Executing OPT_DFF pass (perform DFF optimizations).
+
+34. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+35. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+36. Executing FSM pass (extract and optimize FSM).
+
+36.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+36.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+36.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+36.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+36.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+36.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+36.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+36.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+37. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+38. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 26 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+39. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cic_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+40. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cic_filter.
+Performed a total of 0 changes.
+
+41. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 26 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+42. Executing OPT_DFF pass (perform DFF optimizations).
+
+43. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+44. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+45. Executing WREDUCE pass (reducing word size of cells).
+Removed top 24 bits (of 25) from port B of cell cic_filter.$flatten\u_cas_int.\u_int1.$add$integrator/integrator.v:11$7 ($add).
+
+46. Executing PEEPOPT pass (run peephole optimizers).
+
+47. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+48. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module cic_filter:
+  creating $macc model for $flatten\u_cas_diff.\u_diff1.$sub$differentiator/differentiator.v:14$10 ($sub).
+  creating $macc model for $flatten\u_cas_diff.\u_diff2.$sub$differentiator/differentiator.v:14$10 ($sub).
+  creating $macc model for $flatten\u_cas_diff.\u_diff3.$sub$differentiator/differentiator.v:14$10 ($sub).
+  creating $macc model for $flatten\u_cas_int.\u_int1.$add$integrator/integrator.v:11$7 ($add).
+  creating $macc model for $flatten\u_cas_int.\u_int2.$add$integrator/integrator.v:11$7 ($add).
+  creating $macc model for $flatten\u_cas_int.\u_int3.$add$integrator/integrator.v:11$7 ($add).
+  creating $macc model for $flatten\u_clock_div.$add$clock_div/clock_div.v:12$4 ($add).
+  creating $alu model for $macc $flatten\u_clock_div.$add$clock_div/clock_div.v:12$4.
+  creating $alu model for $macc $flatten\u_cas_int.\u_int3.$add$integrator/integrator.v:11$7.
+  creating $alu model for $macc $flatten\u_cas_int.\u_int2.$add$integrator/integrator.v:11$7.
+  creating $alu model for $macc $flatten\u_cas_int.\u_int1.$add$integrator/integrator.v:11$7.
+  creating $alu model for $macc $flatten\u_cas_diff.\u_diff3.$sub$differentiator/differentiator.v:14$10.
+  creating $alu model for $macc $flatten\u_cas_diff.\u_diff2.$sub$differentiator/differentiator.v:14$10.
+  creating $alu model for $macc $flatten\u_cas_diff.\u_diff1.$sub$differentiator/differentiator.v:14$10.
+  creating $alu cell for $flatten\u_cas_diff.\u_diff1.$sub$differentiator/differentiator.v:14$10: $auto$alumacc.cc:512:replace_alu$40
+  creating $alu cell for $flatten\u_cas_diff.\u_diff2.$sub$differentiator/differentiator.v:14$10: $auto$alumacc.cc:512:replace_alu$43
+  creating $alu cell for $flatten\u_cas_diff.\u_diff3.$sub$differentiator/differentiator.v:14$10: $auto$alumacc.cc:512:replace_alu$46
+  creating $alu cell for $flatten\u_cas_int.\u_int1.$add$integrator/integrator.v:11$7: $auto$alumacc.cc:512:replace_alu$49
+  creating $alu cell for $flatten\u_cas_int.\u_int2.$add$integrator/integrator.v:11$7: $auto$alumacc.cc:512:replace_alu$52
+  creating $alu cell for $flatten\u_cas_int.\u_int3.$add$integrator/integrator.v:11$7: $auto$alumacc.cc:512:replace_alu$55
+  creating $alu cell for $flatten\u_clock_div.$add$clock_div/clock_div.v:12$4: $auto$alumacc.cc:512:replace_alu$58
+  created 7 $alu and 0 $macc cells.
+
+49. Executing SHARE pass (SAT-based resource sharing).
+
+50. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+51. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 26 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+52. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cic_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+53. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cic_filter.
+Performed a total of 0 changes.
+
+54. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 26 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+55. Executing OPT_DFF pass (perform DFF optimizations).
+
+56. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+57. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+58. Executing MEMORY pass.
+
+58.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+58.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+58.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+58.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+58.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+58.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+58.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+58.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+58.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+58.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+59. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+60. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+61. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 26 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+62. Executing OPT_DFF pass (perform DFF optimizations).
+
+63. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+64. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+65. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+66. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 26 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+67. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cic_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+68. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cic_filter.
+Performed a total of 0 changes.
+
+69. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 26 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+70. Executing OPT_SHARE pass.
+
+71. Executing OPT_DFF pass (perform DFF optimizations).
+
+72. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+73. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+74. Executing TECHMAP pass (map to technology primitives).
+
+74.1. Executing Verilog-2005 frontend: /foss/tools/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/foss/tools/yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+74.2. Continuing TECHMAP pass.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_90_alu for cells of type $alu.
+Using template $paramod$4868d58a04723871777326409a611fa912defcd8\_90_alu for cells of type $alu.
+Using template $paramod$c6885379b74fbbf6906b35106e386e521d86cbb2\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011001 for cells of type $lcu.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+No more expansions possible.
+<suppressed ~1156 debug messages>
+
+75. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+<suppressed ~796 debug messages>
+
+76. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 1373 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Computing hashes of 1347 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+<suppressed ~78 debug messages>
+Removed a total of 26 cells.
+
+77. Executing OPT_DFF pass (perform DFF optimizations).
+
+78. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+Removed 116 unused cells and 365 unused wires.
+<suppressed ~117 debug messages>
+
+79. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+80. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 1231 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+81. Executing OPT_DFF pass (perform DFF optimizations).
+
+82. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+83. Executing ABC pass (technology mapping using ABC).
+
+83.1. Extracting gate netlist of module `\cic_filter' to `<abc-temp-dir>/input.blif'..
+
+83.1.1. Executed ABC.
+Extracted 1002 gates and 1211 wires to a netlist network with 209 inputs and 145 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Apr 16 2026 21:01:18)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+83.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       39
+ABC RESULTS:            ANDNOT cells:      238
+ABC RESULTS:              NAND cells:       39
+ABC RESULTS:               NOR cells:      117
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:      174
+ABC RESULTS:             ORNOT cells:       49
+ABC RESULTS:              XNOR cells:       73
+ABC RESULTS:               XOR cells:      191
+ABC RESULTS:        internal signals:      857
+ABC RESULTS:           input signals:      209
+ABC RESULTS:          output signals:      145
+Removing temp directory.
+Removing global temp directory.
+
+84. Executing OPT pass (performing simple optimizations).
+
+84.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+84.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 1150 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+84.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+84.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+Removed 0 unused cells and 770 unused wires.
+<suppressed ~1 debug messages>
+
+84.5. Finished fast OPT passes.
+
+85. Executing HIERARCHY pass (managing design hierarchy).
+
+85.1. Analyzing design hierarchy..
+Top module:  \cic_filter
+
+85.2. Analyzing design hierarchy..
+Top module:  \cic_filter
+Removed 0 unused modules.
+
+86. Executing CHECK pass (checking for obvious problems).
+Checking module cic_filter...
+Found and reported 0 problems.
+
+87. Printing statistics.
+
+=== cic_filter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      834 wires
+     1754 wire bits
+       47 public wires
+      737 public wire bits
+        4 ports
+       15 port bits
+     1150 cells
+      238   $_ANDNOT_
+       39   $_AND_
+      137   $_DFF_NN0_
+       83   $_DFF_PN0_
+       39   $_NAND_
+      117   $_NOR_
+        1   $_NOT_
+       49   $_ORNOT_
+      174   $_OR_
+       73   $_XNOR_
+      191   $_XOR_
+        9   $scopeinfo
+
+88. Executing OPT pass (performing simple optimizations).
+
+88.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+88.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 1150 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+88.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cic_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+88.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cic_filter.
+Performed a total of 0 changes.
+
+88.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cic_filter'.
+Computing hashes of 1150 cells of `\cic_filter'.
+Finding duplicate cells in `\cic_filter'.
+Removed a total of 0 cells.
+
+88.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+88.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+
+88.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cic_filter.
+
+88.9. Finished fast OPT passes. (There is nothing left to do.)
+
+89. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+Removed 9 unused cells and 34 unused wires.
+<suppressed ~43 debug messages>
+{
+   "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/tmp/101cb8f70316420fb77e764d4ee64c39.lib ",
+   "modules": {
+      "\\cic_filter": {
+         "num_wires":         800,
+         "num_wire_bits":     1240,
+         "num_pub_wires":     13,
+         "num_pub_wire_bits": 223,
+         "num_ports":         4,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1141,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 238,
+            "$_AND_": 39,
+            "$_DFF_NN0_": 137,
+            "$_DFF_PN0_": 83,
+            "$_NAND_": 39,
+            "$_NOR_": 117,
+            "$_NOT_": 1,
+            "$_ORNOT_": 49,
+            "$_OR_": 174,
+            "$_XNOR_": 73,
+            "$_XOR_": 191
+         }
+      }
+   },
+      "design": {
+         "num_wires":         800,
+         "num_wire_bits":     1240,
+         "num_pub_wires":     13,
+         "num_pub_wire_bits": 223,
+         "num_ports":         4,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1141,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 238,
+            "$_AND_": 39,
+            "$_DFF_NN0_": 137,
+            "$_DFF_PN0_": 83,
+            "$_NAND_": 39,
+            "$_NOR_": 117,
+            "$_NOT_": 1,
+            "$_ORNOT_": 49,
+            "$_OR_": 174,
+            "$_XNOR_": 73,
+            "$_XOR_": 191
+         }
+      }
+}
+
+90. Printing statistics.
+
+=== cic_filter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      800 wires
+     1240 wire bits
+       13 public wires
+      223 public wire bits
+        4 ports
+       15 port bits
+     1141 cells
+      238   $_ANDNOT_
+       39   $_AND_
+      137   $_DFF_NN0_
+       83   $_DFF_PN0_
+       39   $_NAND_
+      117   $_NOR_
+        1   $_NOT_
+       49   $_ORNOT_
+      174   $_OR_
+       73   $_XNOR_
+      191   $_XOR_
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_DFF_NN0_ is unknown!
+   Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
+91. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnq_1 (noninv, pins=3, area=65.86) is a direct match for cell type $_DFF_N_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffq_1 (noninv, pins=3, area=63.66) is a direct match for cell type $_DFF_P_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1 (noninv, pins=4, area=74.64) is a direct match for cell type $_DFF_NN0_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1 (noninv, pins=4, area=79.03) is a direct match for cell type $_DFF_NN1_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 (noninv, pins=4, area=74.64) is a direct match for cell type $_DFF_PN0_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 (noninv, pins=4, area=79.03) is a direct match for cell type $_DFF_PN1_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1 (noninv, pins=5, area=94.39) is a direct match for cell type $_DFFSR_NNN_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1 (noninv, pins=5, area=85.61) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    \gf180mcu_fd_sc_mcu7t5v0__dffnq_1 _DFF_N_ (.CLKN( C), .D( D), .Q( Q));
+    \gf180mcu_fd_sc_mcu7t5v0__dffq_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1 _DFF_NN0_ (.CLKN( C), .D( D), .Q( Q), .RN( R));
+    \gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1 _DFF_NN1_ (.CLKN( C), .D( D), .Q( Q), .SETN( R));
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RN( R));
+    \gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SETN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    \gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1 _DFFSR_NNN_ (.CLKN( C), .D( D), .Q( Q), .RN( R), .SETN( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .RN( R), .SETN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+91.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\cic_filter':
+  mapped 137 $_DFF_NN0_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1 cells.
+  mapped 83 $_DFF_PN0_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 cells.
+{
+   "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/tmp/101cb8f70316420fb77e764d4ee64c39.lib ",
+   "modules": {
+      "\\cic_filter": {
+         "num_wires":         800,
+         "num_wire_bits":     1240,
+         "num_pub_wires":     13,
+         "num_pub_wire_bits": 223,
+         "num_ports":         4,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1141,
+         "num_submodules":       0,
+         "area":              16420.096000,
+         "sequential_area":    16420.096000,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 238,
+            "$_AND_": 39,
+            "$_NAND_": 39,
+            "$_NOR_": 117,
+            "$_NOT_": 1,
+            "$_ORNOT_": 49,
+            "$_OR_": 174,
+            "$_XNOR_": 73,
+            "$_XOR_": 191,
+            "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1": 137,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 83
+         }
+      }
+   },
+      "design": {
+         "num_wires":         800,
+         "num_wire_bits":     1240,
+         "num_pub_wires":     13,
+         "num_pub_wire_bits": 223,
+         "num_ports":         4,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1141,
+         "num_submodules":       0,
+         "area":              16420.096000,
+         "sequential_area":    16420.096000,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 238,
+            "$_AND_": 39,
+            "$_NAND_": 39,
+            "$_NOR_": 117,
+            "$_NOT_": 1,
+            "$_ORNOT_": 49,
+            "$_OR_": 174,
+            "$_XNOR_": 73,
+            "$_XOR_": 191,
+            "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1": 137,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 83
+         }
+      }
+}
+
+92. Printing statistics.
+
+=== cic_filter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      800        - wires
+     1240        - wire bits
+       13        - public wires
+      223        - public wire bits
+        4        - ports
+       15        - port bits
+     1141 1.64E+04 cells
+      238        -   $_ANDNOT_
+       39        -   $_AND_
+       39        -   $_NAND_
+      117        -   $_NOR_
+        1        -   $_NOT_
+       49        -   $_ORNOT_
+      174        -   $_OR_
+       73        -   $_XNOR_
+      191        -   $_XOR_
+      137 1.02E+04   gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1
+       83 6.19E+03   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
+   Chip area for module '\cic_filter': 16420.096000
+     of which used for sequential elements: 16420.096000 (100.00%)
+
+[INFO] Using generated ABC script '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/06-yosys-synthesis/DELAY_1.abc'…
+
+93. Executing ABC pass (technology mapping using ABC).
+
+93.1. Extracting gate netlist of module `\cic_filter' to `/tmp/yosys-abc-ci4VZi/input.blif'..
+
+93.1.1. Executed ABC.
+Extracted 921 gates and 1130 wires to a netlist network with 209 inputs and 145 outputs.
+Running ABC script: /tmp/yosys-abc-ci4VZi/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Apr 16 2026 21:01:18)
+ABC: abc 01> empty
+ABC: abc 01> source /tmp/yosys-abc-ci4VZi/abc.script
+ABC: + read_blif /tmp/yosys-abc-ci4VZi/input.blif 
+ABC: + read_lib -w /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/tmp/101cb8f70316420fb77e764d4ee64c39.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.08 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__antenna" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__endcap" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__filltie" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__hold".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_4".
+ABC: Library "gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00" from "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/tmp/101cb8f70316420fb77e764d4ee64c39.lib" has 143 cells (72 skipped: 36 seq; 15 tri-state; 21 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.14 sec
+ABC: Memory =   23.83 MB. Time =     0.14 sec
+ABC: Warning: Detected 6 multi-output cells (for example, "gf180mcu_fd_sc_mcu7t5v0__addf_1").
+ABC: + read_constr -v /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "gf180mcu_fd_sc_mcu7t5v0__inv_1/ZN".
+ABC: Setting output load to be 72.910004.
+ABC: + source /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/06-yosys-synthesis/DELAY_1.abc 
+ABC: Error: The network is combinational.
+ABC: The cell areas are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.20).
+ABC: Cannot find the default PI driving cell (gf180mcu_fd_sc_mcu7t5v0__inv_1/ZN) in the library.
+ABC: WireLoad = "none"  Gates =   1035 ( 12.2 %)   Cap = 17.9 ff (  9.3 %)   Area =    18422.12 ( 84.6 %)   Delay =  5630.14 ps  (  1.2 %)               
+ABC: Path  0 --      82 : 0    4 pi                               A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  19.1 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     839 : 4    5 gf180mcu_fd_sc_mcu7t5v0__and4_1  A =  24.15  Df = 685.2 -223.2 ps  S = 483.5 ps  Cin =  3.0 ff  Cout =  23.1 ff  Cmax = 238.3 ff  G =  779  
+ABC: Path  2 --     846 : 4    2 gf180mcu_fd_sc_mcu7t5v0__nand4_1 A =  19.76  Df = 991.7 -133.6 ps  S = 521.4 ps  Cin =  4.0 ff  Cout =  11.5 ff  Cmax = 143.5 ff  G =  289  
+ABC: Path  3 --     850 : 3    8 gf180mcu_fd_sc_mcu7t5v0__nor3_1  A =  17.56  Df =2069.1 -659.1 ps  S =1745.3 ps  Cin =  4.1 ff  Cout =  35.1 ff  Cmax =  84.3 ff  G =  855  
+ABC: Path  4 --     871 : 4    6 gf180mcu_fd_sc_mcu7t5v0__and4_1  A =  24.15  Df =2943.7 -889.2 ps  S = 572.5 ps  Cin =  3.0 ff  Cout =  27.8 ff  Cmax = 238.3 ff  G =  939  
+ABC: Path  5 --     881 : 4    5 gf180mcu_fd_sc_mcu7t5v0__and4_1  A =  24.15  Df =3647.1-1050.1 ps  S = 491.6 ps  Cin =  3.0 ff  Cout =  23.5 ff  Cmax = 238.3 ff  G =  795  
+ABC: Path  6 --     885 : 3    3 gf180mcu_fd_sc_mcu7t5v0__and3_1  A =  21.95  Df =4171.3-1080.0 ps  S = 360.7 ps  Cin =  2.8 ff  Cout =  16.5 ff  Cmax = 237.8 ff  G =  591  
+ABC: Path  7 --     889 : 3    1 gf180mcu_fd_sc_mcu7t5v0__aoi21_1 A =  17.56  Df =4294.4 -949.5 ps  S = 330.5 ps  Cin =  4.6 ff  Cout =   4.5 ff  Cmax = 124.2 ff  G =   98  
+ABC: Path  8 --     892 : 2    1 gf180mcu_fd_sc_mcu7t5v0__nor2_1  A =  13.17  Df =5630.1 -766.4 ps  S =2308.6 ps  Cin =  4.4 ff  Cout =  72.9 ff  Cmax = 125.1 ff  G = 1671  
+ABC: Start-point = pi81 (\in_cic).  End-point = po74 ($auto$alumacc.cc:512:replace_alu$49.Y [23]).
+ABC: netlist                       : i/o =  209/  145  lat =    0  nd =  1035  edge =   2506  area =8574.03  delay =2910.16  lev = 11
+ABC: + write_blif /tmp/yosys-abc-ci4VZi/output.blif 
+ABC:                                                                                
+ABC: YOSYS_ABC_DONE 
+
+93.1.2. Re-integrating ABC results.
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and2_1 cells:       38
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and3_1 cells:        9
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and4_1 cells:       27
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi211_1 cells:       13
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi21_1 cells:       99
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi221_1 cells:        4
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi22_1 cells:       20
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__clkinv_1 cells:      126
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand2_1 cells:      225
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand3_1 cells:       29
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand4_1 cells:       31
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor2_1 cells:       87
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor3_1 cells:       10
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor4_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai211_1 cells:       26
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai21_1 cells:       63
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai221_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai22_1 cells:       17
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai31_1 cells:        5
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or2_1 cells:       39
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or3_1 cells:        4
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xnor2_1 cells:       26
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xnor3_1 cells:        4
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xor2_1 cells:       86
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xor3_1 cells:       43
+ABC RESULTS:        internal signals:      776
+ABC RESULTS:           input signals:      209
+ABC RESULTS:          output signals:      145
+Removing temp directory.
+Removing global temp directory.
+
+94. Executing SETUNDEF pass (replace undef values with defined constants).
+
+95. Executing HILOMAP pass (mapping to constant drivers).
+
+96. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+97. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cic_filter..
+Removed 0 unused cells and 1226 unused wires.
+<suppressed ~1 debug messages>
+
+98. Executing INSBUF pass (insert buffer cells for connected wires).
+
+99. Executing CHECK pass (checking for obvious problems).
+Checking module cic_filter...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/tmp/101cb8f70316420fb77e764d4ee64c39.lib ",
+   "modules": {
+      "\\cic_filter": {
+         "num_wires":         1247,
+         "num_wire_bits":     1258,
+         "num_pub_wires":     212,
+         "num_pub_wire_bits": 223,
+         "num_ports":         4,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1255,
+         "num_submodules":       0,
+         "area":              34842.214400,
+         "sequential_area":    16420.096000,
+         "num_cells_by_type": {
+            "gf180mcu_fd_sc_mcu7t5v0__and2_1": 38,
+            "gf180mcu_fd_sc_mcu7t5v0__and3_1": 9,
+            "gf180mcu_fd_sc_mcu7t5v0__and4_1": 27,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi211_1": 13,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi21_1": 99,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi221_1": 4,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi22_1": 20,
+            "gf180mcu_fd_sc_mcu7t5v0__clkinv_1": 126,
+            "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1": 137,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 83,
+            "gf180mcu_fd_sc_mcu7t5v0__nand2_1": 225,
+            "gf180mcu_fd_sc_mcu7t5v0__nand3_1": 29,
+            "gf180mcu_fd_sc_mcu7t5v0__nand4_1": 31,
+            "gf180mcu_fd_sc_mcu7t5v0__nor2_1": 87,
+            "gf180mcu_fd_sc_mcu7t5v0__nor3_1": 10,
+            "gf180mcu_fd_sc_mcu7t5v0__nor4_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__oai211_1": 26,
+            "gf180mcu_fd_sc_mcu7t5v0__oai21_1": 63,
+            "gf180mcu_fd_sc_mcu7t5v0__oai221_1": 3,
+            "gf180mcu_fd_sc_mcu7t5v0__oai22_1": 17,
+            "gf180mcu_fd_sc_mcu7t5v0__oai31_1": 5,
+            "gf180mcu_fd_sc_mcu7t5v0__or2_1": 39,
+            "gf180mcu_fd_sc_mcu7t5v0__or3_1": 4,
+            "gf180mcu_fd_sc_mcu7t5v0__xnor2_1": 26,
+            "gf180mcu_fd_sc_mcu7t5v0__xnor3_1": 4,
+            "gf180mcu_fd_sc_mcu7t5v0__xor2_1": 86,
+            "gf180mcu_fd_sc_mcu7t5v0__xor3_1": 43
+         }
+      }
+   },
+      "design": {
+         "num_wires":         1247,
+         "num_wire_bits":     1258,
+         "num_pub_wires":     212,
+         "num_pub_wire_bits": 223,
+         "num_ports":         4,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1255,
+         "num_submodules":       0,
+         "area":              34842.214400,
+         "sequential_area":    16420.096000,
+         "num_cells_by_type": {
+            "gf180mcu_fd_sc_mcu7t5v0__and2_1": 38,
+            "gf180mcu_fd_sc_mcu7t5v0__and3_1": 9,
+            "gf180mcu_fd_sc_mcu7t5v0__and4_1": 27,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi211_1": 13,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi21_1": 99,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi221_1": 4,
+            "gf180mcu_fd_sc_mcu7t5v0__aoi22_1": 20,
+            "gf180mcu_fd_sc_mcu7t5v0__clkinv_1": 126,
+            "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1": 137,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 83,
+            "gf180mcu_fd_sc_mcu7t5v0__nand2_1": 225,
+            "gf180mcu_fd_sc_mcu7t5v0__nand3_1": 29,
+            "gf180mcu_fd_sc_mcu7t5v0__nand4_1": 31,
+            "gf180mcu_fd_sc_mcu7t5v0__nor2_1": 87,
+            "gf180mcu_fd_sc_mcu7t5v0__nor3_1": 10,
+            "gf180mcu_fd_sc_mcu7t5v0__nor4_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__oai211_1": 26,
+            "gf180mcu_fd_sc_mcu7t5v0__oai21_1": 63,
+            "gf180mcu_fd_sc_mcu7t5v0__oai221_1": 3,
+            "gf180mcu_fd_sc_mcu7t5v0__oai22_1": 17,
+            "gf180mcu_fd_sc_mcu7t5v0__oai31_1": 5,
+            "gf180mcu_fd_sc_mcu7t5v0__or2_1": 39,
+            "gf180mcu_fd_sc_mcu7t5v0__or3_1": 4,
+            "gf180mcu_fd_sc_mcu7t5v0__xnor2_1": 26,
+            "gf180mcu_fd_sc_mcu7t5v0__xnor3_1": 4,
+            "gf180mcu_fd_sc_mcu7t5v0__xor2_1": 86,
+            "gf180mcu_fd_sc_mcu7t5v0__xor3_1": 43
+         }
+      }
+}
+
+100. Printing statistics.
+
+=== cic_filter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     1247        - wires
+     1258        - wire bits
+      212        - public wires
+      223        - public wire bits
+        4        - ports
+       15        - port bits
+     1255 3.48E+04 cells
+       38  667.341   gf180mcu_fd_sc_mcu7t5v0__and2_1
+        9  197.568   gf180mcu_fd_sc_mcu7t5v0__and3_1
+       27  651.974   gf180mcu_fd_sc_mcu7t5v0__and4_1
+       13  285.376   gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+       99 1.74E+03   gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+        4   96.589   gf180mcu_fd_sc_mcu7t5v0__aoi221_1
+       20  395.136   gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+      126 1.11E+03   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+      137 1.02E+04   gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1
+       83 6.19E+03   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+      225   2469.6   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+       29  445.626   gf180mcu_fd_sc_mcu7t5v0__nand3_1
+       31  612.461   gf180mcu_fd_sc_mcu7t5v0__nand4_1
+       87 1.15E+03   gf180mcu_fd_sc_mcu7t5v0__nor2_1
+       10  175.616   gf180mcu_fd_sc_mcu7t5v0__nor3_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__nor4_1
+       26  570.752   gf180mcu_fd_sc_mcu7t5v0__oai211_1
+       63 1.11E+03   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+        3   79.027   gf180mcu_fd_sc_mcu7t5v0__oai221_1
+       17  373.184   gf180mcu_fd_sc_mcu7t5v0__oai22_1
+        5  120.736   gf180mcu_fd_sc_mcu7t5v0__oai31_1
+       39  684.902   gf180mcu_fd_sc_mcu7t5v0__or2_1
+        4   87.808   gf180mcu_fd_sc_mcu7t5v0__or3_1
+       26  741.978   gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+        4  210.739   gf180mcu_fd_sc_mcu7t5v0__xnor3_1
+       86 2.27E+03   gf180mcu_fd_sc_mcu7t5v0__xor2_1
+       43 2.17E+03   gf180mcu_fd_sc_mcu7t5v0__xor3_1
+
+   Chip area for module '\cic_filter': 34842.214400
+     of which used for sequential elements: 16420.096000 (47.13%)
+
+101. Executing Verilog backend.
+Dumping module `\cic_filter'.
+
+102. Executing JSON backend.
