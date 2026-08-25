@@ -1,0 +1,7 @@
+set circuit1 [readnet spice /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/68-magic-spiceextraction/cic_filter.spice]
+set circuit2 [readnet verilog /dev/null]
+puts "Reading SPICE netlist file '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice'..."
+readnet spice /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice $circuit2
+puts "Reading Verilog netlist file '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/52-openroad-fillinsertion/cic_filter.pnl.v'..."
+readnet verilog /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/52-openroad-fillinsertion/cic_filter.pnl.v $circuit2
+lvs "$circuit1 cic_filter" "$circuit2 cic_filter" /usr/local/lib/python3.12/dist-packages/librelane/scripts/netgen/setup.tcl /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-17_02-11-52/70-netgen-lvs/reports/lvs.netgen.rpt -blackbox -json

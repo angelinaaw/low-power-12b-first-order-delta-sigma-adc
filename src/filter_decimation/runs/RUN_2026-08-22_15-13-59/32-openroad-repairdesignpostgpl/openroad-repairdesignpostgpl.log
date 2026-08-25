@@ -1,0 +1,205 @@
+Reading timing models for corner max_ff_n40C_5v50…
+Reading timing library for the 'max_ff_n40C_5v50' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+Reading timing models for corner max_tt_025C_5v00…
+Reading timing library for the 'max_tt_025C_5v00' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading timing models for corner nom_ff_n40C_5v50…
+Reading timing library for the 'nom_ff_n40C_5v50' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner min_ss_125C_4v50…
+Reading timing library for the 'min_ss_125C_4v50' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+Reading timing models for corner min_ff_n40C_5v50…
+Reading timing library for the 'min_ff_n40C_5v50' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner min_tt_025C_5v00…
+Reading timing library for the 'min_tt_025C_5v00' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner max_ss_125C_4v50…
+Reading timing library for the 'max_ss_125C_4v50' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading timing models for corner nom_ss_125C_4v50…
+Reading timing library for the 'nom_ss_125C_4v50' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading OpenROAD database at '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/28-openroad-globalplacement/cic_filter.odb'…
+Reading design constraints file at 'constraint.sdc'…
+[WARNING STA-0345] resistance scale 1e+03 does not match library scale 1e+00.
+[WARNING STA-0351] clock 'clk' not found.
+[WARNING STA-0138] clock arg 'clk' clock not found.
+[WARNING STA-0138] clock arg 'clk' clock not found.
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+[INFO RSZ-0027] Inserted 2 gf180mcu_fd_sc_mcu7t5v0__dlyb_1 input buffers.
+[INFO RSZ-0028] Inserted 12 gf180mcu_fd_sc_mcu7t5v0__dlyb_1 output buffers.
++ repair_design -verbose -max_wire_length 0 -slew_margin 20 -cap_margin 20
+[WARNING STA-1060] no master clock found for generated clock clk_div.
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |      1272
+       10 |     +0.0% |       0 |       0 |             0 |      1262
+       20 |     +0.0% |       0 |       0 |             0 |      1252
+       30 |     +0.0% |       0 |       0 |             0 |      1242
+       40 |     +0.0% |       0 |       0 |             0 |      1232
+       50 |     +0.0% |       0 |       0 |             0 |      1222
+       60 |     +0.0% |       0 |       0 |             0 |      1212
+       70 |     +0.0% |       0 |       0 |             0 |      1202
+       80 |     +0.0% |       0 |       0 |             0 |      1192
+       90 |     +0.0% |       0 |       0 |             0 |      1182
+      100 |     +0.0% |       0 |       0 |             0 |      1172
+      110 |     +0.0% |       0 |       0 |             0 |      1162
+      120 |     +0.0% |       0 |       0 |             0 |      1152
+      130 |     +0.0% |       0 |       0 |             0 |      1142
+      140 |     +0.0% |       0 |       0 |             0 |      1132
+      150 |     +0.0% |       0 |       0 |             0 |      1122
+      160 |     +0.0% |       0 |       0 |             0 |      1112
+      170 |     +0.0% |       0 |       0 |             0 |      1102
+      180 |     +0.0% |       0 |       0 |             0 |      1092
+      190 |     +0.0% |       0 |       0 |             0 |      1082
+      200 |     +0.0% |       0 |       0 |             0 |      1072
+      210 |     +0.0% |       0 |       0 |             0 |      1062
+      220 |     +0.0% |       0 |       0 |             0 |      1052
+      230 |     +0.0% |       0 |       0 |             0 |      1042
+      240 |     +0.0% |       0 |       0 |             0 |      1032
+      250 |     +0.0% |       0 |       0 |             0 |      1022
+      260 |     +0.0% |       0 |       0 |             0 |      1012
+      270 |     +0.0% |       0 |       0 |             0 |      1002
+      280 |     +0.0% |       0 |       0 |             0 |       992
+      290 |     +0.0% |       0 |       0 |             0 |       982
+      300 |     +0.0% |       0 |       0 |             0 |       972
+      310 |     +0.0% |       0 |       0 |             0 |       962
+      320 |     +0.0% |       0 |       0 |             0 |       952
+      330 |     +0.0% |       0 |       0 |             0 |       942
+      340 |     +0.0% |       0 |       0 |             0 |       932
+      350 |     +0.0% |       0 |       0 |             0 |       922
+      360 |     +0.0% |       0 |       0 |             0 |       912
+      370 |     +0.0% |       0 |       0 |             0 |       902
+      380 |     +0.0% |       0 |       0 |             0 |       892
+      390 |     +0.0% |       0 |       0 |             0 |       882
+      400 |     +0.0% |       0 |       0 |             0 |       872
+      410 |     +0.0% |       0 |       0 |             0 |       862
+      420 |     +0.0% |       0 |       0 |             0 |       852
+      430 |     +0.0% |       0 |       0 |             0 |       842
+      440 |     +0.0% |       0 |       0 |             0 |       832
+      450 |     +0.0% |       0 |       0 |             0 |       822
+      460 |     +0.0% |       0 |       0 |             0 |       812
+      470 |     +0.0% |       0 |       0 |             0 |       802
+      480 |     +0.0% |       0 |       0 |             0 |       792
+      490 |     +0.0% |       0 |       0 |             0 |       782
+      500 |     +0.0% |       0 |       0 |             0 |       772
+      510 |     +0.0% |       0 |       0 |             0 |       762
+      520 |     +0.0% |       0 |       0 |             0 |       752
+      530 |     +0.0% |       0 |       0 |             0 |       742
+      540 |     +0.0% |       0 |       0 |             0 |       732
+      550 |     +0.0% |       0 |       0 |             0 |       722
+      560 |     +0.0% |       0 |       0 |             0 |       712
+      570 |     +0.0% |       0 |       0 |             0 |       702
+      580 |     +0.0% |       0 |       0 |             0 |       692
+      590 |     +0.0% |       0 |       0 |             0 |       682
+      600 |     +0.0% |       0 |       0 |             0 |       672
+      610 |     +0.0% |       0 |       0 |             0 |       662
+      620 |     +0.0% |       0 |       0 |             0 |       652
+      630 |     +0.0% |       0 |       0 |             0 |       642
+      640 |     +0.0% |       0 |       0 |             0 |       632
+      650 |     +0.0% |       0 |       0 |             0 |       622
+      660 |     +0.0% |       0 |       0 |             0 |       612
+      670 |     +0.0% |       0 |       0 |             0 |       602
+      680 |     +0.0% |       0 |       0 |             0 |       592
+      690 |     +0.0% |       0 |       0 |             0 |       582
+      700 |     +0.0% |       0 |       0 |             0 |       572
+      710 |     +0.0% |       0 |       0 |             0 |       562
+      720 |     +0.0% |       0 |       0 |             0 |       552
+      730 |     +0.0% |       0 |       0 |             0 |       542
+      740 |     +0.0% |       0 |       0 |             0 |       532
+      750 |     +0.0% |       0 |       0 |             0 |       522
+      760 |     +0.0% |       0 |       0 |             0 |       512
+      770 |     +0.0% |       0 |       0 |             0 |       502
+      780 |     +0.0% |       0 |       0 |             0 |       492
+      790 |     +0.0% |       0 |       0 |             0 |       482
+      800 |     +0.0% |       0 |       0 |             0 |       472
+      810 |     +0.0% |       0 |       0 |             0 |       462
+      820 |     +0.0% |       0 |       0 |             0 |       452
+      830 |     +0.0% |       0 |       0 |             0 |       442
+      840 |     +0.0% |       0 |       0 |             0 |       432
+      850 |     +0.0% |       0 |       0 |             0 |       422
+      860 |     +0.0% |       0 |       0 |             0 |       412
+      870 |     +0.0% |       0 |       0 |             0 |       402
+      880 |     +0.0% |       0 |       0 |             0 |       392
+      890 |     +0.0% |       0 |       0 |             0 |       382
+      900 |     +0.0% |       0 |       0 |             0 |       372
+      910 |     +0.0% |       0 |       0 |             0 |       362
+      920 |     +0.0% |       0 |       0 |             0 |       352
+      930 |     +0.0% |       0 |       0 |             0 |       342
+      940 |     +0.0% |       0 |       0 |             0 |       332
+      950 |     +0.0% |       0 |       0 |             0 |       322
+      960 |     +0.0% |       0 |       0 |             0 |       312
+      970 |     +0.0% |       0 |       0 |             0 |       302
+      980 |     +0.0% |       0 |       0 |             0 |       292
+      990 |     +0.0% |       0 |       0 |             0 |       282
+     1000 |     +0.0% |       0 |       0 |             0 |       272
+     1010 |     +0.0% |       0 |       0 |             0 |       262
+     1020 |     +0.0% |       0 |       0 |             0 |       252
+     1030 |     +0.0% |       0 |       0 |             0 |       242
+     1040 |     +0.0% |       0 |       0 |             0 |       232
+     1050 |     +0.0% |       0 |       0 |             0 |       222
+     1060 |     +0.0% |       0 |       0 |             0 |       212
+     1070 |     +0.0% |       0 |       0 |             0 |       202
+     1080 |     +0.0% |       0 |       0 |             0 |       192
+     1090 |     +0.0% |       0 |       0 |             0 |       182
+     1100 |     +0.0% |       0 |       0 |             0 |       172
+     1110 |     +0.0% |       0 |       0 |             0 |       162
+     1120 |     +0.0% |       0 |       0 |             0 |       152
+     1130 |     +0.0% |       0 |       0 |             0 |       142
+     1140 |     +0.0% |       0 |       0 |             0 |       132
+     1150 |     +0.0% |       0 |       0 |             0 |       122
+     1160 |     +0.0% |       0 |       0 |             0 |       112
+     1170 |     +0.0% |       0 |       0 |             0 |       102
+     1180 |     +0.0% |       0 |       0 |             0 |        92
+     1190 |     +0.3% |       1 |       2 |             1 |        82
+     1200 |     +0.3% |       1 |       2 |             1 |        72
+     1210 |     +0.3% |       1 |       2 |             1 |        62
+     1220 |     +0.3% |       1 |       2 |             1 |        52
+     1230 |     +0.3% |       1 |       2 |             1 |        42
+     1240 |     +0.3% |       1 |       2 |             1 |        32
+     1250 |     +0.3% |       1 |       2 |             1 |        22
+     1260 |     +0.3% |       1 |       2 |             1 |        12
+     1270 |     +1.7% |       2 |       7 |             2 |         2
+    final |     +1.7% |       2 |       7 |             2 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 2 slew violations.
+[INFO RSZ-0036] Found 2 capacitance violations.
+[INFO RSZ-0039] Resized 2 instances.
+[INFO RSZ-0038] Inserted 7 buffers in 2 nets.
+[WARNING RSZ-0020] found 2 floating nets.
+ VDD
+ VSS
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement      11204.3 u
+average displacement        6.8 u
+max displacement          106.5 u
+original HPWL           18472.2 u
+legalized HPWL          32735.9 u
+delta HPWL                   77 %
+
+[INFO DPL-0020] Mirrored 388 instances
+[INFO DPL-0021] HPWL before           32735.9 u
+[INFO DPL-0022] HPWL after            32062.9 u
+[INFO DPL-0023] HPWL delta               -2.1 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 84 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                             100     439.04
+  Tap cell                                262    1150.28
+  Timing Repair Buffer                     21    1097.60
+  Inverter                                126    1106.38
+  Sequential cell                         220   16424.49
+  Multi-Input combinational cell          909   17315.74
+  Total                                  1638   37533.53
+Writing OpenROAD database to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/32-openroad-repairdesignpostgpl/cic_filter.odb'…
+Writing netlist to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/32-openroad-repairdesignpostgpl/cic_filter.nl.v'…
+Writing powered netlist to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/32-openroad-repairdesignpostgpl/cic_filter.pnl.v'…
+Writing layout to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/32-openroad-repairdesignpostgpl/cic_filter.def'…
+Writing timing constraints to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/32-openroad-repairdesignpostgpl/cic_filter.sdc'…

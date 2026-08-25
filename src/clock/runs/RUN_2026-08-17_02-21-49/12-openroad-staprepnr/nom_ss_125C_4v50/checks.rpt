@@ -1,0 +1,122 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_ss_125C_4v50 Corner ===================================
+
+Startpoint: rst (input port clocked by in_clk)
+Endpoint: _31_ (recovery check against rising-edge clock in_clk)
+Path Group: asynchronous
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.150000    0.000000    0.000000   clock in_clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  2.000000    2.000000 ^ input external delay
+     6    0.043602    0.000022    0.000022    2.000022 ^ rst (in)
+                                                         rst (net)
+                      0.000022    0.000000    2.000022 ^ _31_/SETN (gf180mcu_fd_sc_mcu7t5v0__dffsnq_1)
+                                              2.000022   data arrival time
+
+                      0.150000   13.563000   13.563000   clock in_clk (rise edge)
+                                  0.000000   13.563000   clock network delay (ideal)
+                                 -0.200000   13.363000   clock uncertainty
+                                  0.000000   13.363000   clock reconvergence pessimism
+                                             13.363000 ^ _31_/CLK (gf180mcu_fd_sc_mcu7t5v0__dffsnq_1)
+                                  0.074368   13.437368   library recovery time
+                                             13.437368   data required time
+---------------------------------------------------------------------------------------------
+                                             13.437368   data required time
+                                             -2.000022   data arrival time
+---------------------------------------------------------------------------------------------
+                                             11.437346   slack (MET)
+
+
+Startpoint: _32_ (rising edge-triggered flip-flop clocked by in_clk)
+Endpoint: out_clk2B (output port clocked by in_clk)
+Path Group: in_clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.150000    0.000000    0.000000   clock in_clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                      0.150000    0.000000    0.000000 ^ _32_/CLK (gf180mcu_fd_sc_mcu7t5v0__dffrnq_1)
+     2    0.039310    1.227252    2.250888    2.250888 ^ _32_/Q (gf180mcu_fd_sc_mcu7t5v0__dffrnq_1)
+                                                         out_clk2 (net)
+                      1.227252    0.000000    2.250888 ^ _16_/I (gf180mcu_fd_sc_mcu7t5v0__clkinv_1)
+     2    0.039825    1.235737    0.998269    3.249156 v _16_/ZN (gf180mcu_fd_sc_mcu7t5v0__clkinv_1)
+                                                         out_clk2B (net)
+                      1.235737    0.000000    3.249156 v out_clk2B (out)
+                                              3.249156   data arrival time
+
+                      0.150000   13.563000   13.563000   clock in_clk (rise edge)
+                                  0.000000   13.563000   clock network delay (ideal)
+                                 -0.200000   13.363000   clock uncertainty
+                                  0.000000   13.363000   clock reconvergence pessimism
+                                 -2.500000   10.863000   output external delay
+                                             10.863000   data required time
+---------------------------------------------------------------------------------------------
+                                             10.863000   data required time
+                                             -3.249156   data arrival time
+---------------------------------------------------------------------------------------------
+                                              7.613843   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_ss_125C_4v50 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_ss_125C_4v50 Corner ===================================
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 24 unannotated drivers.
+ in_clk
+ rst
+ _15_/ZN
+ _16_/ZN
+ _17_/ZN
+ _18_/Z
+ _19_/ZN
+ _20_/Z
+ _21_/ZN
+ _22_/ZN
+ _23_/ZN
+ _24_/ZN
+ _25_/Z
+ _26_/ZN
+ _27_/ZN
+ _28_/ZN
+ _29_/ZN
+ _30_/ZN
+ _31_/Q
+ _32_/Q
+ _33_/Q
+ _34_/Q
+ _35_/Q
+ _36_/Q
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================

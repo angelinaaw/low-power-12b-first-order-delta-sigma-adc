@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/tmp/772538a726a244fdac5d1e9af2af1744.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/tmp/772538a726a244fdac5d1e9af2af1744.bb.v"

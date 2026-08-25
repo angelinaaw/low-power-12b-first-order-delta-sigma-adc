@@ -1,0 +1,39 @@
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading OpenROAD database at '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/53-odb-cellfrequencytables/cic_filter.odb'…
+Reading design constraints file at 'constraint.sdc'…
+[WARNING STA-0345] resistance scale 1e+03 does not match library scale 1e+00.
+[WARNING STA-0351] clock 'clk' not found.
+[WARNING STA-0138] clock arg 'clk' clock not found.
+[WARNING STA-0138] clock arg 'clk' clock not found.
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+[INFO] Using voltage extracted from lib (5V) for power nets and 0V for ground nets…
+%OL_CREATE_REPORT irdrop.rpt
++ analyze_power_grid -net VDD -voltage_file /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/56-openroad-irdropreport/net-VDD.csv
+[INFO PSM-0040] All shapes on net VDD are connected.
+[WARNING STA-1060] no master clock found for generated clock clk_div.
+########## IR report #################
+Net              : VDD
+Corner           : nom_tt_025C_5v00
+Total power      : 3.95e-03 W
+Supply voltage   : 5.00e+00 V
+Worstcase voltage: 5.00e+00 V
+Average voltage  : 5.00e+00 V
+Average IR drop  : 8.15e-05 V
+Worstcase IR drop: 1.51e-03 V
+Percentage drop  : 0.03 %
+######################################
++ analyze_power_grid -net VSS -voltage_file /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-22_15-13-59/56-openroad-irdropreport/net-VSS.csv
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : nom_tt_025C_5v00
+Total power      : 3.95e-03 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 1.66e-03 V
+Average voltage  : 8.23e-05 V
+Average IR drop  : 8.23e-05 V
+Worstcase IR drop: 1.66e-03 V
+Percentage drop  : 0.03 %
+######################################
+%OL_END_REPORT

@@ -1,0 +1,15 @@
+
+===========================================================================
+Violator List
+============================================================================
+[hold in-reg] rst -> _33_/RN : -0.003287
+[hold in-reg] rst -> _32_/RN : -0.003241
+[hold in-reg] rst -> _35_/RN : -0.003161
+[hold in-reg] rst -> _36_/RN : -0.003142
+[hold in-reg] rst -> _34_/RN : -0.003043
+Writing metric timing__hold_vio__count__corner:nom_tt_025C_5v00: 5
+Writing metric timing__hold_r2r__ws__corner:nom_tt_025C_5v00: 0.807103
+Writing metric timing__hold_r2r_vio__count__corner:nom_tt_025C_5v00: 0
+Writing metric timing__setup_vio__count__corner:nom_tt_025C_5v00: 0
+Writing metric timing__setup_r2r__ws__corner:nom_tt_025C_5v00: 10.849360
+Writing metric timing__setup_r2r_vio__count__corner:nom_tt_025C_5v00: 0

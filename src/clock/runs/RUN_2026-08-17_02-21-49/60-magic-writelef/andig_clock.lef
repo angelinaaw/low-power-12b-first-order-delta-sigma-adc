@@ -1,0 +1,110 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO andig_clock
+  CLASS BLOCK ;
+  FOREIGN andig_clock ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 100.000 BY 100.000 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 22.240 15.380 23.840 82.620 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 6.720 31.530 92.960 33.130 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 25.540 15.380 27.140 82.620 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 6.720 34.830 92.960 36.430 ;
+    END
+  END VSS
+  PIN in_clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 4.738000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 61.600 0.560 62.160 ;
+    END
+  END in_clk
+  PIN out_clk1
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.897600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 99.440 38.080 100.000 38.640 ;
+    END
+  END out_clk1
+  PIN out_clk2
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.897600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 99.440 62.720 100.000 63.280 ;
+    END
+  END out_clk2
+  PIN out_clk2B
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.897600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 99.440 60.480 100.000 61.040 ;
+    END
+  END out_clk2B
+  PIN out_clk_cic
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.897600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 99.440 50.400 100.000 50.960 ;
+    END
+  END out_clk_cic
+  PIN rst
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 99.440 39.200 100.000 39.760 ;
+    END
+  END rst
+  OBS
+      LAYER Nwell ;
+        RECT 6.290 15.250 93.390 82.750 ;
+      LAYER Metal1 ;
+        RECT 6.720 15.380 92.960 82.620 ;
+      LAYER Metal2 ;
+        RECT 22.380 15.490 91.700 82.510 ;
+      LAYER Metal3 ;
+        RECT 0.560 63.580 99.440 82.460 ;
+        RECT 0.560 62.460 99.140 63.580 ;
+        RECT 0.860 62.420 99.140 62.460 ;
+        RECT 0.860 61.340 99.440 62.420 ;
+        RECT 0.860 61.300 99.140 61.340 ;
+        RECT 0.560 60.180 99.140 61.300 ;
+        RECT 0.560 51.260 99.440 60.180 ;
+        RECT 0.560 50.100 99.140 51.260 ;
+        RECT 0.560 40.060 99.440 50.100 ;
+        RECT 0.560 37.780 99.140 40.060 ;
+        RECT 0.560 15.540 99.440 37.780 ;
+  END
+END andig_clock
+END LIBRARY
+
