@@ -1,0 +1,206 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO piso_12bit
+  CLASS BLOCK ;
+  FOREIGN piso_12bit ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 75.000 BY 75.000 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 22.240 15.380 23.840 59.100 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 6.720 31.530 67.760 33.130 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 25.540 15.380 27.140 59.100 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 6.720 34.830 67.760 36.430 ;
+    END
+  END VSS
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 4.738000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 47.040 0.560 47.600 ;
+    END
+  END clk
+  PIN data_in[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 28.000 0.560 28.560 ;
+    END
+  END data_in[0]
+  PIN data_in[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 74.440 45.920 75.000 46.480 ;
+    END
+  END data_in[10]
+  PIN data_in[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 74.440 44.800 75.000 45.360 ;
+    END
+  END data_in[11]
+  PIN data_in[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 25.760 0.560 26.320 ;
+    END
+  END data_in[1]
+  PIN data_in[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 26.880 0.560 27.440 ;
+    END
+  END data_in[2]
+  PIN data_in[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 40.320 0.000 40.880 0.560 ;
+    END
+  END data_in[3]
+  PIN data_in[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 74.440 26.880 75.000 27.440 ;
+    END
+  END data_in[4]
+  PIN data_in[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 74.440 30.240 75.000 30.800 ;
+    END
+  END data_in[5]
+  PIN data_in[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 39.200 0.560 39.760 ;
+    END
+  END data_in[6]
+  PIN data_in[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 44.800 0.560 45.360 ;
+    END
+  END data_in[7]
+  PIN data_in[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 45.920 0.560 46.480 ;
+    END
+  END data_in[8]
+  PIN data_in[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 41.440 74.440 42.000 75.000 ;
+    END
+  END data_in[9]
+  PIN load_en
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 43.680 0.560 44.240 ;
+    END
+  END load_en
+  PIN rst_n
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.396000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 74.440 28.000 75.000 28.560 ;
+    END
+  END rst_n
+  PIN serial_out
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.897600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 74.440 47.040 75.000 47.600 ;
+    END
+  END serial_out
+  OBS
+      LAYER Nwell ;
+        RECT 6.290 15.250 68.190 59.230 ;
+      LAYER Metal1 ;
+        RECT 6.720 15.380 67.760 59.100 ;
+      LAYER Metal2 ;
+        RECT 8.540 74.140 41.140 74.440 ;
+        RECT 42.300 74.140 66.500 74.440 ;
+        RECT 8.540 0.860 66.500 74.140 ;
+        RECT 8.540 0.560 40.020 0.860 ;
+        RECT 41.180 0.560 66.500 0.860 ;
+      LAYER Metal3 ;
+        RECT 0.560 47.900 74.440 70.980 ;
+        RECT 0.860 44.500 74.140 47.900 ;
+        RECT 0.860 43.380 74.440 44.500 ;
+        RECT 0.560 40.060 74.440 43.380 ;
+        RECT 0.860 38.900 74.440 40.060 ;
+        RECT 0.560 31.100 74.440 38.900 ;
+        RECT 0.560 29.940 74.140 31.100 ;
+        RECT 0.560 28.860 74.440 29.940 ;
+        RECT 0.860 26.580 74.140 28.860 ;
+        RECT 0.860 25.460 74.440 26.580 ;
+        RECT 0.560 15.540 74.440 25.460 ;
+      LAYER Metal4 ;
+        RECT 24.220 31.450 24.500 45.270 ;
+  END
+END piso_12bit
+END LIBRARY
+

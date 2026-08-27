@@ -1,0 +1,51 @@
+{
+   "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/tmp/8cab262a6905431cb4eeaf0a5889ccdb.lib ",
+   "modules": {
+      "\\piso_12bit": {
+         "num_wires":         50,
+         "num_wire_bits":     61,
+         "num_pub_wires":     16,
+         "num_pub_wire_bits": 27,
+         "num_ports":         5,
+         "num_port_bits":     16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         46,
+         "num_submodules":       0,
+         "area":              1323.705600,
+         "sequential_area":    895.641600,
+         "num_cells_by_type": {
+            "gf180mcu_fd_sc_mcu7t5v0__and2_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__clkinv_1": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 12,
+            "gf180mcu_fd_sc_mcu7t5v0__nand2_1": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__oai21_1": 11
+         }
+      }
+   },
+      "design": {
+         "num_wires":         50,
+         "num_wire_bits":     61,
+         "num_pub_wires":     16,
+         "num_pub_wire_bits": 27,
+         "num_ports":         5,
+         "num_port_bits":     16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         46,
+         "num_submodules":       0,
+         "area":              1323.705600,
+         "sequential_area":    895.641600,
+         "num_cells_by_type": {
+            "gf180mcu_fd_sc_mcu7t5v0__and2_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__clkinv_1": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 12,
+            "gf180mcu_fd_sc_mcu7t5v0__nand2_1": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__oai21_1": 11
+         }
+      }
+}
+

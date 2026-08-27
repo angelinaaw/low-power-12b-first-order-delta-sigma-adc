@@ -268,7 +268,7 @@ C {ipin.sym} 540 -930 3 1 {name=p41 lab=clk1}
 C {ipin.sym} 570 -1060 2 1 {name=p2 lab=clk2}
 C {ipin.sym} 1140 -640 1 1 {name=p4 lab=Vbiasn}
 C {ipin.sym} 1180 -640 1 1 {name=p42 lab=Vbiasp}
-C {fully_differential_amplifier/fullydiffamp.sym} 1160 -615 0 0 {name=x1}
-C {dac_1bit/DAC_1_BIT.sym} 1690 -450 0 1 {name=x2}
-C {dac_1bit/DAC_1_BIT.sym} 1690 -830 0 1 {name=x3}
-C {latched_comparator/COMPARATOR_SD.sym} 1400 -540 0 0 {name=x4}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/fully_differential_amplifier/fullydiffamp.sym} 1160 -615 0 0 {name=x1}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/dac_1bit/DAC_1_BIT.sym} 1690 -450 0 1 {name=x2}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/dac_1bit/DAC_1_BIT.sym} 1690 -830 0 1 {name=x3}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/latched_comparator/COMPARATOR_SD.sym} 1400 -540 0 0 {name=x4}

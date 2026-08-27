@@ -17,7 +17,7 @@ module cic_filter (
   );
   
   // Clock Divider
-  wire clk_div;
+  (* keep = "true" *) wire clk_div;
   clock_div u_clock_div (
     .in_clk(clk),
     .rst(rst),

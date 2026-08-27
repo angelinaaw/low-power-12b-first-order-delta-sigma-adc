@@ -1,0 +1,43 @@
+Reading technology LEF file at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__min.tlef'…
+[INFO ODB-0388] unsupported LEF58_EOLENCLOSURE property for layer Via1 :"
+  	EOLENCLOSURE 0.34 0.06 ;"
+[INFO ODB-0388] unsupported LEF58_EOLENCLOSURE property for layer Via2 :" EOLENCLOSURE 0.34 0.06 ; "
+[INFO ODB-0388] unsupported LEF58_EOLENCLOSURE property for layer Via3 :" EOLENCLOSURE 0.34 0.06 ; "
+[INFO ODB-0388] unsupported LEF58_EOLENCLOSURE property for layer Via4 :" EOLENCLOSURE 0.34 0.06 ; "
+[INFO ODB-0227] LEF file: /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__min.tlef, created 15 layers, 56 vias
+Reading cell LEF file at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef'…
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef at line 2.
+
+[INFO ODB-0227] LEF file: /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef, created 229 library cells
+[INFO ODB-0127] Reading DEF file: /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/53-odb-cellfrequencytables/piso_12bit.def
+[INFO ODB-0128] Design: piso_12bit
+[INFO ODB-0130]     Created 18 pins.
+[INFO ODB-0131]     Created 143 components and 678 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 490 connections.
+[INFO ODB-0133]     Created 79 nets and 187 connections.
+[INFO ODB-0134] Finished DEF file: /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/53-odb-cellfrequencytables/piso_12bit.def
+Using RCX ruleset '/foss/pdks/gf180mcuD/libs.tech/librelane/rules.openrcx.gf180mcuD.min'…
+[INFO RCX-0431] Defined process_corner CURRENT_CORNER with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner CURRENT_CORNER
++ extract_parasitics  -ext_model_file /foss/pdks/gf180mcuD/libs.tech/librelane/rules.openrcx.gf180mcuD.min -lef_res
+[INFO RCX-0435] Reading extraction model file /foss/pdks/gf180mcuD/libs.tech/librelane/rules.openrcx.gf180mcuD.min ...
+[INFO RCX-0436] RC segment generation piso_12bit (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 165 rc segments
+[INFO RCX-0439] Coupling Cap extraction piso_12bit ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 48% of 350 wires extracted
+[INFO RCX-0442] 100% of 350 wires extracted
+[INFO RCX-0045] Extract 79 nets, 244 rsegs, 244 caps, 427 ccs
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                              22      96.59
+  Fill cell                                37     259.03
+  Tap cell                                 19      83.42
+  Standard cell                            65    2193.00
+  Total                                   143    2632.04
+Writing extracted parasitics to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/54-openroad-rcx/min/piso_12bit.min.spef'…
+[INFO RCX-0443] 79 nets finished

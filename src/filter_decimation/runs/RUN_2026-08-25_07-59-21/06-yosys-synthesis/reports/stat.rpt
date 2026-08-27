@@ -1,0 +1,46 @@
+100. Printing statistics.
+
+=== cic_filter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     1215        - wires
+     1226        - wire bits
+      213        - public wires
+      224        - public wire bits
+        4        - ports
+       15        - port bits
+     1223 3.45E+04 cells
+       38  667.341   gf180mcu_fd_sc_mcu7t5v0__and2_1
+       14  307.328   gf180mcu_fd_sc_mcu7t5v0__and3_1
+       26  627.827   gf180mcu_fd_sc_mcu7t5v0__and4_1
+        9  197.568   gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+      100  1756.16   gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+        2   48.294   gf180mcu_fd_sc_mcu7t5v0__aoi221_1
+       16  316.109   gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+      113   992.23   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+      137 1.02E+04   gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1
+       83 6.19E+03   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+      211 2.32E+03   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+       26  399.526   gf180mcu_fd_sc_mcu7t5v0__nand3_1
+       23  454.406   gf180mcu_fd_sc_mcu7t5v0__nand4_1
+       79 1.04E+03   gf180mcu_fd_sc_mcu7t5v0__nor2_1
+       12  210.739   gf180mcu_fd_sc_mcu7t5v0__nor3_1
+        2   43.904   gf180mcu_fd_sc_mcu7t5v0__nor4_1
+       40   878.08   gf180mcu_fd_sc_mcu7t5v0__oai211_1
+       54  948.326   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+        5  131.712   gf180mcu_fd_sc_mcu7t5v0__oai221_1
+       17  373.184   gf180mcu_fd_sc_mcu7t5v0__oai22_1
+        5  120.736   gf180mcu_fd_sc_mcu7t5v0__oai31_1
+       44   772.71   gf180mcu_fd_sc_mcu7t5v0__or2_1
+        3   65.856   gf180mcu_fd_sc_mcu7t5v0__or3_1
+        1   26.342   gf180mcu_fd_sc_mcu7t5v0__or4_1
+       26  741.978   gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+        7  368.794   gf180mcu_fd_sc_mcu7t5v0__xnor3_1
+       94 2.48E+03   gf180mcu_fd_sc_mcu7t5v0__xor2_1
+       36 1.82E+03   gf180mcu_fd_sc_mcu7t5v0__xor3_1
+
+   Chip area for module '\cic_filter': 34519.520000
+     of which used for sequential elements: 16420.096000 (47.57%)
+

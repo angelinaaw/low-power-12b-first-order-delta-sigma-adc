@@ -1,0 +1,1079 @@
+(DELAYFILE
+ (SDFVERSION "3.0")
+ (DESIGN "piso_12bit")
+ (DATE "Tue Aug 25 09:55:02 2026")
+ (VENDOR "Parallax")
+ (PROGRAM "STA")
+ (VERSION "2.7.0")
+ (DIVIDER .)
+ (TIMESCALE 1ns)
+ (CELL
+  (CELLTYPE "piso_12bit")
+  (INSTANCE)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT clk clkbuf_0_clk.I (0.000:0.000:0.000))
+    (INTERCONNECT load_en input13.I (0.000:0.000:0.000))
+    (INTERCONNECT rst_n input14.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[11] input3.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[10] input2.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[9] input12.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[8] input11.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[7] input10.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[6] input9.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[5] input8.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[4] input7.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[3] input6.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[2] input5.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[1] input4.I (0.000:0.000:0.000))
+    (INTERCONNECT data_in[0] input1.I (0.000:0.000:0.000))
+    (INTERCONNECT _34_.ZN _46_.A1 (0.000:0.000:0.000))
+    (INTERCONNECT _35_.ZN _48_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT _36_.ZN _50_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT _37_.ZN _52_.A2 (0.001:0.001:0.001) (0.001:0.001:0.001))
+    (INTERCONNECT _38_.ZN _54_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT _39_.ZN _56_.A2 (0.001:0.001:0.001) (0.001:0.001:0.001))
+    (INTERCONNECT _40_.ZN _58_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT _41_.ZN _60_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT _42_.ZN _62_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT _43_.ZN _64_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT _44_.ZN _66_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT _45_.ZN _46_.B (0.000:0.000:0.000))
+    (INTERCONNECT _46_.ZN _79_.D (0.000:0.000:0.000))
+    (INTERCONNECT _47_.ZN _48_.B (0.000:0.000:0.000))
+    (INTERCONNECT _48_.ZN _68_.D (0.000:0.000:0.000))
+    (INTERCONNECT _49_.ZN _50_.B (0.000:0.000:0.000))
+    (INTERCONNECT _50_.ZN _69_.D (0.000:0.000:0.000))
+    (INTERCONNECT _51_.ZN _52_.B (0.000:0.000:0.000))
+    (INTERCONNECT _52_.ZN _70_.D (0.000:0.000:0.000))
+    (INTERCONNECT _53_.ZN _54_.B (0.000:0.000:0.000))
+    (INTERCONNECT _54_.ZN _71_.D (0.000:0.000:0.000))
+    (INTERCONNECT _55_.ZN _56_.B (0.000:0.000:0.000))
+    (INTERCONNECT _56_.ZN _72_.D (0.000:0.000:0.000))
+    (INTERCONNECT _57_.ZN _58_.B (0.000:0.000:0.000))
+    (INTERCONNECT _58_.ZN _73_.D (0.000:0.000:0.000))
+    (INTERCONNECT _59_.ZN _60_.B (0.000:0.000:0.000))
+    (INTERCONNECT _60_.ZN _74_.D (0.000:0.000:0.000))
+    (INTERCONNECT _61_.ZN _62_.B (0.000:0.000:0.000))
+    (INTERCONNECT _62_.ZN _75_.D (0.000:0.000:0.000))
+    (INTERCONNECT _63_.ZN _64_.B (0.000:0.000:0.000))
+    (INTERCONNECT _64_.ZN _76_.D (0.000:0.000:0.000))
+    (INTERCONNECT _65_.ZN _66_.B (0.000:0.000:0.000))
+    (INTERCONNECT _66_.ZN _77_.D (0.000:0.000:0.000))
+    (INTERCONNECT _67_.Z _78_.D (0.000:0.000:0.000))
+    (INTERCONNECT _68_.Q _36_.I (0.000:0.000:0.000))
+    (INTERCONNECT _69_.Q _37_.I (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT _70_.Q _38_.I (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT _71_.Q _39_.I (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT _72_.Q _40_.I (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT _73_.Q _41_.I (0.000:0.000:0.000))
+    (INTERCONNECT _74_.Q _42_.I (0.000:0.000:0.000))
+    (INTERCONNECT _75_.Q _43_.I (0.000:0.000:0.000))
+    (INTERCONNECT _76_.Q _44_.I (0.000:0.000:0.000))
+    (INTERCONNECT _77_.Q output15.I (0.000:0.000:0.000))
+    (INTERCONNECT _78_.Q _34_.I (0.000:0.000:0.000))
+    (INTERCONNECT _79_.Q _35_.I (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_0_clk.Z clkbuf_1_0__f_clk.I (0.001:0.001:0.001) (0.001:0.001:0.001))
+    (INTERCONNECT clkbuf_0_clk.Z clkbuf_1_1__f_clk.I (0.001:0.001:0.001) (0.001:0.001:0.001))
+    (INTERCONNECT clkbuf_1_0__f_clk.Z _68_.CLK (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_0__f_clk.Z _72_.CLK (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_0__f_clk.Z _73_.CLK (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_0__f_clk.Z _74_.CLK (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_0__f_clk.Z _78_.CLK (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_0__f_clk.Z clkload0.I (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_1__f_clk.Z _69_.CLK (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_1__f_clk.Z _70_.CLK (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_1__f_clk.Z _71_.CLK (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_1__f_clk.Z _75_.CLK (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_1__f_clk.Z _76_.CLK (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_1__f_clk.Z _77_.CLK (0.000:0.000:0.000))
+    (INTERCONNECT clkbuf_1_1__f_clk.Z _79_.CLK (0.000:0.000:0.000) (0.000:0.000:0.000))
+    (INTERCONNECT input1.Z _67_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input10.Z _57_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input11.Z _59_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input12.Z _61_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input13.Z _45_.A2 (0.003:0.003:0.003) (0.003:0.003:0.003))
+    (INTERCONNECT input13.Z _46_.A2 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _47_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _48_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _49_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _50_.A1 (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT input13.Z _51_.A1 (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT input13.Z _52_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _53_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _54_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _55_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _56_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _57_.A1 (0.002:0.002:0.002))
+    (INTERCONNECT input13.Z _58_.A1 (0.002:0.002:0.002))
+    (INTERCONNECT input13.Z _59_.A1 (0.002:0.002:0.002))
+    (INTERCONNECT input13.Z _60_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input13.Z _61_.A1 (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT input13.Z _62_.A1 (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT input13.Z _63_.A1 (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT input13.Z _64_.A1 (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT input13.Z _65_.A1 (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT input13.Z _66_.A1 (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT input13.Z _67_.A1 (0.004:0.004:0.004) (0.004:0.004:0.004))
+    (INTERCONNECT input14.Z _68_.RN (0.002:0.002:0.002))
+    (INTERCONNECT input14.Z _69_.RN (0.001:0.001:0.001))
+    (INTERCONNECT input14.Z _70_.RN (0.002:0.002:0.002))
+    (INTERCONNECT input14.Z _71_.RN (0.002:0.002:0.002))
+    (INTERCONNECT input14.Z _72_.RN (0.002:0.002:0.002))
+    (INTERCONNECT input14.Z _73_.RN (0.002:0.002:0.002) (0.002:0.002:0.002))
+    (INTERCONNECT input14.Z _74_.RN (0.003:0.003:0.003) (0.003:0.003:0.003))
+    (INTERCONNECT input14.Z _75_.RN (0.002:0.002:0.002))
+    (INTERCONNECT input14.Z _76_.RN (0.002:0.002:0.002))
+    (INTERCONNECT input14.Z _77_.RN (0.002:0.002:0.002))
+    (INTERCONNECT input14.Z _78_.RN (0.003:0.003:0.003) (0.003:0.003:0.003))
+    (INTERCONNECT input14.Z _79_.RN (0.002:0.002:0.002) (0.002:0.002:0.002))
+    (INTERCONNECT input2.Z _63_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input3.Z _65_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input4.Z _45_.A1 (0.000:0.000:0.000))
+    (INTERCONNECT input5.Z _47_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input6.Z _49_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input7.Z _51_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input8.Z _53_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT input9.Z _55_.A2 (0.000:0.000:0.000))
+    (INTERCONNECT output15.Z serial_out (0.001:0.001:0.001))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _34_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.253:0.253:0.253) (0.287:0.287:0.287))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _35_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.303:0.303:0.303) (0.340:0.340:0.340))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _36_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.262:0.262:0.262) (0.298:0.298:0.298))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _37_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.377:0.377:0.377) (0.424:0.424:0.424))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _38_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.283:0.283:0.283) (0.323:0.323:0.323))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _39_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.379:0.379:0.379) (0.424:0.424:0.424))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _40_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.270:0.270:0.270) (0.308:0.308:0.308))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _41_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.232:0.232:0.232) (0.262:0.262:0.262))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _42_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.210:0.210:0.210) (0.238:0.238:0.238))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _43_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.255:0.255:0.255) (0.288:0.288:0.288))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_1")
+  (INSTANCE _44_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.327:0.327:0.327) (0.365:0.365:0.365))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _45_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.364:0.364:0.364) (0.287:0.287:0.287))
+    (IOPATH A2 ZN (0.887:0.887:0.887) (0.250:0.250:0.250))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _46_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.488:0.488:0.488) (0.273:0.273:0.273))
+    (IOPATH A2 ZN (0.894:0.894:0.894) (0.459:0.459:0.459))
+    (IOPATH B ZN (0.443:0.530:0.618) (0.371:0.386:0.401))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.443:0.530:0.618) (0.286:0.304:0.322)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.416:0.501:0.587) (0.323:0.335:0.347)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.424:0.510:0.597) (0.371:0.386:0.401)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _47_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.846:0.846:0.846) (0.473:0.473:0.473))
+    (IOPATH A2 ZN (0.447:0.447:0.447) (0.314:0.314:0.314))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _48_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.905:0.905:0.905) (0.142:0.142:0.142))
+    (IOPATH A2 ZN (0.402:0.402:0.402) (0.258:0.258:0.258))
+    (IOPATH B ZN (0.390:0.487:0.585) (0.315:0.323:0.330))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.390:0.487:0.585) (0.243:0.250:0.256)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.361:0.455:0.549) (0.265:0.270:0.274)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.370:0.465:0.561) (0.315:0.323:0.330)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _49_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.785:0.785:0.785) (0.399:0.399:0.399))
+    (IOPATH A2 ZN (0.388:0.388:0.388) (0.270:0.270:0.270))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _50_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.919:0.919:0.919) (0.157:0.157:0.157))
+    (IOPATH A2 ZN (0.401:0.401:0.401) (0.251:0.251:0.251))
+    (IOPATH B ZN (0.374:0.472:0.571) (0.315:0.324:0.334))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.374:0.472:0.571) (0.241:0.251:0.260)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.346:0.441:0.537) (0.266:0.273:0.279)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.354:0.451:0.548) (0.315:0.324:0.334)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _51_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.817:0.817:0.817) (0.438:0.438:0.438))
+    (IOPATH A2 ZN (0.401:0.401:0.401) (0.287:0.287:0.287))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _52_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (1.205:1.205:1.205) (0.446:0.446:0.446))
+    (IOPATH A2 ZN (0.658:0.658:0.658) (0.408:0.408:0.408))
+    (IOPATH B ZN (0.511:0.617:0.723) (0.441:0.454:0.467))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.511:0.617:0.723) (0.347:0.364:0.381)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.485:0.589:0.693) (0.393:0.404:0.415)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.494:0.598:0.703) (0.441:0.454:0.467)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _53_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.850:0.850:0.850) (0.477:0.477:0.477))
+    (IOPATH A2 ZN (0.448:0.448:0.448) (0.316:0.316:0.316))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _54_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (1.034:1.034:1.034) (0.274:0.274:0.274))
+    (IOPATH A2 ZN (0.495:0.495:0.495) (0.303:0.303:0.303))
+    (IOPATH B ZN (0.446:0.548:0.649) (0.370:0.379:0.389))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.446:0.548:0.649) (0.291:0.301:0.311)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.419:0.518:0.616) (0.321:0.328:0.335)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.427:0.527:0.627) (0.370:0.379:0.389)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _55_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.817:0.817:0.817) (0.438:0.438:0.438))
+    (IOPATH A2 ZN (0.414:0.414:0.414) (0.291:0.291:0.291))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _56_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (1.215:1.215:1.215) (0.455:0.455:0.455))
+    (IOPATH A2 ZN (0.668:0.668:0.668) (0.415:0.415:0.415))
+    (IOPATH B ZN (0.519:0.624:0.729) (0.446:0.459:0.472))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.519:0.624:0.729) (0.351:0.368:0.385)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.492:0.595:0.699) (0.398:0.409:0.420)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.501:0.605:0.708) (0.446:0.459:0.472)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _57_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.717:0.717:0.717) (0.319:0.319:0.319))
+    (IOPATH A2 ZN (0.337:0.337:0.337) (0.232:0.232:0.232))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _58_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (1.080:1.080:1.080) (0.321:0.321:0.321))
+    (IOPATH A2 ZN (0.529:0.529:0.529) (0.319:0.319:0.319))
+    (IOPATH B ZN (0.426:0.526:0.626) (0.377:0.390:0.403))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.426:0.526:0.626) (0.290:0.307:0.323)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.399:0.497:0.595) (0.329:0.340:0.352)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.407:0.506:0.605) (0.377:0.390:0.403)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _59_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.716:0.716:0.716) (0.318:0.318:0.318))
+    (IOPATH A2 ZN (0.339:0.339:0.339) (0.232:0.232:0.232))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _60_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.915:0.915:0.915) (0.153:0.153:0.153))
+    (IOPATH A2 ZN (0.392:0.392:0.392) (0.243:0.243:0.243))
+    (IOPATH B ZN (0.356:0.451:0.547) (0.308:0.319:0.330))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.356:0.451:0.547) (0.235:0.246:0.257)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.327:0.420:0.514) (0.261:0.268:0.276)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.336:0.430:0.524) (0.308:0.319:0.330)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _61_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.739:0.739:0.739) (0.345:0.345:0.345))
+    (IOPATH A2 ZN (0.351:0.351:0.351) (0.243:0.243:0.243))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _62_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.908:0.908:0.908) (0.146:0.146:0.146))
+    (IOPATH A2 ZN (0.382:0.382:0.382) (0.238:0.238:0.238))
+    (IOPATH B ZN (0.356:0.454:0.553) (0.307:0.318:0.328))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.356:0.454:0.553) (0.234:0.245:0.255)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.328:0.423:0.519) (0.259:0.267:0.274)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.336:0.433:0.530) (0.307:0.318:0.328)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _63_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.678:0.678:0.678) (0.272:0.272:0.272))
+    (IOPATH A2 ZN (0.319:0.319:0.319) (0.213:0.213:0.213))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _64_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.911:0.911:0.911) (0.148:0.148:0.148))
+    (IOPATH A2 ZN (0.394:0.394:0.394) (0.248:0.248:0.248))
+    (IOPATH B ZN (0.345:0.438:0.531) (0.304:0.315:0.326))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.345:0.438:0.531) (0.230:0.242:0.254)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.317:0.407:0.498) (0.257:0.265:0.274)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.325:0.417:0.508) (0.304:0.315:0.326)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__nand2_1")
+  (INSTANCE _65_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (0.799:0.799:0.799) (0.417:0.417:0.417))
+    (IOPATH A2 ZN (0.392:0.392:0.392) (0.276:0.276:0.276))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__oai21_1")
+  (INSTANCE _66_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 ZN (1.058:1.058:1.058) (0.298:0.298:0.298))
+    (IOPATH A2 ZN (0.527:0.527:0.527) (0.332:0.332:0.332))
+    (IOPATH B ZN (0.438:0.543:0.647) (0.374:0.386:0.398))
+    (COND A1===1'b1 && A2===1'b1
+     (IOPATH B ZN (0.438:0.543:0.647) (0.292:0.305:0.319)))
+    (COND A1===1'b1 && A2===1'b0
+     (IOPATH B ZN (0.411:0.513:0.615) (0.326:0.335:0.345)))
+    (COND A1===1'b0 && A2===1'b1
+     (IOPATH B ZN (0.419:0.522:0.626) (0.374:0.386:0.398)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__and2_1")
+  (INSTANCE _67_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH A1 Z (0.840:0.840:0.840) (0.999:0.999:0.999))
+    (IOPATH A2 Z (0.564:0.564:0.564) (0.556:0.556:0.556))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _68_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.795:1.795:1.795) (1.364:1.364:1.364))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.351:0.351:0.351))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.634:0.665:0.696))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.282:0.365:0.449))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.221:-0.250:-0.279))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.206:0.149:0.093))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _69_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.825:1.825:1.825) (1.384:1.384:1.384))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.352:0.352:0.352))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.635:0.667:0.700))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.279:0.367:0.454))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.222:-0.252:-0.282))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.208:0.149:0.090))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _70_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.812:1.812:1.812) (1.375:1.375:1.375))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.352:0.352:0.352))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.676:0.711:0.746))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.317:0.420:0.523))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.261:-0.291:-0.322))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.180:0.115:0.050))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _71_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.800:1.800:1.800) (1.367:1.367:1.367))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.352:0.352:0.352))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.653:0.686:0.718))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.297:0.390:0.483))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.240:-0.269:-0.298))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.194:0.133:0.073))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _72_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.831:1.831:1.831) (1.388:1.388:1.388))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.351:0.351:0.351))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.677:0.711:0.746))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.317:0.421:0.524))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.262:-0.292:-0.322))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.179:0.114:0.049))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _73_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.774:1.774:1.774) (1.351:1.351:1.351))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.351:0.351:0.351))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.658:0.691:0.724))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.294:0.394:0.493))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.245:-0.274:-0.304))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.197:0.132:0.067))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _74_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.694:1.694:1.694) (1.295:1.295:1.295))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.351:0.351:0.351))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.633:0.665:0.698))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.274:0.363:0.452))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.220:-0.250:-0.281))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.212:0.152:0.091))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _75_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.737:1.737:1.737) (1.325:1.325:1.325))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.352:0.352:0.352))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.633:0.665:0.698))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.275:0.363:0.451))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.220:-0.250:-0.280))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.211:0.151:0.092))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _76_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.725:1.725:1.725) (1.317:1.317:1.317))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.352:0.352:0.352))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.633:0.665:0.698))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.272:0.362:0.452))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.220:-0.250:-0.281))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.213:0.152:0.091))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _77_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.704:1.704:1.704) (1.302:1.302:1.302))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.352:0.352:0.352))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.656:0.689:0.722))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.296:0.392:0.489))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.242:-0.272:-0.302))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.195:0.132:0.069))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _78_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.714:1.714:1.714) (1.310:1.310:1.310))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.351:0.351:0.351))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.615:0.622:0.628))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.269:0.278:0.288))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.203:-0.209:-0.215))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.216:0.208:0.201))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1")
+  (INSTANCE _79_)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH CLK Q (1.753:1.753:1.753) (1.336:1.336:1.336))
+    (IOPATH RN Q () (0.000:0.000:0.000))
+    (COND CLK===1'b1 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b1 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b1
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+    (COND CLK===1'b0 && D===1'b0
+     (IOPATH RN Q () (0.000:0.000:0.000)))
+   )
+  )
+  (TIMINGCHECK
+    (REMOVAL (posedge RN) (posedge CLK) (0.894:0.894:0.894))
+    (RECOVERY (posedge RN) (posedge CLK) (0.352:0.352:0.352))
+    (SETUP (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.657:0.691:0.725))
+    (SETUP (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.294:0.407:0.519))
+    (HOLD (COND ENABLE_RN === 1'b1 (posedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (-0.243:-0.274:-0.304))
+    (HOLD (COND ENABLE_RN === 1'b1 (negedge D)) (COND ENABLE_RN === 1'b1 (posedge CLK)) (0.197:0.124:0.051))
+    (WIDTH (posedge CLK) (1.114:1.114:1.114))
+    (WIDTH (negedge CLK) (0.874:0.874:0.874))
+    (PERIOD CLK (2.292:2.292:2.292))
+    (WIDTH (negedge RN) (0.627:0.627:0.627))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkbuf_16")
+  (INSTANCE clkbuf_0_clk)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.400:0.400:0.400) (0.382:0.382:0.382))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkbuf_16")
+  (INSTANCE clkbuf_1_0__f_clk)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.436:0.436:0.436) (0.433:0.433:0.433))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkbuf_16")
+  (INSTANCE clkbuf_1_1__f_clk)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.432:0.432:0.432) (0.429:0.429:0.429))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__clkinv_2")
+  (INSTANCE clkload0)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I ZN (0.087:0.087:0.087) (0.087:0.087:0.087))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input1)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.666:1.666:1.666) (1.828:1.828:1.828))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input10)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.654:1.654:1.654) (1.814:1.814:1.814))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input11)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.666:1.666:1.666) (1.827:1.827:1.827))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input12)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.660:1.660:1.660) (1.820:1.820:1.820))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input13)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (3.817:3.817:3.817) (3.402:3.402:3.402))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input14)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (3.352:3.352:3.352) (3.106:3.106:3.106))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input2)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.660:1.660:1.660) (1.821:1.821:1.821))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input3)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.680:1.680:1.680) (1.842:1.842:1.842))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input4)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.715:1.715:1.715) (1.882:1.882:1.882))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input5)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.765:1.765:1.765) (1.931:1.931:1.931))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input6)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.701:1.701:1.701) (1.866:1.866:1.866))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input7)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.680:1.680:1.680) (1.843:1.843:1.843))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input8)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.762:1.762:1.762) (1.928:1.928:1.928))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE input9)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.716:1.716:1.716) (1.883:1.883:1.883))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyb_1")
+  (INSTANCE output15)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (2.224:2.224:2.224) (2.345:2.345:2.345))
+   )
+  )
+ )
+)

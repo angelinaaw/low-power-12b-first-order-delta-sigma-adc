@@ -76,4 +76,4 @@ C {lab_pin.sym} -20 -30 0 0 {name=p11 sig_type=std_logic lab=Vin-}
 C {lab_pin.sym} -20 -10 0 0 {name=p12 sig_type=std_logic lab=Vref-}
 C {lab_pin.sym} 280 -110 2 0 {name=p13 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 280 -90 2 0 {name=p14 sig_type=std_logic lab=VSS}
-C {integration/analog_integration.sym} 0 0 0 0 {name=x1}
+C {analog_integration.sym} 0 0 0 0 {name=x1}

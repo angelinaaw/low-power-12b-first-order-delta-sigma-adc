@@ -20,11 +20,12 @@ create_clock -name clk -period 81.38 -waveform {0 40.69} [get_ports clk]
 #   * Tepi naik clk_div terjadi di ketukan clk ke-1
 #   * Tepi jatuh clk_div terjadi di ketukan clk ke-257 (setelah 256 setengah periode)
 #   * Tepi naik berikutnya terjadi di ketukan clk ke-513 (satu periode penuh = 512 ketukan master)
-create_generated_clock -name clk_div \
-    -source [get_ports clk] \
-    -edges {1 257 513} \
-    [get_ports clk]
-
+create_generated_clock \
+  -name clk_div \
+  -source [get_ports clk] \
+  -master_clock clk \
+  -edges {1 257 513} \
+  [get_ports clk] -add
 # ====================================================================
 # 4. KETIDAKPASTIAN CLOCK (Clock Uncertainty / Jitter)
 # ====================================================================

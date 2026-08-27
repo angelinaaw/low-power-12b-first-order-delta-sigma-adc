@@ -1,0 +1,59 @@
+{
+   "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-25_07-56-23/tmp/4753ab662a5440128ade19452af4487a.lib ",
+   "modules": {
+      "\\cic_filter": {
+         "num_wires":         800,
+         "num_wire_bits":     1240,
+         "num_pub_wires":     13,
+         "num_pub_wire_bits": 223,
+         "num_ports":         4,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1141,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 238,
+            "$_AND_": 39,
+            "$_DFF_NN0_": 137,
+            "$_DFF_PN0_": 83,
+            "$_NAND_": 39,
+            "$_NOR_": 117,
+            "$_NOT_": 1,
+            "$_ORNOT_": 49,
+            "$_OR_": 174,
+            "$_XNOR_": 73,
+            "$_XOR_": 191
+         }
+      }
+   },
+      "design": {
+         "num_wires":         800,
+         "num_wire_bits":     1240,
+         "num_pub_wires":     13,
+         "num_pub_wire_bits": 223,
+         "num_ports":         4,
+         "num_port_bits":     15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1141,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 238,
+            "$_AND_": 39,
+            "$_DFF_NN0_": 137,
+            "$_DFF_PN0_": 83,
+            "$_NAND_": 39,
+            "$_NOR_": 117,
+            "$_NOT_": 1,
+            "$_ORNOT_": 49,
+            "$_OR_": 174,
+            "$_XNOR_": 73,
+            "$_XOR_": 191
+         }
+      }
+}
+

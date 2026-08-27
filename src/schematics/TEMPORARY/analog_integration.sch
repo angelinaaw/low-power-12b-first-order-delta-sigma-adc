@@ -166,6 +166,8 @@ value="
 .param Wp=12u Wn=6u Kall=1.28u
 .param Wpc=50u Wnc=2u Wsc=2*Wp Lc=10u
 .param Wsp=3u Wsn=1.5u Ld=0.3u Wdp=2u Wdn=1u
+.param Wp1=Wp Wp2=Wp Wp3=Wp Wn1=Wn Wn2=Wn Wn3=Wn Wn4=Wn
+.param Lp1=Lp2=Lp3=Ln1=Ln2=Ln3=Ln4=Kall
 CLP Vop 0 \{CL\}
 CLM Vom 0 \{CL\}
 RLEAKP Vop 0 1T

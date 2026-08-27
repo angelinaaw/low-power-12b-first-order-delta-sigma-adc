@@ -1,0 +1,21 @@
+85. Printing statistics.
+
+=== piso_12bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+       40 wire bits
+        6 public wires
+       28 public wire bits
+        5 ports
+       16 port bits
+       24 cells
+        1   $_AND_
+       12   $_DFF_PN0_
+       11   $_MUX_
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+

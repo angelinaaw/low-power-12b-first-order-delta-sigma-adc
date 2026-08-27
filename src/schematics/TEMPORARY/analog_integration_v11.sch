@@ -364,7 +364,7 @@ meas tran avg_power AVG inst_pwr from=0 to=5u
 C {vsource.sym} -1217.5 -541.25 0 0 {name=V10 value="PULSE(3.3 0 40.69n 1n 1n 36.69n 81.38n)" savecurrent=false}
 C {gnd.sym} -1217.5 -491.25 0 0 {name=l2 lab=0}
 C {lab_pin.sym} -1217.5 -611.25 1 0 {name=p22 sig_type=std_logic lab=clk2B}
-C {latched_comparator/COMPARATOR_SD.sym} 932.5 -661.25 0 0 {name=x2}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/latched_comparator/COMPARATOR_SD.sym} 932.5 -661.25 0 0 {name=x2}
 C {opin.sym} 1190 -826.25 3 0 {name=p52 lab=Vout}
 C {vsource.sym} 1227.5 -926.25 0 0 {name=V11 value=3.3 savecurrent=false}
 C {gnd.sym} 1227.5 -896.25 0 0 {name=l3 lab=0}
@@ -383,9 +383,9 @@ C {lab_pin.sym} 1650 -683.75 1 0 {name=p37 sig_type=std_logic lab=OUT_DAC_MIN}
 C {noconn.sym} 1670 -683.75 1 0 {name=l19}
 C {vsource.sym} 1270 -673.75 0 0 {name=V16 value=3.3 savecurrent=false}
 C {gnd.sym} 1330 -593.75 0 0 {name=l20 lab=0}
-C {fully_differential_amplifier/fullydiffamp.sym} 470 -736.25 0 0 {name=x1}
-C {dac_1bit/DAC_1_BIT_MIN.sym} 1470 -553.75 0 0 {name=x3}
-C {dac_1bit/DAC_1_BIT_PLUS.sym} 1341.25 -826.25 0 0 {name=x4}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/fully_differential_amplifier/fullydiffamp.sym} 470 -736.25 0 0 {name=x1}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/dac_1bit/DAC_1_BIT_MIN.sym} 1470 -553.75 0 0 {name=x3}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/dac_1bit/DAC_1_BIT_PLUS.sym} 1341.25 -826.25 0 0 {name=x4}
 C {lab_pin.sym} 1640.625 -916.25 1 0 {name=p40 sig_type=std_logic lab=OUT_DAC_PLUS}
 C {lab_pin.sym} -80 -1241.25 1 0 {name=p43 sig_type=std_logic lab=OUT_DAC_PLUS}
 C {lab_pin.sym} -80 -401.25 3 0 {name=p36 sig_type=std_logic lab=OUT_DAC_MIN}

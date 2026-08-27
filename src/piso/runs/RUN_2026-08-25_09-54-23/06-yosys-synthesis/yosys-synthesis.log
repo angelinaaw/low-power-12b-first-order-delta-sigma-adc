@@ -1,0 +1,884 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)
+
+1. Executing Liberty frontend: /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib
+Imported 229 cell types from liberty file.
+[INFO] Using SDC file '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/06-yosys-synthesis/synthesis.abc.sdc' for ABC…wtaf
+
+2. Executing Verilog-2005 frontend: /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/piso_12bit.v
+Parsing SystemVerilog input from `/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/piso_12bit.v' to AST representation.
+Storing AST representation for module `$abstract\piso_12bit'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+4. Executing AST frontend in derive mode using pre-parsed AST for module `\piso_12bit'.
+Generating RTLIL representation for module `\piso_12bit'.
+
+4.1. Analyzing design hierarchy..
+Top module:  \piso_12bit
+
+4.2. Analyzing design hierarchy..
+Top module:  \piso_12bit
+Removing unused module `$abstract\piso_12bit'.
+Removed 1 unused modules.
+Renaming module piso_12bit to piso_12bit.
+
+5. Executing ATTRMAP pass (move or copy attributes).
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \piso_12bit
+
+6.2. Analyzing design hierarchy..
+Top module:  \piso_12bit
+Removed 0 unused modules.
+
+7. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/piso_12bit.v:11$1 in module piso_12bit.
+Removed a total of 0 dead cases.
+
+9. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 0 assignments to connections.
+
+10. Executing PROC_INIT pass (extract init attributes).
+
+11. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\piso_12bit.$proc$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/piso_12bit.v:11$1'.
+
+12. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+13. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\piso_12bit.$proc$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/piso_12bit.v:11$1'.
+     1/1: $0\shift_reg[11:0]
+
+14. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+15. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\piso_12bit.\shift_reg' using process `\piso_12bit.$proc$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/piso_12bit.v:11$1'.
+  created $adff cell `$procdff$10' with positive edge clock and positive level reset.
+
+16. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+17. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\piso_12bit.$proc$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/piso_12bit.v:11$1'.
+Removing empty process `piso_12bit.$proc$/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/piso_12bit.v:11$1'.
+Cleaned up 1 empty switch.
+
+18. Executing CHECK pass (checking for obvious problems).
+Checking module piso_12bit...
+Found and reported 0 problems.
+
+19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+<suppressed ~2 debug messages>
+
+20. Executing FLATTEN pass (flatten design).
+
+21. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+22. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+Removed 2 unused cells and 5 unused wires.
+<suppressed ~3 debug messages>
+
+23. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+24. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 2 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+25. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \piso_12bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+26. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \piso_12bit.
+Performed a total of 0 changes.
+
+27. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 2 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+28. Executing OPT_DFF pass (perform DFF optimizations).
+
+29. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+30. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+31. Executing FSM pass (extract and optimize FSM).
+
+31.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+31.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+31.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+31.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+31.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+31.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+31.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+31.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+32. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+33. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 2 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+34. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \piso_12bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+35. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \piso_12bit.
+Performed a total of 0 changes.
+
+36. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 2 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+37. Executing OPT_DFF pass (perform DFF optimizations).
+
+38. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+39. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+40. Executing WREDUCE pass (reducing word size of cells).
+
+41. Executing PEEPOPT pass (run peephole optimizers).
+
+42. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+43. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module piso_12bit:
+  created 0 $alu and 0 $macc cells.
+
+44. Executing SHARE pass (SAT-based resource sharing).
+
+45. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+46. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 2 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+47. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \piso_12bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+48. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \piso_12bit.
+Performed a total of 0 changes.
+
+49. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 2 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+50. Executing OPT_DFF pass (perform DFF optimizations).
+
+51. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+52. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+53. Executing MEMORY pass.
+
+53.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+53.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+53.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+53.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+53.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+53.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+53.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+53.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+53.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+53.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+54. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+55. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+56. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 2 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+57. Executing OPT_DFF pass (perform DFF optimizations).
+
+58. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+59. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+60. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+61. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 2 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+62. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \piso_12bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+63. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \piso_12bit.
+Performed a total of 0 changes.
+
+64. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 2 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+65. Executing OPT_SHARE pass.
+
+66. Executing OPT_DFF pass (perform DFF optimizations).
+
+67. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+68. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+69. Executing TECHMAP pass (map to technology primitives).
+
+69.1. Executing Verilog-2005 frontend: /foss/tools/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/foss/tools/yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+69.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $adff.
+No more expansions possible.
+<suppressed ~79 debug messages>
+
+70. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+71. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 24 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+72. Executing OPT_DFF pass (perform DFF optimizations).
+
+73. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+74. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+75. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 24 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+76. Executing OPT_DFF pass (perform DFF optimizations).
+
+77. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+78. Executing ABC pass (technology mapping using ABC).
+
+78.1. Extracting gate netlist of module `\piso_12bit' to `<abc-temp-dir>/input.blif'..
+
+78.1.1. Executed ABC.
+Extracted 12 gates and 37 wires to a netlist network with 24 inputs and 12 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Apr 16 2026 21:01:18)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+78.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:       11
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       24
+ABC RESULTS:          output signals:       12
+Removing temp directory.
+Removing global temp directory.
+
+79. Executing OPT pass (performing simple optimizations).
+
+79.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+79.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 24 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+79.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+79.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+Removed 0 unused cells and 36 unused wires.
+<suppressed ~1 debug messages>
+
+79.5. Finished fast OPT passes.
+
+80. Executing HIERARCHY pass (managing design hierarchy).
+
+80.1. Analyzing design hierarchy..
+Top module:  \piso_12bit
+
+80.2. Analyzing design hierarchy..
+Top module:  \piso_12bit
+Removed 0 unused modules.
+
+81. Executing CHECK pass (checking for obvious problems).
+Checking module piso_12bit...
+Found and reported 0 problems.
+
+82. Printing statistics.
+
+=== piso_12bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+       40 wire bits
+        6 public wires
+       28 public wire bits
+        5 ports
+       16 port bits
+       24 cells
+        1   $_AND_
+       12   $_DFF_PN0_
+       11   $_MUX_
+
+83. Executing OPT pass (performing simple optimizations).
+
+83.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+83.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 24 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+83.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \piso_12bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+83.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \piso_12bit.
+Performed a total of 0 changes.
+
+83.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\piso_12bit'.
+Computing hashes of 24 cells of `\piso_12bit'.
+Finding duplicate cells in `\piso_12bit'.
+Removed a total of 0 cells.
+
+83.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+83.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+
+83.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piso_12bit.
+
+83.9. Finished fast OPT passes. (There is nothing left to do.)
+
+84. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+{
+   "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/tmp/8cab262a6905431cb4eeaf0a5889ccdb.lib ",
+   "modules": {
+      "\\piso_12bit": {
+         "num_wires":         7,
+         "num_wire_bits":     40,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 28,
+         "num_ports":         5,
+         "num_port_bits":     16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         24,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_DFF_PN0_": 12,
+            "$_MUX_": 11
+         }
+      }
+   },
+      "design": {
+         "num_wires":         7,
+         "num_wire_bits":     40,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 28,
+         "num_ports":         5,
+         "num_port_bits":     16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         24,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_DFF_PN0_": 12,
+            "$_MUX_": 11
+         }
+      }
+}
+
+85. Printing statistics.
+
+=== piso_12bit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+       40 wire bits
+        6 public wires
+       28 public wire bits
+        5 ports
+       16 port bits
+       24 cells
+        1   $_AND_
+       12   $_DFF_PN0_
+       11   $_MUX_
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+86. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnq_1 (noninv, pins=3, area=65.86) is a direct match for cell type $_DFF_N_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffq_1 (noninv, pins=3, area=63.66) is a direct match for cell type $_DFF_P_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1 (noninv, pins=4, area=74.64) is a direct match for cell type $_DFF_NN0_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1 (noninv, pins=4, area=79.03) is a direct match for cell type $_DFF_NN1_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 (noninv, pins=4, area=74.64) is a direct match for cell type $_DFF_PN0_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 (noninv, pins=4, area=79.03) is a direct match for cell type $_DFF_PN1_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1 (noninv, pins=5, area=94.39) is a direct match for cell type $_DFFSR_NNN_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1 (noninv, pins=5, area=85.61) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    \gf180mcu_fd_sc_mcu7t5v0__dffnq_1 _DFF_N_ (.CLKN( C), .D( D), .Q( Q));
+    \gf180mcu_fd_sc_mcu7t5v0__dffq_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1 _DFF_NN0_ (.CLKN( C), .D( D), .Q( Q), .RN( R));
+    \gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1 _DFF_NN1_ (.CLKN( C), .D( D), .Q( Q), .SETN( R));
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RN( R));
+    \gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SETN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    \gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1 _DFFSR_NNN_ (.CLKN( C), .D( D), .Q( Q), .RN( R), .SETN( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .RN( R), .SETN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+86.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\piso_12bit':
+  mapped 12 $_DFF_PN0_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 cells.
+{
+   "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/tmp/8cab262a6905431cb4eeaf0a5889ccdb.lib ",
+   "modules": {
+      "\\piso_12bit": {
+         "num_wires":         7,
+         "num_wire_bits":     40,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 28,
+         "num_ports":         5,
+         "num_port_bits":     16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         24,
+         "num_submodules":       0,
+         "area":              895.641600,
+         "sequential_area":    895.641600,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_MUX_": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 12
+         }
+      }
+   },
+      "design": {
+         "num_wires":         7,
+         "num_wire_bits":     40,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 28,
+         "num_ports":         5,
+         "num_port_bits":     16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         24,
+         "num_submodules":       0,
+         "area":              895.641600,
+         "sequential_area":    895.641600,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_MUX_": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 12
+         }
+      }
+}
+
+87. Printing statistics.
+
+=== piso_12bit ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        7        - wires
+       40        - wire bits
+        6        - public wires
+       28        - public wire bits
+        5        - ports
+       16        - port bits
+       24  895.642 cells
+        1        -   $_AND_
+       11        -   $_MUX_
+       12  895.642   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\piso_12bit': 895.641600
+     of which used for sequential elements: 895.641600 (100.00%)
+
+[INFO] Using generated ABC script '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/06-yosys-synthesis/DELAY_1.abc'…
+
+88. Executing ABC pass (technology mapping using ABC).
+
+88.1. Extracting gate netlist of module `\piso_12bit' to `/tmp/yosys-abc-RgbDnR/input.blif'..
+
+88.1.1. Executed ABC.
+Extracted 12 gates and 36 wires to a netlist network with 24 inputs and 12 outputs.
+Running ABC script: /tmp/yosys-abc-RgbDnR/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Apr 16 2026 21:01:18)
+ABC: abc 01> empty
+ABC: abc 01> source /tmp/yosys-abc-RgbDnR/abc.script
+ABC: + read_blif /tmp/yosys-abc-RgbDnR/input.blif 
+ABC: + read_lib -w /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/tmp/8cab262a6905431cb4eeaf0a5889ccdb.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.08 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__antenna" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__endcap" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__filltie" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__hold".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_4".
+ABC: Library "gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00" from "/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/tmp/8cab262a6905431cb4eeaf0a5889ccdb.lib" has 143 cells (72 skipped: 36 seq; 15 tri-state; 21 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.14 sec
+ABC: Memory =   23.83 MB. Time =     0.14 sec
+ABC: Warning: Detected 6 multi-output cells (for example, "gf180mcu_fd_sc_mcu7t5v0__addf_1").
+ABC: + read_constr -v /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "gf180mcu_fd_sc_mcu7t5v0__inv_1/ZN".
+ABC: Setting output load to be 72.910004.
+ABC: + source /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/06-yosys-synthesis/DELAY_1.abc 
+ABC: Error: The network is combinational.
+ABC: The cell areas are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.20).
+ABC: Cannot find the default PI driving cell (gf180mcu_fd_sc_mcu7t5v0__inv_1/ZN) in the library.
+ABC: WireLoad = "none"  Gates =     34 ( 32.4 %)   Cap = 20.5 ff (  0.0 %)   Area =      428.06 (100.0 %)   Delay =  1448.08 ps  ( 97.1 %)               
+ABC: Path  0 --       4 : 0    1 pi                                A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   4.2 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      38 : 1    1 gf180mcu_fd_sc_mcu7t5v0__clkinv_1 A =   8.78  Df =  87.2  -10.9 ps  S = 124.8 ps  Cin =  4.2 ff  Cout =   4.8 ff  Cmax = 228.4 ff  G =  114  
+ABC: Path  2 --      51 : 3    1 gf180mcu_fd_sc_mcu7t5v0__oai21_1  A =  17.56  Df =1448.1 -564.5 ps  S =2337.3 ps  Cin =  4.9 ff  Cout =  72.9 ff  Cmax = 124.5 ff  G = 1500  
+ABC: Start-point = pi3 (\shift_reg [1]).  End-point = po1 ($0\shift_reg[11:0] [2]).
+ABC: netlist                       : i/o =   24/   12  lat =    0  nd =    34  edge =     68  area =242.58  delay =500.90  lev = 2
+ABC: + write_blif /tmp/yosys-abc-RgbDnR/output.blif 
+ABC:                                                                                
+ABC: YOSYS_ABC_DONE 
+
+88.1.2. Re-integrating ABC results.
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and2_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__clkinv_1 cells:       11
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand2_1 cells:       11
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai21_1 cells:       11
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       24
+ABC RESULTS:          output signals:       12
+Removing temp directory.
+Removing global temp directory.
+
+89. Executing SETUNDEF pass (replace undef values with defined constants).
+
+90. Executing HILOMAP pass (mapping to constant drivers).
+
+91. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+92. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \piso_12bit..
+Removed 0 unused cells and 37 unused wires.
+<suppressed ~2 debug messages>
+
+93. Executing INSBUF pass (insert buffer cells for connected wires).
+
+94. Executing CHECK pass (checking for obvious problems).
+Checking module piso_12bit...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.64 (git sha1 6d2c445ae, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3)",
+   "invocation": "stat -json -liberty /foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/tmp/8cab262a6905431cb4eeaf0a5889ccdb.lib ",
+   "modules": {
+      "\\piso_12bit": {
+         "num_wires":         50,
+         "num_wire_bits":     61,
+         "num_pub_wires":     16,
+         "num_pub_wire_bits": 27,
+         "num_ports":         5,
+         "num_port_bits":     16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         46,
+         "num_submodules":       0,
+         "area":              1323.705600,
+         "sequential_area":    895.641600,
+         "num_cells_by_type": {
+            "gf180mcu_fd_sc_mcu7t5v0__and2_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__clkinv_1": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 12,
+            "gf180mcu_fd_sc_mcu7t5v0__nand2_1": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__oai21_1": 11
+         }
+      }
+   },
+      "design": {
+         "num_wires":         50,
+         "num_wire_bits":     61,
+         "num_pub_wires":     16,
+         "num_pub_wire_bits": 27,
+         "num_ports":         5,
+         "num_port_bits":     16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         46,
+         "num_submodules":       0,
+         "area":              1323.705600,
+         "sequential_area":    895.641600,
+         "num_cells_by_type": {
+            "gf180mcu_fd_sc_mcu7t5v0__and2_1": 1,
+            "gf180mcu_fd_sc_mcu7t5v0__clkinv_1": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1": 12,
+            "gf180mcu_fd_sc_mcu7t5v0__nand2_1": 11,
+            "gf180mcu_fd_sc_mcu7t5v0__oai21_1": 11
+         }
+      }
+}
+
+95. Printing statistics.
+
+=== piso_12bit ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       50        - wires
+       61        - wire bits
+       16        - public wires
+       27        - public wire bits
+        5        - ports
+       16        - port bits
+       46 1.32E+03 cells
+        1   17.562   gf180mcu_fd_sc_mcu7t5v0__and2_1
+       11   96.589   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+       12  895.642   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+       11  120.736   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+       11  193.178   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+
+   Chip area for module '\piso_12bit': 1323.705600
+     of which used for sequential elements: 895.641600 (67.66%)
+
+96. Executing Verilog backend.
+Dumping module `\piso_12bit'.
+
+97. Executing JSON backend.
