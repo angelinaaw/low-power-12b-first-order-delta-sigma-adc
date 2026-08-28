@@ -47,6 +47,7 @@ value="
 .param CL=0.5p
 .param Wp=18u
 .param Wn=9u
+.param Wp1=Wp Wp2=Wp Wp3=Wp
 .param Kall=1.25u
 .param Gcm = 1m
 .temp 27
@@ -150,7 +151,7 @@ C {lab_wire.sym} 190 -42.5 0 1 {name=p1 sig_type=std_logic lab=vop}
 C {lab_wire.sym} 190 -18.75 0 1 {name=p2 sig_type=std_logic lab=vom}
 C {lab_wire.sym} 142.5 22.5 0 1 {name=p3 sig_type=std_logic lab=vbiasp}
 C {lab_wire.sym} 110 37.5 0 1 {name=p4 sig_type=std_logic lab=vbiasn}
-C {fully_differential_amplifier/fullydiffamp.sym} 130 60 0 0 {name=x1}
+C {fullydiffamp.sym} 130 60 0 0 {name=x1}
 C {code_shown.sym} 400 -20 0 0 {name=MODELS only_toplevel=false value="
 .lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
 .inc /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice"}

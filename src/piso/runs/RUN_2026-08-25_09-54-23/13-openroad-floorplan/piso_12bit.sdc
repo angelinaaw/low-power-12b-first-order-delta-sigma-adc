@@ -1,0 +1,77 @@
+###############################################################################
+# Created by write_sdc
+###############################################################################
+current_design piso_12bit
+###############################################################################
+# Timing Constraints
+###############################################################################
+create_clock -name clk -period 81.3800 [get_ports {clk}]
+set_clock_transition 0.1500 [get_clocks {clk}]
+set_clock_uncertainty 0.2500 clk
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[0]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[0]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[10]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[10]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[11]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[11]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[1]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[1]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[2]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[2]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[3]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[3]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[4]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[4]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[5]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[5]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[6]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[6]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[7]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[7]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[8]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[8]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {data_in[9]}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {data_in[9]}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {load_en}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {load_en}]
+set_input_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {rst_n}]
+set_input_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {rst_n}]
+set_output_delay 1.0000 -clock [get_clocks {clk}] -min -add_delay [get_ports {serial_out}]
+set_output_delay 16.0000 -clock [get_clocks {clk}] -max -add_delay [get_ports {serial_out}]
+###############################################################################
+# Environment
+###############################################################################
+set_load -pin_load 0.0350 [get_ports {serial_out}]
+set_drive -rise 0.5000 [get_ports {clk}]
+set_drive -fall 0.5000 [get_ports {clk}]
+set_drive -rise 0.5000 [get_ports {load_en}]
+set_drive -fall 0.5000 [get_ports {load_en}]
+set_drive -rise 0.5000 [get_ports {rst_n}]
+set_drive -fall 0.5000 [get_ports {rst_n}]
+set_drive -rise 0.5000 [get_ports {data_in[11]}]
+set_drive -fall 0.5000 [get_ports {data_in[11]}]
+set_drive -rise 0.5000 [get_ports {data_in[10]}]
+set_drive -fall 0.5000 [get_ports {data_in[10]}]
+set_drive -rise 0.5000 [get_ports {data_in[9]}]
+set_drive -fall 0.5000 [get_ports {data_in[9]}]
+set_drive -rise 0.5000 [get_ports {data_in[8]}]
+set_drive -fall 0.5000 [get_ports {data_in[8]}]
+set_drive -rise 0.5000 [get_ports {data_in[7]}]
+set_drive -fall 0.5000 [get_ports {data_in[7]}]
+set_drive -rise 0.5000 [get_ports {data_in[6]}]
+set_drive -fall 0.5000 [get_ports {data_in[6]}]
+set_drive -rise 0.5000 [get_ports {data_in[5]}]
+set_drive -fall 0.5000 [get_ports {data_in[5]}]
+set_drive -rise 0.5000 [get_ports {data_in[4]}]
+set_drive -fall 0.5000 [get_ports {data_in[4]}]
+set_drive -rise 0.5000 [get_ports {data_in[3]}]
+set_drive -fall 0.5000 [get_ports {data_in[3]}]
+set_drive -rise 0.5000 [get_ports {data_in[2]}]
+set_drive -fall 0.5000 [get_ports {data_in[2]}]
+set_drive -rise 0.5000 [get_ports {data_in[1]}]
+set_drive -fall 0.5000 [get_ports {data_in[1]}]
+set_drive -rise 0.5000 [get_ports {data_in[0]}]
+set_drive -fall 0.5000 [get_ports {data_in[0]}]
+###############################################################################
+# Design Rules
+###############################################################################

@@ -1,0 +1,98 @@
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading OpenROAD database at '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/21-openroad-generatepdn/piso_12bit.odb'…
+Reading design constraints file at '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/constraint.sdc'…
+[WARNING STA-0345] resistance scale 1e+03 does not match library scale 1e+00.
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
++ global_placement -density 0.7 -skip_io -pad_right 0 -pad_left 0 -init_wirelength_coef 0.25
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.560  3.920 ) um
+[INFO GPL-0004] CoreBBox: (  6.720 15.680 ) ( 67.760 58.800 ) um
+[INFO GPL-0036] Movable instances area:       1323.706 um^2
+[INFO GPL-0037] Total instances area:         1407.123 um^2
+[INFO GPL-0035] Pin density area adjust:        58.524 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:                65
+[INFO GPL-0007] Movable instances:                  46
+[INFO GPL-0008] Fixed instances:                    19
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                     61
+[INFO GPL-0011] Number of pins:                    150
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 75.000 75.000 ) um
+[INFO GPL-0013] Core BBox: (  6.720 15.680 ) ( 67.760 58.800 ) um
+[INFO GPL-0016] Core area:                    2632.045 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                  2632.045 um^2
+[INFO GPL-0017] Fixed instances area:           83.418 um^2
+[INFO GPL-0018] Movable instances area:       1382.230 um^2
+[INFO GPL-0019] Utilization:                    54.234 %
+[INFO GPL-0020] Standard cells area:          1382.230 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 46	Region center = 0
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.7000
+[INFO GPL-0024] Movable insts average area:     30.048 um^2
+[INFO GPL-0025] Ideal bin area:                 42.926 um^2
+[INFO GPL-0026] Ideal bin count:                    61
+[INFO GPL-0027] Total bin area:               2632.045 um^2
+[INFO GPL-0028] Bin count (X, Y):           4 ,      4
+[INFO GPL-0029] Bin size (W * H):      15.260 * 10.780 um
+[INFO GPL-0030] Number of bins:                     16
+[INFO GPL-0007] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.6789 |  2.198030e+02 |   +0.00% |  1.07e-13 |      
+       10 |   0.6730 |  2.185040e+02 |   -0.59% |  1.75e-13 |      
+       20 |   0.6733 |  2.179750e+02 |   -0.24% |  2.85e-13 |      
+       30 |   0.6734 |  2.178870e+02 |   -0.04% |  4.65e-13 |      
+       40 |   0.6733 |  2.179850e+02 |   +0.04% |  7.57e-13 |      
+       50 |   0.6733 |  2.179710e+02 |   -0.01% |  1.23e-12 |      
+       60 |   0.6732 |  2.180615e+02 |   +0.04% |  2.01e-12 |      
+       70 |   0.6731 |  2.181675e+02 |   +0.05% |  3.27e-12 |      
+       80 |   0.6730 |  2.182580e+02 |   +0.04% |  5.33e-12 |      
+       90 |   0.6727 |  2.189630e+02 |   +0.32% |  8.68e-12 |      
+      100 |   0.6723 |  2.193045e+02 |   +0.16% |  1.41e-11 |      
+      110 |   0.6716 |  2.194980e+02 |   +0.09% |  2.30e-11 |      
+      120 |   0.6707 |  2.210510e+02 |   +0.71% |  3.75e-11 |      
+      130 |   0.6697 |  2.210690e+02 |   +0.01% |  6.11e-11 |      
+      140 |   0.6670 |  2.236800e+02 |   +1.18% |  9.95e-11 |      
+      150 |   0.6602 |  2.286940e+02 |   +2.24% |  1.62e-10 |      
+      160 |   0.6439 |  2.412705e+02 |   +5.50% |  2.64e-10 |      
+      170 |   0.6047 |  2.735525e+02 |  +13.38% |  4.30e-10 |      
+      180 |   0.4925 |  2.993305e+02 |   +9.42% |  7.01e-10 |      
+      190 |   0.4510 |  2.969940e+02 |   -0.78% |  1.14e-09 |      
+      200 |   0.3955 |  3.194295e+02 |   +7.55% |  1.86e-09 |      
+      210 |   0.3447 |  3.311295e+02 |   +3.66% |  3.03e-09 |      
+      220 |   0.3008 |  3.304615e+02 |   -0.20% |  4.46e-09 |      
+      230 |   0.2392 |  3.383755e+02 |   +2.39% |  6.57e-09 |      
+      240 |   0.1660 |  3.406010e+02 |   +0.66% |  9.68e-09 |      
+      249 |   0.0979 |  3.510875e+02 |          |  1.43e-08 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 249
+[INFO GPL-1002] Placed Cell Area             1382.2296
+[INFO GPL-1003] Available Free Area          2548.6272
+[INFO GPL-1004] Minimum Feasible Density        0.5500 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.6026
+[INFO GPL-1008]     - For 80% usage of free space: 0.6779
+[INFO GPL-1014] Final placement area: 1382.23 (+0.00%)
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                              22      96.59
+  Tap cell                                 19      83.42
+  Inverter                                 11      96.59
+  Sequential cell                          12     895.64
+  Multi-Input combinational cell           23     331.48
+  Total                                    87    1503.71
+Writing OpenROAD database to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/24-openroad-globalplacementskipio/piso_12bit.odb'…
+Writing netlist to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/24-openroad-globalplacementskipio/piso_12bit.nl.v'…
+Writing powered netlist to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/24-openroad-globalplacementskipio/piso_12bit.pnl.v'…
+Writing layout to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/24-openroad-globalplacementskipio/piso_12bit.def'…
+Writing timing constraints to '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/piso/runs/RUN_2026-08-25_09-54-23/24-openroad-globalplacementskipio/piso_12bit.sdc'…

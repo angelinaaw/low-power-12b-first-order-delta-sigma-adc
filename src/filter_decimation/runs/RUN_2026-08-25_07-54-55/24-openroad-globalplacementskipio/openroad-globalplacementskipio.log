@@ -1,0 +1,33 @@
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading OpenROAD database at '/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/filter_decimation/runs/RUN_2026-08-25_07-54-55/21-openroad-generatepdn/cic_filter.odb'…
+Reading design constraints file at 'constraint.sdc'…
+[WARNING STA-0345] resistance scale 1e+03 does not match library scale 1e+00.
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
++ global_placement -density 0.1 -skip_io -pad_right 0 -pad_left 0 -init_wirelength_coef 0.25
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.560  3.920 ) um
+[INFO GPL-0004] CoreBBox: (  6.720 15.680 ) ( 212.800 203.840 ) um
+[INFO GPL-0036] Movable instances area:      34842.214 um^2
+[INFO GPL-0037] Total instances area:        35939.814 um^2
+[INFO GPL-0035] Pin density area adjust:      2993.128 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:              1505
+[INFO GPL-0007] Movable instances:                1255
+[INFO GPL-0008] Fixed instances:                   250
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                   1258
+[INFO GPL-0011] Number of pins:                   4421
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 220.000 220.000 ) um
+[INFO GPL-0013] Core BBox: (  6.720 15.680 ) ( 212.800 203.840 ) um
+[INFO GPL-0016] Core area:                   38776.013 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                 38776.013 um^2
+[INFO GPL-0017] Fixed instances area:         1097.600 um^2
+[INFO GPL-0018] Movable instances area:      37835.342 um^2
+[INFO GPL-0019] Utilization:                   100.416 %
+[INFO GPL-0020] Standard cells area:         37835.342 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[ERROR GPL-0301] Utilization 100.416 % exceeds 100%.
+Error: gpl.tcl, 82 GPL-0301

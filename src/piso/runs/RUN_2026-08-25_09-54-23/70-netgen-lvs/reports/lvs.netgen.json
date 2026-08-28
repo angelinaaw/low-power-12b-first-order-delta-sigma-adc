@@ -1,0 +1,310 @@
+[
+  {
+   "pins": [
+      [
+        "A1",
+        "A2",
+        "B",
+        "ZN",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "A1",
+        "A2",
+        "B",
+        "ZN",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A1",
+        "A2",
+        "ZN",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "A1",
+        "A2",
+        "ZN",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "I",
+        "ZN",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "I",
+        "ZN",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "I",
+        "ZN",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "I",
+        "ZN",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "I",
+        "Z",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "I",
+        "Z",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "I",
+        "Z",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "I",
+        "Z",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "D",
+        "RN",
+        "CLK",
+        "Q",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "D",
+        "RN",
+        "CLK",
+        "Q",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A1",
+        "A2",
+        "Z",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ], [
+        "A1",
+        "A2",
+        "Z",
+        "VDD",
+        "VNW",
+        "VPW",
+        "VSS"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "piso_12bit",
+      "piso_12bit"
+   ],
+   "devices": [
+       [
+         ["gf180mcu_fd_sc_mcu7t5v0__oai21_1", 11],
+         ["gf180mcu_fd_sc_mcu7t5v0__nand2_1", 11],
+         ["gf180mcu_fd_sc_mcu7t5v0__fillcap_4", 1],
+         ["gf180mcu_fd_sc_mcu7t5v0__clkinv_2", 1],
+         ["gf180mcu_fd_sc_mcu7t5v0__fillcap_8", 1],
+         ["gf180mcu_fd_sc_mcu7t5v0__clkinv_1", 11],
+         ["gf180mcu_fd_sc_mcu7t5v0__dlyb_1", 15],
+         ["gf180mcu_fd_sc_mcu7t5v0__clkbuf_16", 3],
+         ["gf180mcu_fd_sc_mcu7t5v0__dffrnq_1", 12],
+         ["gf180mcu_fd_sc_mcu7t5v0__fillcap_16", 1],
+         ["gf180mcu_fd_sc_mcu7t5v0__fillcap_32", 1],
+         ["gf180mcu_fd_sc_mcu7t5v0__and2_1", 1 ]
+       ], [
+         ["gf180mcu_fd_sc_mcu7t5v0__oai21_1", 11 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__nand2_1", 11 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__fillcap_4", 1 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__clkinv_2", 1 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__fillcap_8", 1 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__clkinv_1", 11 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__dlyb_1", 15 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__clkbuf_16", 3 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__dffrnq_1", 12 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__fillcap_16", 1 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__fillcap_32", 1 ],
+         ["gf180mcu_fd_sc_mcu7t5v0__and2_1", 1 ]
+       ]
+   ],
+   "nets": [
+    82,
+    82
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "clk",
+        "load_en",
+        "rst_n",
+        "data_in[1]",
+        "data_in[7]",
+        "data_in[8]",
+        "data_in[6]",
+        "data_in[2]",
+        "data_in[11]",
+        "data_in[9]",
+        "data_in[3]",
+        "data_in[4]",
+        "data_in[10]",
+        "data_in[5]",
+        "data_in[0]",
+        "serial_out",
+        "VDD",
+        "VSS"
+      ], [
+        "clk",
+        "load_en",
+        "rst_n",
+        "data_in[1]",
+        "data_in[7]",
+        "data_in[8]",
+        "data_in[6]",
+        "data_in[2]",
+        "data_in[11]",
+        "data_in[9]",
+        "data_in[3]",
+        "data_in[4]",
+        "data_in[10]",
+        "data_in[5]",
+        "data_in[0]",
+        "serial_out",
+        "VDD",
+        "VSS"
+      ]
+   ]
+  }
+]
