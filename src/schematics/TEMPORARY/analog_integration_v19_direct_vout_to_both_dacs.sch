@@ -290,7 +290,7 @@ C {ipin.sym} 877.5 -930 1 1 {name=p4 lab=Vbiasn}
 C {ipin.sym} 917.5 -930 1 1 {name=p42 lab=Vbiasp}
 C {lab_pin.sym} 747.5 -1010 1 0 {name=p33 sig_type=std_logic lab=Vm}
 C {lab_pin.sym} 747.5 -970 3 0 {name=p34 sig_type=std_logic lab=Vp}
-C {fulldiffamp.sym} 897.5 -905 0 0 {name=x1}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/TEMPORARY/fulldiffamp.sym} 897.5 -905 0 0 {name=x1}
 C {lab_pin.sym} 347.5 -1410 1 0 {name=p36 sig_type=std_logic lab=OUT_DAC_MIN}
 C {lab_pin.sym} 347.5 -570 3 0 {name=p21 sig_type=std_logic lab=OUT_DAC_PLUS}
 C {vsource.sym} -1010 -1240 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -301,9 +301,8 @@ C {vsource.sym} -570 -1240 0 0 {name=V3 value=0.65 savecurrent=false}
 C {gnd.sym} -570 -1190 0 0 {name=l7 lab=0}
 C {vsource.sym} -310 -1240 0 0 {name=V4 value=2.5 savecurrent=false}
 C {gnd.sym} -310 -1190 0 0 {name=l8 lab=0}
-C {vsource.sym} -1010 -960 0 0 {name=V5 value="SIN(1.65 0.25 50k 0 0 0)" savecurrent=false}
 C {gnd.sym} -1010 -910 0 0 {name=l9 lab=0}
-C {vsource.sym} -790 -960 0 0 {name=V6 value="SIN(1.65 0.25 50k 0 0 180)" savecurrent=false}
+C {vsource.sym} -790 -960 0 0 {name=V6 value=1.65 savecurrent=false}
 C {gnd.sym} -790 -910 0 0 {name=l10 lab=0}
 C {vsource.sym} -570 -960 0 0 {name=V7 value="PULSE(0 3.3 1.1u 1n 1n 30n 81.38n)" savecurrent=false}
 C {gnd.sym} -570 -910 0 0 {name=l11 lab=0}
@@ -328,80 +327,195 @@ value="
 .lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
 .inc /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
 
+* =====================================================
+* PARAMETERS
+* =====================================================
+
 .param CL=0.5p
+
 .param Wp=20u
 .param Wn=10u
 .param Kall=1.28u
-.param Wpc=50u Wnc=2u Wsc=2*Wpc Lc=10u
-.param Wsp_p=5u Wsn_p=0.3u Ld=0.3u Wdp_p=40u Wdn_p=0.6u Wsp2_p=5u Wsn2_p=0.3u
-.param Wsp_m=5u Wsn_m=0.5u Wdp_m=10u Wdn_m=1u
+
+.param Wpc=50u
+.param Wnc=2u
+.param Wsc=2*Wpc
+.param Lc=10u
+
+.param Wsp_p=5u
+.param Wsn_p=0.3u
+.param Ld=0.3u
+.param Wdp_p=40u
+.param Wdn_p=0.6u
+.param Wsp2_p=5u
+.param Wsn2_p=0.3u
+
+.param Wsp_m=5u
+.param Wsn_m=0.5u
+.param Wdp_m=10u
+.param Wdn_m=1u
+
 .param Win=1u
-.param AFD=10000 VOUTCM=1.65 VSW=1.63
+
+BVINP Vin+ 0 V=\{1.65 + pwl(time, 0, -0.5u, 0.008, 5.85u, 0.016, 5.06u, 0.024, -4.9u, 0.032, -4.6u, 0.040, 6.71u, 0.048, 11.2u, 0.056, -1.3u, 0.064, -10.4u)\}
+
+* =====================================================
+* SIMULATION OPTIONS
+* =====================================================
+
+.options method=gear
+.options maxord=2
+.options reltol=1e-3
+.options abstol=1e-12
+.options vntol=1e-6
+.options temp=27
+
+
+* =====================================================
+* LOADS
+* =====================================================
+
 CLP Vop 0 \{CL\}
 CLM Vom 0 \{CL\}
+
 RLEAKP Vop 0 1T
 RLEAKM Vom 0 1T
+
 CMPLOAD Vout 0 10f
 RLEAKCMP Vout 0 1T
 
-* dummy load supaya tiap node punya DC path ke ground
-Rd1 clk1  0 1meg
-Rd2 clk2  0 1meg
 
-* Self-contained fully differential amplifier reference model.
-* The original transistor amplifier is kept on the drawing but ignored.
-BFDAP Vop 0 V=\{VOUTCM+VSW*tanh(0.5*AFD*(V(Vp)-V(Vm))/VSW)\}
-BFDAM Vom 0 V=\{VOUTCM-VSW*tanh(0.5*AFD*(V(Vp)-V(Vm))/VSW)\}
-RCM_M Vm VCM 1G
-RCM_P Vp VCM 1G
+* =====================================================
+* CLOCK DC PATH
+* =====================================================
 
-* Reset every signal node to VCM so integration starts from Vod=0.
-SRESET_VM Vm VCM reset 0 SWRST
-SRESET_VP Vp VCM reset 0 SWRST
-SRESET_OP Vop VCM reset 0 SWRST
-SRESET_OM Vom VCM reset 0 SWRST
-.model SWRST SW(Ron=1 Roff=1T Vt=1.65 Vh=0.1)
+Rd1 clk1  0 1G
+Rd2 clk2  0 1G
+Rd3 clk2B 0 1G
 
-* One unambiguous clocked comparator output.
-* During clk2 evaluation Vout is high only when Vin+ > Vin-.
-* Outside evaluation, or when Vin+ <= Vin-, Vout is low.
-* This same Vout node directly drives DAC_1_BIT_PLUS and DAC_1_BIT_MIN.
-* There are no intermediate comparator, latch, restoration, or DAC-control nodes.
-BVOUT Vout 0 V=\{V(Vin+)>V(Vin-) ? (V(clk2)>1.65 ? 3.3 : 0) : 0\}
+
+* =====================================================
+* OPERATING POINT HINT
+* =====================================================
+
+.nodeset V(Vm)=1.65
+.nodeset V(Vp)=1.65
+.nodeset V(Vop)=1.65
+.nodeset V(Vom)=1.65
+
+
+* =====================================================
+* IMPORTANT
+* =====================================================
+
+* Vin+ is driven ONLY by schematic source V5
+* Vin- is driven ONLY by schematic source V6
+*
+* DO NOT add:
+* BVINP
+* BVINM
+*
+* Vop/Vom come ONLY from transistor-level diffamp
+*
+* Vout comes ONLY from transistor-level comparator
+*
+* Vout directly drives DAC_PLUS and DAC_MIN
+
+
+* =====================================================
+* TRANSIENT
+* =====================================================
 
 .control
+
 set color0=white
 set color1=black
-tran 5n 50u 0 0.2n
-let vicm_ota = (v(Vp)+v(Vm))/2
-let vid_ota  = v(Vp)-v(Vm)
+
+save v(reset)
+save v(clk1)
+save v(clk2)
+save v(clk2B)
+
+save v(Vin+)
+save v(Vin-)
+
+save v(Vm)
+save v(Vp)
+
+save v(Vop)
+save v(Vom)
+
+save v(Vout)
+
+save v(OUT_DAC_PLUS)
+save v(OUT_DAC_MIN)
+
+tran 50n 3m 0 10n
+
+
+* =====================================================
+* DERIVED SIGNALS
+* =====================================================
+
+let vint_diff = v(Vp)-v(Vm)
+
 let vod = v(Vop)-v(Vom)
+
 let vocm = (v(Vop)+v(Vom))/2
-let vin_diff = v(Vin+)-v(Vin-)
-let bit_norm = v(Vout)/3.3
+
 let dacdiff = v(OUT_DAC_MIN)-v(OUT_DAC_PLUS)
-meas tran vout_min MIN v(Vout) from=2u to=50u
-meas tran vout_max MAX v(Vout) from=2u to=50u
-meas tran duty_early AVG bit_norm from=5u to=20u
-meas tran duty_late AVG bit_norm from=30u to=45u
-meas tran duty_vinp_peak AVG bit_norm from=3u to=7u
-meas tran duty_vinm_peak AVG bit_norm from=13u to=17u
+
+
+* =====================================================
+* PLOTS
+* =====================================================
+
 plot v(reset) v(clk1) v(clk2)
+
 plot v(clk2) v(clk2B)
-plot v(Vin+) v(Vin-) v(Vout)
-plot vin_diff v(Vout)
-plot vod
-plot v(Vout)
+
+plot v(Vin+) v(Vin-)
+
+plot v(Vm) v(Vp)
+
+plot vint_diff
+
 plot v(Vop) v(Vom)
-plot v(OUT_DAC_PLUS) v(OUT_DAC_MIN)
-plot dacdiff
+
+plot vod
+
 plot vocm
-plot vicm_ota
-plot vid_ota
-write analog_integration_v19_sigma_delta.raw v(reset) v(clk1) v(clk2) v(clk2B) v(Vin+) v(Vin-) v(Vm) v(Vp) v(Vop) v(Vom) v(Vout) v(OUT_DAC_PLUS) v(OUT_DAC_MIN)
+
+plot v(Vout)
+
+plot v(OUT_DAC_PLUS) v(OUT_DAC_MIN)
+
+plot dacdiff
+
+
+* =====================================================
+* MEASUREMENTS
+* =====================================================
+
+meas tran VOUT_MAX MAX v(Vout) FROM=100u TO=3m
+meas tran VOUT_MIN MIN v(Vout) FROM=100u TO=3m
+
+meas tran VOP_MAX MAX v(Vop) FROM=100u TO=3m
+meas tran VOP_MIN MIN v(Vop) FROM=100u TO=3m
+
+meas tran VOM_MAX MAX v(Vom) FROM=100u TO=3m
+meas tran VOM_MIN MIN v(Vom) FROM=100u TO=3m
+
+
+* =====================================================
+* RAW
+* =====================================================
+
+write analog_integration_real_transistor.raw
+
 .endc
-.end
-"}
+
+.end"}
 C {vsource.sym} -790 -710 0 0 {name=V10 value="PULSE(3.3 0 1u 1n 1n 100u 200u)" savecurrent=false}
 C {gnd.sym} -790 -660 0 0 {name=l2 lab=0}
 C {lab_pin.sym} -790 -780 1 0 {name=p22 sig_type=std_logic lab=reset}
