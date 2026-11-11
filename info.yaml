@@ -11,27 +11,39 @@
 # ======================================================
 # Project metadata (used for documentation / review)
 # ======================================================
+
 project:
   title: "Low-Power 12-Bit First-Order Delta-Sigma ADC"
   team: "ARNSChips"
   discord: "mycompanyios"
-  description: "A low-power 12-bit first-order delta-sigma ADC in GF180MCU with an analog modulator and CIC decimation filter."
+  description: "A low-power 12-bit first-order delta-sigma ADC in GF180MCU-D with an analog modulator, CIC decimation filter, and 12-bit PISO serial output."
   lvs_config: "lvs_config.json"
+  gf_def_ready: false
+  ws_def_ready: false
+  drc_ready: true
+  lvs_ready: false
+  export_control: "docs/Export_Control_GF_Rev8.2.docx"
 
 pins:
   # Analog
   - name: AVSS
     io_type: ground
-  - name: Vin+
-    io_type: analog
-    secondary_esd: true
-  - name: Vin-
+  - name: Vbiasn
     io_type: analog
     secondary_esd: true
   - name: Vbiasp
     io_type: analog
     secondary_esd: true
-  - name: Vbiasn
+  - name: VREFN
+    io_type: analog
+    secondary_esd: true
+  - name: VREFP
+    io_type: analog
+    secondary_esd: true
+  - name: Vin-
+    io_type: analog
+    secondary_esd: true
+  - name: Vin+
     io_type: analog
     secondary_esd: true
   - name: AVDD
@@ -40,33 +52,11 @@ pins:
   # Digital
   - name: DVSS
     io_type: ground
-  - name: in_clk
-    io_type: input_schmitt
   - name: rst
     io_type: input_cmos
-  - name: out_cic[0]
-    io_type: bidirectional
-  - name: out_cic[1]
-    io_type: bidirectional
-  - name: out_cic[2]
-    io_type: bidirectional
-  - name: out_cic[3]
-    io_type: bidirectional
-  - name: out_cic[4]
-    io_type: bidirectional
-  - name: out_cic[5]
-    io_type: bidirectional
-  - name: out_cic[6]
-    io_type: bidirectional
-  - name: out_cic[7]
-    io_type: bidirectional
-  - name: out_cic[8]
-    io_type: bidirectional
-  - name: out_cic[9]
-    io_type: bidirectional
-  - name: out_cic[10]
-    io_type: bidirectional
-  - name: out_cic[11]
+  - name: in_clk
+    io_type: input_schmitt
+  - name: serial_out
     io_type: bidirectional
   - name: DVDD
     io_type: power

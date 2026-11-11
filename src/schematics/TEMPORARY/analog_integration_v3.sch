@@ -154,7 +154,7 @@ spiceprefix=X
 }
 C {capa.sym} 457.5 -1180 1 1 {name=C1
 m=1
-value=50pF
+value=250f
 footprint=1206
 device="ceramic capacitor"}
 C {ipin.sym} 197.5 -1180 0 0 {name=p3 lab=Vin+}
@@ -218,7 +218,7 @@ spiceprefix=X
 }
 C {capa.sym} 457.5 -800 1 0 {name=C3
 m=1
-value=50pF
+value=250f
 footprint=1206
 device="ceramic capacitor"}
 C {ipin.sym} 197.5 -800 2 1 {name=p6 lab=Vin-}
@@ -236,12 +236,12 @@ C {lab_pin.sym} 357.5 -630 2 0 {name=p19 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 517.5 -630 0 0 {name=p20 sig_type=std_logic lab=VSS}
 C {capa.sym} 897.5 -1180 3 0 {name=C5
 m=1
-value=300pF
+value=100p
 footprint=1206
 device="ceramic capacitor"}
 C {capa.sym} 917.5 -800 3 0 {name=C6
 m=1
-value=300pF
+value=100p
 footprint=1206
 device="ceramic capacitor"}
 C {opin.sym} 1252.5 -1007.5 3 0 {name=p11 lab=Vop}
@@ -256,7 +256,7 @@ C {ipin.sym} 877.5 -930 1 1 {name=p4 lab=Vbiasn}
 C {ipin.sym} 917.5 -930 1 1 {name=p42 lab=Vbiasp}
 C {lab_pin.sym} 747.5 -1010 1 0 {name=p33 sig_type=std_logic lab=Vm}
 C {lab_pin.sym} 747.5 -970 3 0 {name=p34 sig_type=std_logic lab=Vp}
-C {fully_differential_amplifier/fullydiffamp.sym} 897.5 -905 0 0 {name=x1}
+C {fulldiffamp.sym} 897.5 -905 0 0 {name=x1}
 C {lab_pin.sym} 1380 -1030 0 0 {name=p46 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1380 -950 0 0 {name=p47 sig_type=std_logic lab=VSS}
 C {opin.sym} 1740 -990 0 0 {name=p52 lab=Vout}
@@ -290,7 +290,7 @@ C {lab_pin.sym} -1010 -1030 1 0 {name=p29 sig_type=std_logic lab=Vin+}
 C {lab_pin.sym} -790 -1030 1 0 {name=p30 sig_type=std_logic lab=Vin-}
 C {lab_pin.sym} -570 -1030 1 0 {name=p31 sig_type=std_logic lab=clk1}
 C {lab_pin.sym} -310 -1030 1 0 {name=p32 sig_type=std_logic lab=clk2}
-C {vsource.sym} -1010 -710 0 0 {name=V9 value=1.65 savecurrent=false}
+C {vsource.sym} -1010 -710 0 0 {name=V9 value=0 savecurrent=false}
 C {gnd.sym} -1010 -660 0 0 {name=l1 lab=0}
 C {lab_pin.sym} -1010 -780 1 0 {name=p35 sig_type=std_logic lab=VCM}
 C {devices/code_shown.sym} 2071.25 -1403.75 0 0 {name=NGSPICE only_toplevel=true
@@ -299,10 +299,10 @@ value="
 .inc /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
 
 .param CL=0.5p
-.param Wp=12u
-.param Wn=6u
+.param Wp=20u
+.param Wn=10u
 .param Kall=1.28u
-.param Wpc=50u Wnc=2u Wsc=2*Wp Lc=10u
+.param Wpc=50u Wnc=2u Wsc=2*Wpc Lc=10u
 CLP Vop 0 \{CL\}
 CLM Vom 0 \{CL\}
 RLEAKP Vop 0 1T
@@ -315,21 +315,21 @@ Rd2 clk2  0 1meg
 .control
 set color0=white
 set color1=black
-tran 2n 200u
+tran 2n 50u
 let vicm_ota = (v(Vp)+v(Vm))/2
 let vid_ota  = v(Vp)-v(Vm)
 * --- window ala paper ---
-plot v(clk1) v(clk2)          $ window 1: non-overlapping clocks
-plot v(Vin+) v(Vin-)          $ window 2: input diferensial
+*plot v(clk1) v(clk2)          $ window 1: non-overlapping clocks
+*plot v(Vin+) v(Vin-)          $ window 2: input diferensial
 plot v(Vop) v(Vom)            $ window 3: output OTA (single-ended)
 plot v(Vop)-v(Vom) v(Vout)           $ window 4: output integrator (diferensial) -> segitiga
-plot v(Vp) v(Vm)
-plot vicm_ota
-plot vid_ota
+*plot v(Vp) v(Vm)
+*plot vicm_ota
+*plot vid_ota
 .endc
 .end
 "}
-C {latched_comparator/COMPARATOR_SD.sym} 1360 -830 0 0 {name=x2}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/latched_comparator/COMPARATOR_SD.sym} 1360 -830 0 0 {name=x2}
 C {vsource.sym} -790 -710 0 0 {name=V10 value="PULSE(3.3 0 40.69n 1n 1n 36.69n 81.38n)" savecurrent=false}
 C {gnd.sym} -790 -660 0 0 {name=l2 lab=0}
 C {lab_pin.sym} -790 -780 1 0 {name=p22 sig_type=std_logic lab=clk2B}

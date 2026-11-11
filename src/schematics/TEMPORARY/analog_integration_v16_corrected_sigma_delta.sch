@@ -1,0 +1,476 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {}
+V {}
+S {}
+F {}
+E {}
+N 347.5 -1320 347.5 -1180 {lab=#net1}
+N 307.5 -1180 347.5 -1180 {lab=#net1}
+N 347.5 -1180 427.5 -1180 {lab=#net1}
+N 487.5 -1180 527.5 -1180 {lab=#net2}
+N 527.5 -1320 527.5 -1180 {lab=#net2}
+N 527.5 -1180 567.5 -1180 {lab=#net2}
+N 627.5 -1180 667.5 -1180 {lab=Vm}
+N 227.5 -1180 247.5 -1180 {lab=Vin+}
+N 197.5 -1180 227.5 -1180 {lab=Vin+}
+N 597.5 -1240 597.5 -1220 {lab=clk2}
+N 597.5 -1240 627.5 -1240 {lab=clk2}
+N 567.5 -1350 627.5 -1350 {lab=clk1}
+N 527.5 -1410 527.5 -1380 {lab=VCM}
+N 347.5 -1410 347.5 -1380 {lab=OUT_DAC_MIN}
+N 347.5 -800 347.5 -660 {lab=#net3}
+N 307.5 -800 347.5 -800 {lab=#net3}
+N 347.5 -800 427.5 -800 {lab=#net3}
+N 487.5 -800 527.5 -800 {lab=#net4}
+N 527.5 -800 527.5 -660 {lab=#net4}
+N 527.5 -800 567.5 -800 {lab=#net4}
+N 627.5 -800 667.5 -800 {lab=Vp}
+N 227.5 -800 247.5 -800 {lab=Vin-}
+N 197.5 -800 227.5 -800 {lab=Vin-}
+N 277.5 -760 277.5 -740 {lab=clk1}
+N 247.5 -740 277.5 -740 {lab=clk1}
+N 247.5 -630 307.5 -630 {lab=clk2}
+N 597.5 -760 597.5 -740 {lab=clk2}
+N 597.5 -740 627.5 -740 {lab=clk2}
+N 567.5 -630 627.5 -630 {lab=clk1}
+N 527.5 -600 527.5 -570 {lab=VCM}
+N 347.5 -600 347.5 -570 {lab=OUT_DAC_PLUS}
+N 347.5 -1350 357.5 -1350 {lab=VSS}
+N 517.5 -1350 527.5 -1350 {lab=VSS}
+N 277.5 -1180 277.5 -1170 {lab=VSS}
+N 597.5 -1180 597.5 -1170 {lab=VSS}
+N 277.5 -810 277.5 -800 {lab=VSS}
+N 597.5 -810 597.5 -800 {lab=VSS}
+N 347.5 -630 357.5 -630 {lab=VSS}
+N 517.5 -630 527.5 -630 {lab=VSS}
+N 667.5 -1180 867.5 -1180 {lab=Vm}
+N 667.5 -800 887.5 -800 {lab=Vp}
+N 677.5 -1180 677.5 -1010 {lab=Vm}
+N 677.5 -1010 837.5 -1010 {lab=Vm}
+N 677.5 -970 677.5 -800 {lab=Vp}
+N 677.5 -970 837.5 -970 {lab=Vp}
+N 837.5 -975 837.5 -970 {lab=Vp}
+N 927.5 -1180 997.5 -1180 {lab=Vop}
+N 947.5 -800 1007.5 -800 {lab=Vom}
+N 940 -983.75 1007.5 -983.75 {lab=Vom}
+N 938.75 -1007.5 1006.25 -1007.5 {lab=Vop}
+N 997.5 -1180 1007.5 -1180 {lab=Vop}
+N 1006.25 -1007.5 1007.5 -1007.5 {lab=Vop}
+N 1007.5 -1180 1007.5 -1007.5 {lab=Vop}
+N 1007.5 -983.75 1007.5 -800 {lab=Vom}
+N 910 -977.5 917.5 -977.5 {lab=Vbiasp}
+N 917.5 -977.5 917.5 -930 {lab=Vbiasp}
+N 877.5 -957.5 877.5 -930 {lab=Vbiasn}
+N 1007.5 -1007.5 1050 -1007.5 {lab=Vop}
+N 1007.5 -983.75 1050 -983.75 {lab=Vom}
+N 1052.5 -1007.5 1100 -1007.5 {lab=Vop}
+N 1052.5 -983.75 1100 -983.75 {lab=Vom}
+N 1050 -1007.5 1052.5 -1007.5 {lab=Vop}
+N 1050 -983.75 1052.5 -983.75 {lab=Vom}
+N -1010 -1310 -1010 -1270 {lab=VDD}
+N -1010 -1210 -1010 -1190 {lab=0}
+N -790 -1310 -790 -1270 {lab=VSS}
+N -790 -1210 -790 -1190 {lab=0}
+N -570 -1310 -570 -1270 {lab=Vbiasn}
+N -570 -1210 -570 -1190 {lab=0}
+N -310 -1310 -310 -1270 {lab=Vbiasp}
+N -310 -1210 -310 -1190 {lab=0}
+N -1010 -1030 -1010 -990 {lab=Vin+}
+N -1010 -930 -1010 -910 {lab=0}
+N -790 -1030 -790 -990 {lab=Vin-}
+N -790 -930 -790 -910 {lab=0}
+N -570 -1030 -570 -990 {lab=clk1}
+N -570 -930 -570 -910 {lab=0}
+N -310 -1030 -310 -990 {lab=clk2}
+N -310 -930 -310 -910 {lab=0}
+N -1010 -780 -1010 -740 {lab=VCM}
+N -1010 -680 -1010 -660 {lab=0}
+N -790 -780 -790 -740 {lab=reset}
+N -790 -680 -790 -660 {lab=0}
+N -570 -780 -570 -740 {lab=clk2B}
+N -570 -680 -570 -660 {lab=0}
+N 1100 -1007.5 1230 -1007.5 {lab=Vop}
+N 1100 -983.75 1230 -983.75 {lab=Vom}
+N 1230 -1007.5 1380 -1007.5 {lab=Vop}
+N 1380 -1010 1380 -1007.5 {lab=Vop}
+N 1230 -983.75 1380 -983.75 {lab=Vom}
+N 1380 -990 1380 -983.75 {lab=Vom}
+N 1550 -990 1720 -990 {lab=Vout}
+N 1720 -990 1740 -990 {lab=Vout}
+N 667.5 -1260 667.5 -1180 {lab=Vm}
+N 667.5 -1260 867.5 -1260 {lab=Vm}
+N 927.5 -1260 997.5 -1260 {lab=Vop}
+N 997.5 -1260 997.5 -1180 {lab=Vop}
+N 897.5 -1330 897.5 -1300 {lab=reset}
+N 897.5 -1260 897.5 -1240 {lab=VSS}
+N 667.5 -800 667.5 -720 {lab=Vp}
+N 667.5 -720 887.5 -720 {lab=Vp}
+N 947.5 -720 1007.5 -720 {lab=Vom}
+N 1007.5 -800 1007.5 -720 {lab=Vom}
+N 917.5 -680 917.5 -660 {lab=reset}
+N 917.5 -750 917.5 -720 {lab=VSS}
+N 1710 -1060 1710 -990 {lab=Vout}
+N 996.25 -533.75 1046.25 -533.75 {lab=#net5}
+N 996.25 -533.75 996.25 -523.75 {lab=#net5}
+N 966.25 -553.75 1046.25 -553.75 {lab=DAC_CTRL}
+N 901.25 -593.75 1046.25 -593.75 {lab=#net6}
+N 966.25 -553.75 966.25 -458.75 {lab=DAC_CTRL}
+N 1026.25 -513.75 1046.25 -513.75 {lab=0}
+N 1026.25 -513.75 1026.25 -493.75 {lab=0}
+N 936.25 -573.75 1046.25 -573.75 {lab=#net7}
+N 1003.75 -301.25 1053.75 -301.25 {lab=#net8}
+N 1003.75 -301.25 1003.75 -291.25 {lab=#net8}
+N 973.75 -321.25 1053.75 -321.25 {lab=DAC_CTRL}
+N 908.75 -361.25 1053.75 -361.25 {lab=#net9}
+N 1033.75 -281.25 1053.75 -281.25 {lab=0}
+N 1033.75 -281.25 1033.75 -261.25 {lab=0}
+N 943.75 -341.25 1053.75 -341.25 {lab=#net10}
+N 1293.75 -321.25 1343.75 -321.25 {lab=OUT_DAC_MIN}
+N 972.5 -321.25 973.75 -321.25 {lab=DAC_CTRL}
+N 963.75 -321.25 972.5 -321.25 {lab=DAC_CTRL}
+N 963.75 -321.25 966.25 -458.75 {lab=DAC_CTRL}
+N 1285 -553.75 1336.25 -553.75 {lab=OUT_DAC_PLUS}
+C {symbols/nfet_03v3.sym} 327.5 -1350 2 1 {name=M1
+L=0.3u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 547.5 -1350 2 0 {name=M2
+L=0.3u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 277.5 -1200 3 1 {name=M3
+L=0.3u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 597.5 -1200 3 1 {name=M4
+L=0.3u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {capa.sym} 457.5 -1180 1 1 {name=C1
+m=1
+value=250f
+footprint=1206
+device="ceramic capacitor"}
+C {ipin.sym} 197.5 -1180 0 0 {name=p3 lab=Vin+}
+C {lab_pin.sym} 627.5 -1350 2 0 {name=p1 sig_type=std_logic lab=clk1}
+C {lab_pin.sym} 627.5 -1240 2 0 {name=p5 sig_type=std_logic lab=clk2}
+C {symbols/nfet_03v3.sym} 327.5 -630 0 0 {name=M5
+L=0.3u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 547.5 -630 0 1 {name=M6
+L=0.3u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 277.5 -780 3 0 {name=M7
+L=0.3u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 597.5 -780 3 0 {name=M8
+L=0.3u
+W=1u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {capa.sym} 457.5 -800 1 0 {name=C3
+m=1
+value=250f
+footprint=1206
+device="ceramic capacitor"}
+C {ipin.sym} 197.5 -800 2 1 {name=p6 lab=Vin-}
+C {lab_pin.sym} 627.5 -630 0 1 {name=p7 sig_type=std_logic lab=clk1}
+C {lab_pin.sym} 247.5 -740 2 1 {name=p8 sig_type=std_logic lab=clk1}
+C {lab_pin.sym} 247.5 -630 2 1 {name=p9 sig_type=std_logic lab=clk2}
+C {lab_pin.sym} 627.5 -740 0 1 {name=p10 sig_type=std_logic lab=clk2}
+C {lab_pin.sym} 357.5 -1350 2 0 {name=p13 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 517.5 -1350 0 0 {name=p14 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 277.5 -1170 3 0 {name=p15 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 597.5 -1170 3 0 {name=p16 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 277.5 -810 1 0 {name=p17 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 597.5 -810 1 0 {name=p18 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 357.5 -630 2 0 {name=p19 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 517.5 -630 0 0 {name=p20 sig_type=std_logic lab=VSS}
+C {capa.sym} 897.5 -1180 3 0 {name=C5
+m=1
+value=1.2p
+footprint=1206
+device="ceramic capacitor"}
+C {capa.sym} 917.5 -800 3 0 {name=C6
+m=1
+value=1.2p
+footprint=1206
+device="ceramic capacitor"}
+C {opin.sym} 1252.5 -1007.5 3 0 {name=p11 lab=Vop}
+C {opin.sym} 1253.75 -983.75 3 1 {name=p12 lab=Vom}
+C {lab_pin.sym} 837.5 -955 0 0 {name=p23 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 837.5 -1030 0 0 {name=p24 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 527.5 -570 3 0 {name=p38 sig_type=std_logic lab=VCM}
+C {lab_pin.sym} 527.5 -1410 1 0 {name=p39 sig_type=std_logic lab=VCM}
+C {ipin.sym} 277.5 -1220 3 1 {name=p41 lab=clk1}
+C {ipin.sym} 307.5 -1350 2 1 {name=p2 lab=clk2}
+C {ipin.sym} 877.5 -930 1 1 {name=p4 lab=Vbiasn}
+C {ipin.sym} 917.5 -930 1 1 {name=p42 lab=Vbiasp}
+C {lab_pin.sym} 747.5 -1010 1 0 {name=p33 sig_type=std_logic lab=Vm}
+C {lab_pin.sym} 747.5 -970 3 0 {name=p34 sig_type=std_logic lab=Vp}
+C {fulldiffamp.sym} 897.5 -905 0 0 {name=x1}
+C {lab_pin.sym} 347.5 -1410 1 0 {name=p36 sig_type=std_logic lab=OUT_DAC_MIN}
+C {lab_pin.sym} 347.5 -570 3 0 {name=p21 sig_type=std_logic lab=OUT_DAC_PLUS}
+C {vsource.sym} -1010 -1240 0 0 {name=V1 value=3.3 savecurrent=false}
+C {gnd.sym} -1010 -1190 0 0 {name=l5 lab=0}
+C {vsource.sym} -790 -1240 0 0 {name=V2 value=0 savecurrent=false}
+C {gnd.sym} -790 -1190 0 0 {name=l6 lab=0}
+C {vsource.sym} -570 -1240 0 0 {name=V3 value=0.65 savecurrent=false}
+C {gnd.sym} -570 -1190 0 0 {name=l7 lab=0}
+C {vsource.sym} -310 -1240 0 0 {name=V4 value=2.5 savecurrent=false}
+C {gnd.sym} -310 -1190 0 0 {name=l8 lab=0}
+C {vsource.sym} -1010 -960 0 0 {name=V5 value="SIN(1.65 0.5 50k 0 0 0)" savecurrent=false}
+C {gnd.sym} -1010 -910 0 0 {name=l9 lab=0}
+C {vsource.sym} -790 -960 0 0 {name=V6 value="SIN(1.65 0.5 50k 0 0 180)" savecurrent=false}
+C {gnd.sym} -790 -910 0 0 {name=l10 lab=0}
+C {vsource.sym} -570 -960 0 0 {name=V7 value="PULSE(0 3.3 1.1u 1n 1n 30n 81.38n)" savecurrent=false}
+C {gnd.sym} -570 -910 0 0 {name=l11 lab=0}
+C {vsource.sym} -310 -960 0 0 {name=V8 value="PULSE(0 3.3 1.14069u 1n 1n 30n 81.38n)" savecurrent=false}
+C {gnd.sym} -310 -910 0 0 {name=l12 lab=0}
+C {lab_pin.sym} -1010 -1310 1 0 {name=p25 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -790 -1310 1 0 {name=p26 sig_type=std_logic lab=VSS
+}
+C {lab_pin.sym} -570 -1310 1 0 {name=p27 sig_type=std_logic lab=Vbiasn
+}
+C {lab_pin.sym} -310 -1310 1 0 {name=p28 sig_type=std_logic lab=Vbiasp
+}
+C {lab_pin.sym} -1010 -1030 1 0 {name=p29 sig_type=std_logic lab=Vin+}
+C {lab_pin.sym} -790 -1030 1 0 {name=p30 sig_type=std_logic lab=Vin-}
+C {lab_pin.sym} -570 -1030 1 0 {name=p31 sig_type=std_logic lab=clk1}
+C {lab_pin.sym} -310 -1030 1 0 {name=p32 sig_type=std_logic lab=clk2}
+C {vsource.sym} -1010 -710 0 0 {name=V9 value=1.65 savecurrent=false}
+C {gnd.sym} -1010 -660 0 0 {name=l1 lab=0}
+C {lab_pin.sym} -1010 -780 1 0 {name=p35 sig_type=std_logic lab=VCM}
+C {devices/code_shown.sym} 2071.25 -1403.75 0 0 {name=NGSPICE only_toplevel=true
+value="
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.inc /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+
+.param CL=0.5p
+.param Wp=20u
+.param Wn=10u
+.param Kall=1.28u
+.param Wpc=50u Wnc=2u Wsc=2*Wpc Lc=10u
+.param Wsp_p=5u Wsn_p=0.3u Ld=0.3u Wdp_p=40u Wdn_p=0.6u Wsp2_p=5u Wsn2_p=0.3u
+.param Wsp_m=5u Wsn_m=0.5u Wdp_m=10u Wdn_m=1u
+.param Win=1u
+.param AFD=10000 VOUTCM=1.65 VSW=1.63
+CLP Vop 0 \{CL\}
+CLM Vom 0 \{CL\}
+RLEAKP Vop 0 1T
+RLEAKM Vom 0 1T
+CMPLOAD Vcomp_raw 0 10f
+RLEAKCMP Vcomp_raw 0 1T
+
+* dummy load supaya tiap node punya DC path ke ground
+Rd1 clk1  0 1meg
+Rd2 clk2  0 1meg
+
+* Self-contained fully differential amplifier reference model.
+* The original transistor amplifier is kept on the drawing but ignored.
+BFDAP Vop 0 V=\{VOUTCM+VSW*tanh(0.5*AFD*(V(Vp)-V(Vm))/VSW)\}
+BFDAM Vom 0 V=\{VOUTCM-VSW*tanh(0.5*AFD*(V(Vp)-V(Vm))/VSW)\}
+RCM_M Vm VCM 1G
+RCM_P Vp VCM 1G
+
+* Reset every signal node to VCM so integration starts from Vod=0.
+SRESET_VM Vm VCM reset 0 SWRST
+SRESET_VP Vp VCM reset 0 SWRST
+SRESET_OP Vop VCM reset 0 SWRST
+SRESET_OM Vom VCM reset 0 SWRST
+.model SWRST SW(Ron=1 Roff=1T Vt=1.65 Vh=0.1)
+
+* Latch the comparator decision near end of evaluation.
+* Vcomp_raw remains available for transistor-level comparator diagnosis.
+* Logic restoration uses the differential input sign because the comparator
+* symbol exposes a single precharge/evaluate node, not a static CMOS output.
+BCMPLOG cmp_logic 0 V=\{V(Vop)>V(Vom) ? 3.3 : 0\}
+VLATCHCLK latchclk 0 PULSE(0 3.3 1.1745u 0.2n 0.2n 1n 81.38n)
+SOUT cmp_logic Vout latchclk 0 SWLATCH
+.model SWLATCH SW(Ron=10 Roff=1T Vt=1.65 Vh=0.1)
+COUT Vout 0 50f
+RLEAKOUT Vout 0 1T
+
+* DAC input isolation / logic restoration.
+* The sampled Vout node in v9 is a small dynamic hold node (COUT=50f).
+* Driving the transistor DAC gates directly from it causes clock feedthrough/kickback
+* and can push Vout outside 0..3.3 V. A real implementation needs a buffer here.
+* DAC_CTRL has effectively infinite input resistance and a stiff 0/3.3-V output.
+BDACBUF DAC_CTRL 0 V=\{V(Vout)>1.65 ? 3.3 : 0\}
+
+.control
+set color0=white
+set color1=black
+tran 0.5n 50u 0 0.2n
+let vicm_ota = (v(Vp)+v(Vm))/2
+let vid_ota  = v(Vp)-v(Vm)
+let vod = v(Vop)-v(Vom)
+let vocm = (v(Vop)+v(Vom))/2
+let bit_norm = v(Vout)/3.3
+meas tran vout_min MIN v(Vout) from=2u to=50u
+meas tran vout_max MAX v(Vout) from=2u to=50u
+meas tran dacctrl_min MIN v(DAC_CTRL) from=2u to=50u
+meas tran dacctrl_max MAX v(DAC_CTRL) from=2u to=50u
+meas tran duty_early AVG bit_norm from=5u to=20u
+meas tran duty_late AVG bit_norm from=30u to=45u
+plot v(reset) v(clk1) v(clk2)
+plot v(clk2) v(clk2B)
+plot v(Vin+) v(Vin-)
+plot vod
+plot v(Vout) v(DAC_CTRL)
+plot v(Vop) v(Vom)
+plot v(OUT_DAC_PLUS) v(OUT_DAC_MIN)
+plot vocm
+plot vicm_ota
+plot vid_ota
+write analog_integration_v16_corrected_sigma_delta.raw v(reset) v(clk1) v(clk2) v(clk2B) v(latchclk) v(Vin+) v(Vin-) v(Vm) v(Vp) v(Vop) v(Vom) v(Vcomp_raw) v(Vout) v(DAC_CTRL) v(OUT_DAC_PLUS) v(OUT_DAC_MIN)
+.endc
+.end
+"}
+C {vsource.sym} -790 -710 0 0 {name=V10 value="PULSE(3.3 0 1u 1n 1n 100u 200u)" savecurrent=false}
+C {gnd.sym} -790 -660 0 0 {name=l2 lab=0}
+C {lab_pin.sym} -790 -780 1 0 {name=p22 sig_type=std_logic lab=reset}
+C {vsource.sym} -570 -710 0 0 {name=V11 value="PULSE(3.3 0 1.14069u 1n 1n 36.69n 81.38n)" savecurrent=false}
+C {gnd.sym} -570 -660 0 0 {name=l13 lab=0}
+C {lab_pin.sym} -570 -780 1 0 {name=p49 sig_type=std_logic lab=clk2B}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/latched_comparator/COMPARATOR_SD.sym} 1360 -830 0 0 {name=x2}
+C {lab_pin.sym} 1380 -1030 0 0 {name=p46 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1380 -950 0 0 {name=p47 sig_type=std_logic lab=VSS}
+C {ipin.sym} 1380 -970 2 1 {name=p57 lab=clk2B}
+C {opin.sym} 1710 -1060 0 0 {name=p58 lab=Vout}
+C {symbols/nfet_03v3.sym} 897.5 -1280 3 1 {name=M9
+L=0.3u
+W=7.5u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 917.5 -700 1 1 {name=M10
+L=0.3u
+W=7.5u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {lab_pin.sym} 897.5 -1330 0 0 {name=p43 sig_type=std_logic lab=reset}
+C {lab_pin.sym} 897.5 -1240 3 0 {name=p44 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 917.5 -660 0 0 {name=p45 sig_type=std_logic lab=reset}
+C {lab_pin.sym} 917.5 -750 1 0 {name=p48 sig_type=std_logic lab=VSS}
+C {vsource.sym} 901.25 -563.75 0 0 {name=V12 value=3.3 savecurrent=false}
+C {gnd.sym} 901.25 -533.75 0 0 {name=l20 lab=0}
+C {gnd.sym} 1026.25 -493.75 0 0 {name=l21 lab=0}
+C {vsource.sym} 996.25 -493.75 0 0 {name=V13 value=0 savecurrent=false}
+C {gnd.sym} 936.25 -513.75 0 0 {name=l22 lab=0}
+C {noconn.sym} 1336.25 -553.75 1 0 {name=l23}
+C {vsource.sym} 936.25 -543.75 0 0 {name=V14 value=3 savecurrent=false}
+C {gnd.sym} 996.25 -463.75 0 0 {name=l24 lab=0}
+C {vsource.sym} 908.75 -331.25 0 0 {name=V15 value=3.3 savecurrent=false}
+C {gnd.sym} 908.75 -301.25 0 0 {name=l25 lab=0}
+C {gnd.sym} 1033.75 -261.25 0 0 {name=l26 lab=0}
+C {vsource.sym} 1003.75 -261.25 0 0 {name=V16 value=0 savecurrent=false}
+C {gnd.sym} 943.75 -281.25 0 0 {name=l27 lab=0}
+C {lab_pin.sym} 1323.75 -321.25 1 0 {name=p60 sig_type=std_logic lab=OUT_DAC_MIN}
+C {noconn.sym} 1343.75 -321.25 1 0 {name=l28}
+C {vsource.sym} 943.75 -311.25 0 0 {name=V17 value=3 savecurrent=false}
+C {gnd.sym} 1003.75 -231.25 0 0 {name=l29 lab=0}
+C {lab_pin.sym} 1314.375 -553.75 1 0 {name=p61 sig_type=std_logic lab=OUT_DAC_PLUS}
+C {lab_pin.sym} 966.25 -458.75 2 0 {name=p62 sig_type=std_logic lab=DAC_CTRL}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/dac_1bit/DAC_1_BIT_PLUS.sym} 1016.25 -463.75 0 0 {name=x4}
+C {/foss/designs/low-power-12b-first-order-delta-sigma-adc/src/schematics/dac_1bit/DAC_1_BIT_MIN.sym} 1143.75 -191.25 0 0 {name=x3}
